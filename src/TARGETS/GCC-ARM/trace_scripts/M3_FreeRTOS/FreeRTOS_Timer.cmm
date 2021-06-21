@@ -1,0 +1,390 @@
+; do Display Task
+GOSUB display_timer
+ENDDO
+
+
+display_timer:
+(
+	; 获取所有Timer句柄
+	PRIVATE &NumOfTimer &TimerHandlerList
+	GOSUB get_timer_handler_list
+	ENTRY &NumOfTimer &TimerHandlerList
+	
+	;PRINT &NumOfTimer
+	;PRINT &TimerHandlerList
+
+	; 设置每个属性列的宽度
+	&TimerNameLen=0xC
+	&TimerCtlBlockLen=0xC
+	&PeriodTicksLen=0xA
+	&TimerIDLen=0xC
+	&CallbackLen=0xC
+	&TimerStatusLen=0xA
+	; Box的宽度，即最多显示多少行
+	&BoxWidth=&NumOfTimer+2
+	; 两个列之间的间隙
+	&MemberGap=0x1
+	
+	;PRIVATE &DrawLine &StartLen
+	PRIVATE &StartLen &StartLenDec &pxCurrentTimer
+	
+	&DrawLine=0x0
+	&StartLen=0x0
+	
+	; 创建 timer_dialog.dlg 的文件，用来显示界面。会覆盖同名文件
+	OPEN #1 timer_dialog.dlg /Create
+	CLOSE #1
+	
+	; 将界面头部信息写入文件
+	GOSUB dialog_show_timer_title &DrawLine
+	
+	; RePeaT 参数为0时，会无限循环
+	IF &NumOfTimer!=0
+	(
+		; 循环写入每个软定时器的信息
+		RePeaT &NumOfTimer
+		(
+			&StartLenDec=CONVert.HEXTOINT(&StartLen)
+			&StartLen=&StartLen+0xA
+			&pxCurrentTimer=STRing.MID("&TimerHandlerList",&StartLenDec,10.)
+			
+			&DrawLine=&DrawLine+0x1
+			
+			GOSUB dialog_show_timer_one_line &pxCurrentTimer &DrawLine
+		)
+	)
+	
+	;DIALOG.END
+	
+	;WinPOS ,,,,,, task_window
+	;AREA.Delete task_window
+	;AREA.Create task_window ;create a named area that is invisible
+	;AREA.Select task_window ;select this area for output
+	;DIALOG.AREA task_window timer_dialog.dlg
+	DIALOG.View timer_dialog.dlg
+	RM timer_dialog.dlg
+	
+	RETURN
+)
+
+
+dialog_show_timer_title:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &DrawLineNum
+	&DrawLineNum=FORMAT.Decimal(2,&AcceptParameter)
+	
+	PRIVATE &CurrentSize &CurrentBoxPosition &CurrentBoxLen &BoxWidthNum
+	
+	&CurrentSize=0
+	&BoxWidthNum=FORMAT.Decimal(2,&BoxWidth)
+	
+	; 以写入的方式打开文件
+	OPEN #1 timer_dialog.dlg /Write
+	
+	; WRITE 是以追加的方式写在文件的末尾
+	; WRITE 的双引号内部是字符，内存也需要写入双引号时，需要两个双引号，如 "该行写入""测试"""
+	
+	WRITE #1 "; '&+' allows you to pass the local macro to a dialog"
+	WRITE #1 "; block that is embedded in a *.cmm file"
+	WRITE #1 ";"
+	WRITE #1 "NAME ""WINDOW_TIMER"""
+	WRITE #1 "HEADER ""TIMER LIST"""
+	WRITE #1 ";"
+	
+	; 对每一列的控件计算其尺寸，尺寸定义在调用这个函数的地方
+	
+	WRITE #1 "; timer name"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&TimerNameLen)
+	&CurrentSize=&CurrentSize+&TimerNameLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""TIMER NAME"""
+	
+	WRITE #1 "; timer handler"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&TimerCtlBlockLen)
+	&CurrentSize=&CurrentSize+&TimerCtlBlockLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""TIMER CB"""
+	
+	WRITE #1 "; period in ticks"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&PeriodTicksLen)
+	&CurrentSize=&CurrentSize+&PeriodTicksLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""PERIOD"""
+	
+	WRITE #1 "; timer id"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&TimerIDLen)
+	&CurrentSize=&CurrentSize+&TimerIDLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""TIMER ID"""
+	
+	WRITE #1 "; timer callback"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&CallbackLen)
+	&CurrentSize=&CurrentSize+&CallbackLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""CALLBACK"""
+	
+	WRITE #1 "; timer status"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&TimerStatusLen)
+	&CurrentSize=&CurrentSize+&TimerStatusLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""STATUS"""
+	
+	WRITE #1 ";"
+	WRITE #1 ";"
+	
+	; 关闭文件
+	CLOSE #1
+	
+	RETURN
+)
+
+
+dialog_show_timer_one_line:
+(
+	ENTRY &AcceptParameter1 &AcceptParameter2
+	
+	PRIVATE &CurrentTimer
+	
+	&CurrentTimer=&AcceptParameter1
+	&DrawLineNum=FORMAT.Decimal(2,&AcceptParameter2)
+	
+	PRIVATE &TimerName &TimerCB &TimerPeriod &TimerID &TimerCallback &TimerStatus
+	GOSUB get_one_timer_attribute &CurrentTimer
+	ENTRY &TimerName &TimerCB &TimerPeriod &TimerID &TimerCallback &TimerStatus
+	
+	PRIVATE &CurrentMemberPosition &CurrentMemberLen &CurrentSize
+	
+	&CurrentSize=0
+	
+	; 以写入的方式打开文件
+	OPEN #1 timer_dialog.dlg /Write
+	
+	; 把设置线程寄存器的实现移动到BUTTON的功能中，替换原来的调用函数，直接调用函数会找不到symbol(符号)
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&TimerNameLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&TimerNameLen+1
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT &TimerName"
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&TimerCtlBlockLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&TimerCtlBlockLen+1
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "BUTTON ""&TimerCB"""
+	WRITE #1 "("
+	WRITE #1 "	Var.View %m %s (Timer_t *)&TimerCB"
+	WRITE #1 ")"
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&PeriodTicksLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&PeriodTicksLen+1
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT FORMAT.Decimal(2,&TimerPeriod)"
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&TimerIDLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&TimerIDLen+1
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1"
+	WRITE #1 "TEXT ""&TimerID"""
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&CallbackLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&CallbackLen+1
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "BUTTON ""&TimerCallback"""
+	WRITE #1 "("
+	WRITE #1 "	Break.Set &TimerCallback"
+	WRITE #1 "	Break.List"
+	WRITE #1 ")"
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&TimerStatusLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&TimerStatusLen+1
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT ""&TimerStatus"""
+	
+	WRITE #1 ";"
+	WRITE #1 ";"
+	
+	; 关闭文件
+	CLOSE #1
+	
+	RETURN
+)
+
+
+get_timer_handler_list:
+(
+	; 获取当前系统所有的任务句柄，返回有多少个线程，所有任务句柄的地址保存为一个字符串
+	
+	PRIVATE &pxCurrentList
+	
+	PRIVATE &TmpNumOfTimer &TmpTimerHandlerList
+	
+	PRIVATE &NumOfTimer &TimerHandlerList
+	
+	&NumOfTimer=0
+	&TimerHandlerList=""
+	
+	; 以下为相同操作，将各个列表的线程加到返回值中
+	
+	&pxCurrentList=v.value(pxCurrentTimerList)
+	GOSUB get_one_list_timer &pxCurrentList
+	ENTRY &TmpNumOfTimer &TmpTimerHandlerList
+	
+	&NumOfTimer=&NumOfTimer+&TmpNumOfTimer
+	&TimerHandlerList="&TimerHandlerList"+"&TmpTimerHandlerList"
+
+	&pxCurrentList=v.value(pxOverflowTimerList)
+	GOSUB get_one_list_timer &pxCurrentList
+	ENTRY &TmpNumOfTimer &TmpTimerHandlerList
+	
+	&NumOfTimer=&NumOfTimer+&TmpNumOfTimer
+	&TimerHandlerList="&TimerHandlerList"+"&TmpTimerHandlerList"
+	
+	RETURN &NumOfTimer &TimerHandlerList
+)
+
+
+get_one_list_timer:
+(
+	; 获取一个列表内所有的软定时器句柄，并返回
+
+	; 参数为操作系统软定时器相关列表，pxCurrentTimerList 和 pxOverflowTimerList
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentList &pxCurrentTimer
+	
+	PRIVATE &NumOfTimer &TimerHandlerList
+	
+	&pxCurrentList=&AcceptParameter
+	
+	&NumOfTimer=v.value(((List_t *)&pxCurrentList)->uxNumberOfItems)
+	&TimerHandlerList=""
+	
+	&pxListEnd=v.value(&(((List_t *)&pxCurrentList)->xListEnd))
+	&pxCurrentListItem=&pxListEnd
+
+	WHILE v.value(((ListItem_t *)&pxCurrentListItem)->pxNext)!=&pxListEnd
+	(
+		&pxCurrentListItem=v.value(((ListItem_t *)&pxCurrentListItem)->pxNext)
+		&pxCurrentTimer=v.value(((ListItem_t *)&pxCurrentListItem)->pvOwner)
+		
+		&TimerHandlerList="&TimerHandlerList"+"&pxCurrentTimer"
+	)
+	
+	RETURN &NumOfTimer &TimerHandlerList
+)
+
+
+get_one_timer_attribute:
+(
+	; 传入的参数为软定时器句柄
+	ENTRY &AcceptParameter
+	
+	PRIVATE &TimerName &CurrentTimerCB &TimerPeriod &TimerID &TimerCallback &TimerStatus
+	
+	&CurrentTimerCB=&AcceptParameter
+	
+	GOSUB get_timer_name &CurrentTimerCB
+	ENTRY &TimerName
+	
+	GOSUB get_timer_period &CurrentTimerCB
+	ENTRY &TimerPeriod
+	
+	GOSUB get_timer_ID &CurrentTimerCB
+	ENTRY &TimerID
+	
+	GOSUB get_timer_callback &CurrentTimerCB
+	ENTRY &TimerCallback
+	
+	GOSUB get_timer_status &CurrentTimerCB
+	ENTRY &TimerStatus
+	
+	RETURN &TimerName &CurrentTimerCB &TimerPeriod &TimerID &TimerCallback &TimerStatus
+)
+
+
+get_timer_name:
+(
+	; 传入的参数为软定时器句柄
+	ENTRY &AcceptParameter
+	
+	PRIVATE &CurrentTimer &TimerName &PrintName
+	
+	&CurrentTimer=&AcceptParameter
+	
+	&TimerName=v.value(((Timer_t *)&CurrentTimer)->pcTimerName)
+	
+	&PrintName=Data.STRing(D:&TimerName)
+	
+	RETURN "&PrintName"
+)
+
+
+get_timer_period:
+(
+	; 传入的参数为软定时器句柄
+	ENTRY &AcceptParameter
+	
+	PRIVATE &CurrentTimer &TimerPeriod
+	
+	&CurrentTimer=&AcceptParameter
+	
+	&TimerPeriod=v.value(((Timer_t *)&CurrentTimer)->xTimerPeriodInTicks)
+	
+	RETURN &TimerPeriod
+)
+
+
+get_timer_ID:
+(
+	; 传入的参数为软定时器句柄
+	ENTRY &AcceptParameter
+	
+	PRIVATE &CurrentTimer &TimerID
+	
+	&CurrentTimer=&AcceptParameter
+	
+	&TimerID=v.value(((Timer_t *)&CurrentTimer)->pvTimerID)
+	
+	RETURN &TimerID
+)
+
+
+get_timer_callback:
+(
+	; 传入的参数为软定时器句柄
+	ENTRY &AcceptParameter
+	
+	PRIVATE &CurrentTimer &TimerCallback
+	
+	&CurrentTimer=&AcceptParameter
+	
+	&TimerCallback=v.value(((Timer_t *)&CurrentTimer)->pxCallbackFunction)
+	
+	RETURN &TimerCallback
+)
+
+
+get_timer_status:
+(
+	; 传入的参数为软定时器句柄
+	ENTRY &AcceptParameter
+	
+	PRIVATE &CurrentTimer &TimerStatus
+	
+	&CurrentTimer=&AcceptParameter
+	
+	&TimerStatus=v.value(((Timer_t *)&CurrentTimer)->ucStatus)
+	
+	RETURN &TimerStatus
+)

@@ -1,0 +1,96 @@
+/** 
+* @mainpage  QS-100模组SDK用户手册
+*
+* @section   开源模块介绍 
+* <table>
+* <tr><th>模块        <th>参考版本号  <th>引用路径     <th>Description  </tr>
+* <tr><td>FreeRTOS  <td>V10.3.1    <td>https://www.freertos.org/a00104.html    <td>新增省电相关机制 </tr>
+* <tr><td>CDP  <td>LiteOSV200R001C50B021    <td>https://github.com/LiteOS/LiteOS/releases/tag/tag_LiteOS_V200R001C50B021_20180629   <td>支持对电信CTWing，联通和华为云平台的连接，版本来源于liteos开源   </tr>
+* <tr><td>ONENET  <td>2.3.0    <td>https://open.iot.10086.cn/doc/nb-iot/book/device-develop/get_SDK.html   <td>中移云   </tr>
+* <tr><td>mbedtls  <td>    <td>https://tls.mbed.org   <td>SSL/TLS 协议   </tr>
+* <tr><td>coap  <td>release-4.2.0    <td>https://github.com/obgm/libcoap/tree/release-4.2.0   <td>libcoap是CoAP协议的C语言实现   </tr>
+* <tr><td>lwm2m  <td>    <td>https://github.com/eclipse/wakaama   <td>wakaama呈现形式并不是一个C的库文件，而是以源代码的形式，直接和项目代码联合编译。    </tr>
+* <tr><td>MQTT  <td>    <td>https://github.com/eclipse/paho.mqtt.embedded-c/tree/master   <td>MQTT是一个基于客户端-服务器的消息发布/订阅传输协议，以源代码的形式呈现，直接和项目代码联合编译   </tr>
+* </table>
+* @section   QS-100模组SDK简介
+
+* -# 特征概述
+	- eclips集成开发调试环境，配套有支持文档和调试工具
+	- 支持实现AT /Socket/多种云API，调用简单灵活
+	- 提供各种网络业务lib库，支持用户通过编译宏方式选择需要的lib库
+	- 扩展AT命令注册机制，方便用户定制扩展私属AT
+	- 灵活的flash操作接口，支持磨损均衡；
+	- 支持外部MCU对芯片断电，确保上电唤醒后流程最优，功耗更低；
+	- 灵活的PSM省电策略，功耗更低；
+	- 快速RAI流程技术突破，功耗更优；
+	- 支持硬件加密机制，保证通信的安全可靠性
+	- 紧凑型高性能的预编译代码库
+	- 灵活可编程的PIN脚资源
+	- 丰富的示例工程
+* @par
+* -# 系统资源
+* @par
+	- 主控核为32-bit ARM Cortext-M3 RISC，主频默认为39.168M，用户理论可用最高130MIPS。
+	- 芯片内部集成900K字节RAM，主控核M3用户可用的RAM空间约为140K，没有外部RAM。
+	- 芯片使用型号为GD25Q16的flash，2M字节空间。目前用户直接可用空间约为417K左右，该flash空间和fota共用，使用的越多fota可用的空间越少。
+	- 平台支持FOTA差分升级。
+* @par
+* -# 外设资源
+* @par
+	- 芯片从standby状态唤醒，需等待约3毫秒后软件系统方可用；从DEEPSLEEP深睡唤醒，需等待约35秒软件系统方可用。
+	- UART支持2400到921600波特率配置，有两个UART可用于二次开发，暂无LPUART。由于STANDBY唤醒时稳PLL需要3毫秒左右，存在数据出错风险。
+	- GPIO-10/11/12仅支持内部下拉，其他的GPIO仅支持内部上拉。
+	- ADC位数为12位，单次采样时间5us。
+	- SDK外设默认配置请参考《芯翼XY1100 I/O 配置及引脚使用说明》
+* @par
+* -# 用户二次开发总则
+* @par
+	- 用户开发的代码，必须位于userapp文件夹下，其他路径不能存放。
+	- 目前平台已支持CDP/ONENET/COAP/LWM2M/MQTT/NTP等协议，OPENCPU开发时只能通过API接口，不得使用扩展AT命令接口。。
+	- 用户不得修改芯翼任何代码，如果需要参考芯翼的实例，请自行新建文件，否则SDK迭代会影响用户代码的同步。
+	- 用户代码除非有特别需求，否则一律放入flash中运行，不得放入RAM中。
+	- 中断服务程序中所有代码及rodata数据，必须放在RAM中，否则会造成各种异常代码跑飞。
+	- 对于打印、内存管理等支撑相关类接口，用户不得直接使用操作系统接口，统一使用平台定义接口。
+	- 平台提供了硬看门狗机制，确保软件正常调度运行。对于用户任务的异常，用户需要自行设计软看门狗机制，如规定时间内未能与网络完成通信等，则触发重启等策略，具体参看user_task_demo.c。
+* @par
+* -# 芯翼平台提供的外部头文件说明
+* @par
+	xy_utils.h      芯翼的基础工具接口，如内存、错误码、打印、断言等  \n
+	xy_api.h		芯翼平台提供的总的API接口，客户开发自己的源代码时，仅需包含该接口就可以使用对外的所有声明 \n
+	xy_sys_hook.h	芯翼平台提供给客户实现的HOOK函数接口，具体实现参看xy_sys_hook.c  \n
+	xy_memmap.h		内存和flash的配置相关，用户禁止修改 \n
+	osal.h			操作系统适配API \n
+	xy_system.h		系统级接口，如软重启、睡眠等 \n
+	xy_flash.h		flash相关接口 \n
+	xy_rtc_api.h	RTC硬定时相关接口 \n
+	xy_at_api.h		AT命令二次开发相关API接口 \n
+	xy_ps_api.h		3GPP相关的API接口 \n
+	xy_ps_ext_api.h		一些特殊需求的3GPP相关机制，如订阅回调机制 \n
+	xy_net_api.h	tcpip基础API接口，如DNS等 \n
+	xy_mqtt_api.h	MQTT的API接口 \n
+	xy_coap_api.h	coap相关的API接口 \n
+	xy_cis_api.h		onenet的API接口 \n
+	xy_cdp_api.h		CDP的API接口 \n
+	xy_fota.h		FOTA相关的API接口，仅限于芯翼自研的FOTA功能 
+
+* @par
+*
+
+**********************************************************************************
+*/
+
+/**
+ * @defgroup at AT
+ */
+
+/**
+ * @defgroup peripheral Peripheral
+ */
+
+ /**
+ * @defgroup opencpu OpenCPU
+ */
+
+ /**
+ * @defgroup cloud Cloud
+ */

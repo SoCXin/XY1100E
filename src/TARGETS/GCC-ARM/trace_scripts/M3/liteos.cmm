@@ -1,0 +1,46 @@
+; --------------------------------------------------------------------------------
+; @Title: LiteOS Demo for TRACE32 OS Awareness
+; @Description: 
+;   
+;   This batchfile loads all necessary files to demonstrate
+;   the OS Awareness for LiteOS on CortexM3.
+;   
+; @Keywords: Awareness, LiteOS, RTOS
+; @Author: ZDM
+; @Copyright: (C) 
+; --------------------------------------------------------------------------------
+; $Id: 
+
+
+SCREEN.ON
+AREA.RESet
+;WinPAGE.RESet
+;WinCLEAR
+WinPOS 0. 27. 63. 7. 0. 0. W006
+;AREA.view
+
+; Debugger reset
+PRINT "resetting..."
+RESet
+SYStem.RESet
+
+; Initializing Debugger
+PRINT "initializing..."
+SYStem.CPU CortexM3
+SYStem.Up
+
+; Load application
+PRINT "loading application..."
+;Data.LOAD.Elf .\xinyiNBSoc_M3.axf 
+;DATA.LOAD.BINARY .\sram.binary.bin   0x20000000  /noclear
+
+
+Data.LOAD.Elf C:\T32\DumpFile\xinyiNBSoc_M3.axf 
+DATA.LOAD.BINARY C:\T32\DumpFile\sram_M3_20000000.bin   0x20000000  /noclear
+
+; Initialize RTOS support
+PRINT "initializing LiteOS support..."
+;TASK.CONFIG ./liteos.t32      ; load LiteOS awareness
+MENU.ReProgram ./liteos.men   ; load LiteOS menu
+
+DODECRYPT   "zhudeming" ./LiteOS_Unwind.t32 1 0

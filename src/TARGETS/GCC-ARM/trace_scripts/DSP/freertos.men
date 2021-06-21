@@ -1,0 +1,24 @@
+; --------------------------------------------------------------------------------
+; @Title: FreeRTOS specific menu
+; @Description: -
+; @Author: DIE ZDM
+; @Copyright: (c) 
+; --------------------------------------------------------------------------------
+; $Id: FreeRTOS.men 
+
+add
+menu
+(
+  popup "&FreeRTOS"
+  (
+    default
+    menuitem "Display &Tasks"
+	(	
+		DODECRYPT "zhudeming" ./FreeRTOS_Task_state.t32
+	)
+	menuitem "Display &Heap"
+	(	
+		DODECRYPT "zhudeming" ./heap.t32
+	)
+  )
+)

@@ -1,0 +1,50 @@
+; do Display main stack
+GOSUB display_main_stack
+ENDDO
+
+
+display_main_stack:
+(
+	;initialize the general purpose registers
+	Frame.Init
+	;Recovers the state of the registers before the last Frame.UNDO command was executed.
+	Frame.REDO
+	Frame.SWAP
+
+	;set all of the register of cpu, trace analyze the stack
+	Register.Init
+	;Register.Reset
+	Register.Set R0        v.value(m3_reg.R0)
+	Register.Set R1        v.value(m3_reg.R1)
+	Register.Set R2        v.value(m3_reg.R2)
+	Register.Set R3        v.value(m3_reg.R3)
+	Register.Set R4        v.value(m3_reg.R4)
+	Register.Set R5        v.value(m3_reg.R5)
+	Register.Set R6        v.value(m3_reg.R6)
+	Register.Set R7        v.value(m3_reg.R7)
+	Register.Set R8        v.value(m3_reg.R8)
+	Register.Set R9        v.value(m3_reg.R9)
+	Register.Set R10       v.value(m3_reg.R10)
+	Register.Set R11       v.value(m3_reg.R11)
+	Register.Set R12       v.value(m3_reg.R12)
+	Register.Set R13       v.value(m3_reg.SP)
+	Register.Set LR        v.value(m3_reg.LR)
+	Register.Set PC        v.value(m3_reg.LR)
+	Register.Set xPSR      v.value(m3_reg.xPSR)
+	Register.Set MSP       v.value(m3_reg.MSP)
+	Register.Set PSP       v.value(m3_reg.PSP)
+	Register.Set PRIMASK   v.value(m3_reg.PRIMASK)
+	Register.Set BASEPRI   v.value(m3_reg.BASEPRI)
+	Register.Set FAULTMASK v.value(m3_reg.FAULTMASK)
+	Register.Set CONTROL   v.value(m3_reg.CONTROL)
+
+	WinCLEAR StackFrame
+	
+	;the first and second paramet is the location of upper left corner,
+	;and the third parament is the width of window,
+	;the fourth parement is the height of window.
+	WinPOS 5% 10% 40% 70% ,,, StackFrame
+	Frame.View /Locals /Caller
+	
+	RETURN
+)

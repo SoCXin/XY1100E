@@ -1,0 +1,65 @@
+; --------------------------------------------------------------------------------
+; @Title: FreeRTOS Demo for TRACE32 OS Awareness
+; @Description: 
+;   
+;   This batchfile loads all necessary files to demonstrate
+;   the OS Awareness for FreeRTOS on Xtensa.
+;   
+; @Keywords: Awareness, FreeRTOS 
+; @Author: ZDM
+; @Copyright: (C) 
+; --------------------------------------------------------------------------------
+
+
+
+SCREEN.ON
+AREA.RESet
+WinPAGE.RESet
+WinCLEAR
+WinPOS 10. 0. 150. 100. 0. 0. W006
+;AREA.view
+
+CD.PEDIT freertos.cmm
+
+; Debugger reset
+PRINT "resetting..."
+RESet
+SYStem.RESet
+
+; Initializing Debugger
+PRINT "initializing..."
+SYStem.CPU XGOLD726-LTX
+SYStem.Up
+SYSTEM.OPTION ENDIANESS LITTLE 
+
+; Load application
+PRINT "loading application..."
+
+OPEN #1 ./heap.txt /Create
+
+
+DATA.LOAD.ELF C:\T32\DumpFile\Xinyi_NBIoT_Master_Branch 
+DATA.LOAD.BINARY C:\T32\DumpFile\dram_3FFC0000.bin   	0x3FFC0000  /noclear
+DATA.LOAD.BINARY C:\T32\DumpFile\sram_dsp_50042000.bin  0x50047000  /noclear
+DATA.LOAD.BINARY C:\T32\DumpFile\sram_M3_20000000.bin   0x50000000  /noclear
+DATA.LOAD.BINARY C:\T32\DumpFile\backmem_50100000.bin   0x50100000  /noclear
+
+
+;DATA.LOAD.ELF C:\T32\DumpFile\Xinyi_NBIoT_Master_Branch 
+;DATA.LOAD.BINARY D:\0x3ffc0000_29800.bin  0x3FFC0000  /noclear
+;DATA.LOAD.BINARY D:\0x20042000_12000.bin  0x50047000  /noclear
+;DATA.LOAD.BINARY D:\0x2005d000_3000.bin   0x5005d000  /noclear
+;DATA.LOAD.BINARY D:\dsp_current_heap.bin    0x3FFF1180  /noclear 
+
+
+; Initialize RTOS support
+PRINT "initializing FreeRTOS support..."
+
+MENU.ReProgram ./FreeRTOS.men   ; load FreeRTOS menu
+
+if !OS.DIR(./.temp)
+	MKDIR ./.temp
+
+
+DODECRYPT   "zhudeming" ./freeRtos_Unwind.t32 2
+

@@ -1,0 +1,41 @@
+; --------------------------------------------------------------------------------
+; @Title: LiteOS specific menu
+; @Description: -
+; @Author: DIE ZDM
+; @Copyright: (c) 
+; --------------------------------------------------------------------------------
+; $Id: liteos.men 
+
+add
+menu
+(
+  popup "&LiteOS"
+  (
+    default
+    menuitem "Display &Tasks"
+	(	
+		DODECRYPT "zhudeming" ./LiteOS_Task.t32
+	)
+    menuitem "Display &Mutex" 
+	(
+		DODECRYPT "zhudeming" ./LiteOS_Mutex.t32
+	)	
+    menuitem "Display &Semaphore"
+	(
+	    DODECRYPT "zhudeming" ./LiteOS_Semaphore.t32
+	)
+    menuitem "Display &Queue"
+	(
+		DODECRYPT "zhudeming" ./LiteOS_Queue.t32
+	)	
+    menuitem "Display &Timer"
+	(	
+	   DODECRYPT "zhudeming" ./LiteOS_Tmr.t32
+	)
+	menuitem "Display &Heap"
+	(	
+	   DODECRYPT "zhudeming" ./LiteOS_Heapnew.t32
+	)
+  )
+)
+

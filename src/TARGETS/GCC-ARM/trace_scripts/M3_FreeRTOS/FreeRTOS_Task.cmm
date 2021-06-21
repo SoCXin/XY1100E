@@ -1,0 +1,559 @@
+; do Display Task
+GOSUB display_task
+ENDDO
+
+
+display_task:
+(
+	PRIVATE &NumOfThread &TaskHandlerList
+	GOSUB get_task_handler_list
+	ENTRY &NumOfThread &TaskHandlerList
+
+	&TaskNameLen=0xB
+	&PriorityLen=0x5
+	&TaskStateLen=0xC
+	&StackTypeLen=0xB
+	&TaskCtlBlockLen=0xB
+	&CurrentSPLen=0xB
+	&StackTopLen=0xB
+	&StackBottomLen=0xB
+	&StackSizeLen=0x7
+	&StackPercentLen=0x5
+	&BoxWidth=&NumOfThread+2
+	&MemberGap=0x1
+	
+	&TaskNameBoxLen=FORMAT.Decimal(2,&TaskNameLen)
+	&PriorityBoxLen=FORMAT.Decimal(2,&PriorityLen)
+	&TaskStateBoxLen=FORMAT.Decimal(2,&TaskStateLen)
+	&StackTypeBoxLen=FORMAT.Decimal(2,&StackTypeLen)
+	&TaskCtlBlockBoxLen=FORMAT.Decimal(2,&TaskCtlBlockLen)
+	&CurrentSPBoxLen=FORMAT.Decimal(2,&CurrentSPLen)
+	&StackTopBoxLen=FORMAT.Decimal(2,&StackTopLen)
+	&StackBottomBoxLen=FORMAT.Decimal(2,&StackBottomLen)
+	&StackSizeBoxLen=FORMAT.Decimal(2,&StackSizeLen)
+	&StackPercentBoxLen=FORMAT.Decimal(2,&StackPercentLen)
+	
+	&BoxWidthNum=FORMAT.Decimal(2,&BoxWidth)
+	
+	&TaskNameMemberLen=FORMAT.Decimal(2,&TaskNameLen-2*&MemberGap)
+	&PriorityMemberLen=FORMAT.Decimal(2,&PriorityLen-2*&MemberGap)
+	&TaskStateMemberLen=FORMAT.Decimal(2,&TaskStateLen-2*&MemberGap)
+	&StackTypeMemberLen=FORMAT.Decimal(2,&StackTypeLen-2*&MemberGap)
+	&TaskCtlBlockMemberLen=FORMAT.Decimal(2,&TaskCtlBlockLen-2*&MemberGap)
+	&CurrentSPMemberLen=FORMAT.Decimal(2,&CurrentSPLen-2*&MemberGap)
+	&StackTopMemberLen=FORMAT.Decimal(2,&StackTopLen-2*&MemberGap)
+	&StackBottomMemberLen=FORMAT.Decimal(2,&StackBottomLen-2*&MemberGap)
+	&StackSizeMemberLen=FORMAT.Decimal(2,&StackSizeLen-2*&MemberGap)
+	&StackPercentMemberLen=FORMAT.Decimal(2,&StackPercentLen-2*&MemberGap)
+	
+	&StepSize=0x1
+	&TaskNameBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&TaskNameMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&TaskNameLen+1
+	
+	&PriorityBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&PriorityMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&PriorityLen+1
+	
+	&TaskStateBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&TaskStateMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&TaskStateLen+1
+	
+	&StackTypeBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&StackTypeMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&StackTypeLen+1
+	
+	&TaskCtlBlockBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&TaskCtlBlockMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&TaskCtlBlockLen+1
+	
+	&CurrentSPBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&CurrentSPMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&CurrentSPLen+1
+	
+	&StackTopBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&StackTopMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&StackTopLen+1
+	
+	&StackBottomBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&StackBottomMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&StackBottomLen+1
+	
+	&StackSizeBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&StackSizeMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&StackSizeLen+1
+	
+	&StackPercentBoxPosition=FORMAT.Decimal(2,&StepSize)
+	&StackPercentMemberPosition=FORMAT.Decimal(2,&StepSize+&MemberGap)
+	&StepSize=&StepSize+&StackPercentLen+1
+	
+	;PRIVATE &DrawLine &StartLen
+	PRIVATE &StartLen &StartLenDec &pxCurrentTCB
+	
+	&DrawLine=0x0
+	&StartLen=0x0
+	
+	OPEN #1 task_dialog.dlg /Create
+	CLOSE #1
+	
+	GOSUB dialog_show_title &DrawLine
+	
+	RePeaT &NumOfThread
+	(
+		&StartLenDec=CONVert.HEXTOINT(&StartLen)
+		&StartLen=&StartLen+0xA
+		&pxCurrentTCB=STRing.MID("&TaskHandlerList",&StartLenDec,10.)
+		
+		&DrawLine=&DrawLine+0x1
+		
+		GOSUB dialog_show_one_line &pxCurrentTCB &DrawLine
+	)
+	
+	;WINPOS 30% 10% 51% 60%
+	AREA.Delete task_window
+	AREA.Create task_window ;create a named area that is invisible
+	AREA.Select task_window ;select this area for output
+	;DIALOG.AREA task_window task_dialog.dlg
+	DIALOG.View task_dialog.dlg
+	RM task_dialog.dlg
+	
+	RETURN
+)
+
+
+dialog_show_title:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &DrawLineNum
+	&DrawLineNum=FORMAT.Decimal(2,&AcceptParameter)
+	
+	OPEN #1 task_dialog.dlg /Write
+	
+	WRITE #1 "; '&+' allows you to pass the local macro to a dialog"
+	WRITE #1 "; block that is embedded in a *.cmm file"
+	WRITE #1 ";"
+	WRITE #1 "NAME ""WINDOW_TASK"""
+	WRITE #1 "HEADER ""TASK LIST"""
+	WRITE #1 ";"
+	WRITE #1 "; task name"
+	WRITE #1 "POS &TaskNameBoxPosition. &DrawLineNum. &TaskNameBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""TASK NAME"""
+	WRITE #1 "; task prioriry"
+	WRITE #1 "POS &PriorityBoxPosition. &DrawLineNum. &PriorityBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""PRI"""
+	WRITE #1 "; task state"
+	WRITE #1 "POS &TaskStateBoxPosition. &DrawLineNum. &TaskStateBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""TASK STATE"""
+	WRITE #1 "; stack type"
+	WRITE #1 "POS &StackTypeBoxPosition. &DrawLineNum. &StackTypeBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""STACK TYPE"""
+	WRITE #1 "; task tcb"
+	WRITE #1 "POS &TaskCtlBlockBoxPosition. &DrawLineNum. &TaskCtlBlockBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""TCB"""
+	WRITE #1 "; current SP"
+	WRITE #1 "POS &CurrentSPBoxPosition. &DrawLineNum. &CurrentSPBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""SP"""
+	WRITE #1 "; stack top"
+	WRITE #1 "POS &StackTopBoxPosition. &DrawLineNum. &StackTopBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""SP TOP"""
+	WRITE #1 "; stack bottom"
+	WRITE #1 "POS &StackBottomBoxPosition. &DrawLineNum. &StackBottomBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""SP BOTTOM"""
+	WRITE #1 "; stack size"
+	WRITE #1 "POS &StackSizeBoxPosition. &DrawLineNum. &StackSizeBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""SIZE"""
+	WRITE #1 "; stack percent"
+	WRITE #1 "POS &StackPercentBoxPosition. &DrawLineNum. &StackPercentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""%"""
+	WRITE #1 ";"
+	
+	CLOSE #1
+	
+	RETURN
+)
+
+
+dialog_show_one_line:
+(
+	ENTRY &AcceptParameter1 &AcceptParameter2
+	
+	&pxCurrentTCB=&AcceptParameter1
+	&DrawLineNum=FORMAT.Decimal(2,&AcceptParameter2)
+	
+	PRIVATE &TaskName &Priority &StackType &State &TaskCB &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+	GOSUB get_one_task_attribute &pxCurrentTCB
+	ENTRY &TaskName &Priority &StackType &State &TaskCB &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+	
+	OPEN #1 task_dialog.dlg /Write
+	
+	WRITE #1 "POS &TaskNameMemberPosition. &DrawLineNum. &TaskNameMemberLen. 1."
+	WRITE #1 "BUTTON &TaskName"
+	WRITE #1 "("
+	WRITE #1 "	GOSUB set_thread_register &TaskCB"
+	WRITE #1 ")"
+	WRITE #1 "POS &PriorityMemberPosition. &DrawLineNum. &PriorityMemberLen. 1."
+	WRITE #1 "TEXT FORMAT.Decimal(2,&Priority)"
+	WRITE #1 "POS &TaskStateMemberPosition. &DrawLineNum. &TaskStateMemberLen. 1"
+	WRITE #1 "TEXT ""&State"""
+	WRITE #1 "POS &StackTypeMemberPosition. &DrawLineNum. &StackTypeMemberLen. 1."
+	WRITE #1 "TEXT ""&StackType"""
+	WRITE #1 "POS &TaskCtlBlockMemberPosition. &DrawLineNum. &TaskCtlBlockMemberLen. 1."
+	WRITE #1 "BUTTON ""&TaskCB"""
+	WRITE #1 "("
+	WRITE #1 "	Var.View %m %s (TCB_t *)&TaskCB"
+	WRITE #1 ")"
+	WRITE #1 "POS &CurrentSPMemberPosition. &DrawLineNum. &CurrentSPMemberLen. 1."
+	WRITE #1 "BUTTON ""&CurrentSP"""
+	WRITE #1 "("
+	WRITE #1 "	Data.dump &CurrentSP /l /dialog"
+	WRITE #1 ")"
+	WRITE #1 "POS &StackTopMemberPosition. &DrawLineNum. &StackTopMemberLen. 1."
+	WRITE #1 "BUTTON ""&StackTop"""
+	WRITE #1 "("
+	WRITE #1 "	Data.dump &StackTop /l /dialog"
+	WRITE #1 "	;DIALOG.MESSAGE ""Can not click!!!"""
+	WRITE #1 ")"
+	WRITE #1 "POS &StackBottomMemberPosition. &DrawLineNum. &StackBottomMemberLen. 1."
+	WRITE #1 "BUTTON ""&StackBottom"""
+	WRITE #1 "("
+	WRITE #1 "	Data.dump &StackBottom /l /dialog"
+	WRITE #1 "	;DIALOG.OK ""Can not click!!!"""
+	WRITE #1 ")"
+	WRITE #1 "POS &StackSizeMemberPosition. &DrawLineNum. &StackSizeMemberLen. 1."
+	WRITE #1 ";TEXT FORMAT.Decimal(2,&StackSize)"
+	WRITE #1 "TEXT ""&StackSize"""
+	WRITE #1 "POS &StackPercentMemberPosition. &DrawLineNum. &StackPercentMemberLen. 1."
+	WRITE #1 "TEXT FORMAT.Decimal(3,&StackPercent)"
+	
+	CLOSE #1
+	
+	RETURN
+)
+
+
+get_task_handler_list:
+(
+	PRIVATE &pxCurrentList
+	
+	PRIVATE &TmpNumOfThread &TmpTaskHandlerList
+	
+	PRIVATE &NumOfThread &TaskHandlerList
+	
+	&NumOfThread=0
+	&TaskHandlerList=""
+
+	&xNumOfPriority=v.value(sizeof(pxReadyTasksLists))/v.value(sizeof(pxReadyTasksLists[0]))
+
+	&xTraverse=0
+
+	WHILE &xTraverse<&xNumOfPriority
+	(
+		&pxCurrentList=v.value(&pxReadyTasksLists[&xTraverse])
+		GOSUB get_one_list_task &pxCurrentList
+		ENTRY &TmpNumOfThread &TmpTaskHandlerList
+		
+		&NumOfThread=&NumOfThread+&TmpNumOfThread
+		&TaskHandlerList="&TaskHandlerList"+"&TmpTaskHandlerList"
+		
+		&xTraverse=&xTraverse+1
+	)
+	
+	&pxCurrentList=v.value(&xSuspendedTaskList)
+	GOSUB get_one_list_task &pxCurrentList
+	ENTRY &TmpNumOfThread &TmpTaskHandlerList
+	
+	&NumOfThread=&NumOfThread+&TmpNumOfThread
+	&TaskHandlerList="&TaskHandlerList"+"&TmpTaskHandlerList"
+
+	&pxCurrentList=v.value(pxDelayedTaskList)
+	GOSUB get_one_list_task &pxCurrentList
+	ENTRY &TmpNumOfThread &TmpTaskHandlerList
+	
+	&NumOfThread=&NumOfThread+&TmpNumOfThread
+	&TaskHandlerList="&TaskHandlerList"+"&TmpTaskHandlerList"
+	
+	&pxCurrentList=v.value(pxOverflowDelayedTaskList)
+	GOSUB get_one_list_task &pxCurrentList
+	ENTRY &TmpNumOfThread &TmpTaskHandlerList
+	
+	&NumOfThread=&NumOfThread+&TmpNumOfThread
+	&TaskHandlerList="&TaskHandlerList"+"&TmpTaskHandlerList"
+
+	&pxCurrentList=v.value(&xPendingReadyList)
+	GOSUB get_one_list_task &pxCurrentList
+	ENTRY &TmpNumOfThread &TmpTaskHandlerList
+	
+	&NumOfThread=&NumOfThread+&TmpNumOfThread
+	&TaskHandlerList="&TaskHandlerList"+"&TmpTaskHandlerList"
+
+	&pxCurrentList=v.value(&xTasksWaitingTermination)
+	GOSUB get_one_list_task &pxCurrentList
+	ENTRY &TmpNumOfThread &TmpTaskHandlerList
+	
+	&NumOfThread=&NumOfThread+&TmpNumOfThread
+	&TaskHandlerList="&TaskHandlerList"+"&TmpTaskHandlerList"
+	
+	RETURN &NumOfThread &TaskHandlerList
+)
+
+
+get_one_list_task:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentList
+	
+	PRIVATE &NumOfThread &TaskHandlerList
+	
+	&pxCurrentList=&AcceptParameter
+	
+	&NumOfThread=v.value(((List_t *)&pxCurrentList)->uxNumberOfItems)
+	
+	&pxListEnd=v.value(&(((List_t *)&pxCurrentList)->xListEnd))
+	&pxCurrentListItem=&pxListEnd
+
+	WHILE v.value(((ListItem_t *)&pxCurrentListItem)->pxNext)!=&pxListEnd
+	(
+		&pxCurrentListItem=v.value(((ListItem_t *)&pxCurrentListItem)->pxNext)
+		&pxCurrentTCB=v.value(((ListItem_t *)&pxCurrentListItem)->pvOwner)
+		
+		&TaskHandlerList="&TaskHandlerList"+"&pxCurrentTCB"
+	)
+	
+	RETURN &NumOfThread &TaskHandlerList
+)
+
+
+get_one_task_attribute:
+(
+	ENTRY &AcceptParameter
+
+	;use to save gosub return value
+	PRIVATE &TaskName &Priority &StackType &State &TaskCB &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+	
+	&TaskCB=&AcceptParameter
+	
+	GOSUB get_task_name &TaskCB
+	ENTRY &TaskName
+	
+	GOSUB get_task_priority &TaskCB
+	ENTRY &Priority
+	
+	GOSUB get_task_stack_type &TaskCB
+	ENTRY &StackType
+	
+	GOSUB get_task_state &TaskCB
+	ENTRY &State
+	
+	GOSUB get_task_stack &TaskCB
+	ENTRY &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+	
+	RETURN &TaskName &Priority &StackType &State &TaskCB &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+)
+
+
+get_task_name:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentTCB
+	
+	PRIVATE &pcTaskName &pxPrintName
+	
+	&pxCurrentTCB=&AcceptParameter
+	
+	&pcTaskName=v.value(((TCB_t *)&pxCurrentTCB)->pcTaskName)
+	
+	&pxPrintName=Data.STRing(D:&pcTaskName)
+	
+	RETURN "&pxPrintName"
+)
+
+
+get_task_priority:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentTCB
+	
+	PRIVATE &uxPriority
+	
+	&pxCurrentTCB=&AcceptParameter
+	
+	&uxPriority=v.value(((TCB_t *)&pxCurrentTCB)->uxPriority)
+	
+	RETURN &uxPriority
+)
+
+
+get_task_stack_type:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentTCB
+	
+	&pxCurrentTCB=&AcceptParameter
+	
+	&StackAttribute="Independent"
+	
+	RETURN &StackAttribute
+)
+
+
+get_task_state:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentTCB
+	
+	PRIVATE &xStateListItem &pxContainer &uxPriority
+	
+	PRIVATE &TaskState
+	
+	&pxCurrentTCB=&AcceptParameter
+	
+	&xStateListItem=v.value(&(((TCB_t *)&pxCurrentTCB)->xStateListItem))
+	
+	&pxContainer=v.value(((ListItem_t *)&xStateListItem)->pvContainer)
+	
+	&uxPriority=v.value(((TCB_t *)&pxCurrentTCB)->uxPriority)
+	
+	IF &pxContainer==v.value(&pxReadyTasksLists[&uxPriority])
+	(
+		IF &pxCurrentTCB==v.value(pxCurrentTCB)
+		(
+			&TaskState="Running"
+		)
+		ELSE
+		(
+			&TaskState="Ready"
+		)
+	)
+	ELSE IF &pxContainer==v.value(&xSuspendedTaskList)
+	(
+		&TaskState="Suspended"
+	)
+	ELSE IF &pxContainer==v.value(pxDelayedTaskList)
+	(
+		&TaskState="Delayed"
+	)
+	ELSE IF &pxContainer==v.value(pxOverflowDelayedTaskList)
+	(
+		&TaskState="Overflow Delayed"
+	)
+	ELSE IF &pxContainer==v.value(&xPendingReadyList)
+	(
+		&TaskState="Pending Ready"
+	)
+	ELSE IF &pxContainer==v.value(&xTasksWaitingTermination)
+	(
+		&TaskState="Waiting Termination"
+	)
+	ELSE
+	(
+		&TaskState="Error"
+	)
+	
+	RETURN &TaskState
+)
+
+
+get_task_stack:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentTCB &StackAddr &StackUsed
+	
+	PRIVATE &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+	
+	&pxCurrentTCB=&AcceptParameter
+	
+	&CurrentSP=v.value(((TCB_t *)&pxCurrentTCB)->pxTopOfStack)
+	&StackTop=v.value(((TCB_t *)&pxCurrentTCB)->pxStack)
+	&StackBottom=v.value(((TCB_t *)&pxCurrentTCB)->pxEndOfStack)
+	&StackSize=&StackBottom-&StackTop
+	
+	&StackAddr=&StackTop
+	WHILE &StackAddr<&CurrentSP
+	(
+		IF Data.Long(D:(&StackAddr))==0xA5A5A5A5
+		(
+			&StackAddr=&StackAddr+0x4
+			CONTinue
+		)
+		ELSE
+		(
+			GOTO exit_while_lable
+		)
+	)
+	
+exit_while_lable:
+	&StackUsed=&StackBottom-&StackAddr
+	&StackPercent=&StackUsed*0x64/&StackSize
+	
+	RETURN &CurrentSP &StackTop &StackBottom &StackSize &StackPercent
+)
+
+
+set_thread_register:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &pxCurrentTCB
+	
+	&pxCurrentTCB=&AcceptParameter
+	
+	IF &pxCurrentTCB==v.value(pxCurrentTCB)
+	(
+		;set all of the register of cpu, trace analyze the stack
+		;Register.Init
+		;Register.Reset
+		Register.Set R0        v.value(m3_reg.R0)
+		Register.Set R1        v.value(m3_reg.R1)
+		Register.Set R2        v.value(m3_reg.R2)
+		Register.Set R3        v.value(m3_reg.R3)
+		Register.Set R4        v.value(m3_reg.R4)
+		Register.Set R5        v.value(m3_reg.R5)
+		Register.Set R6        v.value(m3_reg.R6)
+		Register.Set R7        v.value(m3_reg.R7)
+		Register.Set R8        v.value(m3_reg.R8)
+		Register.Set R9        v.value(m3_reg.R9)
+		Register.Set R10       v.value(m3_reg.R10)
+		Register.Set R11       v.value(m3_reg.R11)
+		Register.Set R12       v.value(m3_reg.R12)
+		Register.Set R13       v.value(m3_reg.SP)
+		Register.Set LR        v.value(m3_reg.LR)
+		Register.Set PC        v.value(m3_reg.LR)
+		Register.Set xPSR      v.value(m3_reg.xPSR)
+	)
+	ELSE
+	(
+		&pxTopOfStack=v.value((((TCB_t *)&pxCurrentTCB)->pxTopOfStack))
+		
+		; D: it's the type of addrees
+		Register.Set R4    Data.Long(D:(&pxTopOfStack+0x00))
+		Register.Set R5    Data.Long(D:(&pxTopOfStack+0x04))
+		Register.Set R6    Data.Long(D:(&pxTopOfStack+0x08))
+		Register.Set R7    Data.Long(D:(&pxTopOfStack+0x0C))
+		Register.Set R8    Data.Long(D:(&pxTopOfStack+0x10))
+		Register.Set R9    Data.Long(D:(&pxTopOfStack+0x14))
+		Register.Set R10   Data.Long(D:(&pxTopOfStack+0x18))
+		Register.Set R11   Data.Long(D:(&pxTopOfStack+0x1C))
+		Register.Set R0    Data.Long(D:(&pxTopOfStack+0x20))
+		Register.Set R1    Data.Long(D:(&pxTopOfStack+0x24))
+		Register.Set R2    Data.Long(D:(&pxTopOfStack+0x28))
+		Register.Set R3    Data.Long(D:(&pxTopOfStack+0x2C))
+		Register.Set R12   Data.Long(D:(&pxTopOfStack+0x30))
+		Register.Set LR    Data.Long(D:(&pxTopOfStack+0x34))
+		Register.Set PC    Data.Long(D:(&pxTopOfStack+0x38))
+		Register.Set xPSR  Data.Long(D:(&pxTopOfStack+0x3C))
+		Register.Set SP    (&pxTopOfStack+0x40)
+	)
+	
+	WinCLEAR StackFrame
+	WinPOS 5% 10% 40% 70% ,,, StackFrame
+	Frame.View /Locals /Caller
+	
+	RETURN
+)

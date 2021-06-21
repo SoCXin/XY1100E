@@ -1,0 +1,98 @@
+; do Display Heap
+GOSUB display_heap
+ENDDO
+
+display_heap:
+(
+	WINPOS 30% 10% 55% 60%
+	
+	AREA.Delete heap_used_window
+	AREA.Create heap_used_window 2000. 2000.
+	;AREA.Select heap_used_window
+	AREA.View heap_used_window
+	
+	GOSUB display_used_heap_list
+	GOSUB display_free_heap_list
+	RETURN
+)
+
+
+display_used_heap_list:
+(
+	PRIVATE &HeapUsed &NextBlock
+	
+	&HeapUsed=v.value(&xHeapUsed)
+	&NextBlock=v.value(((BlockLink_t *)&HeapUsed)->pxNextBlock)
+	
+	PRIVATE &ActualBlockSize &AlignWastedSize &UsedFlag &File &Line
+	
+	PRIVATE &Sequence
+	&Sequence=0
+	
+	PRINT " "
+	PRINT "Heap Used List:"
+	
+	WHILE &NextBlock!=0
+	(
+		GOSUB get_one_Block_msg &NextBlock
+		ENTRY &ActualBlockSize &AlignWastedSize &UsedFlag &File &Line
+		
+		&Sequence=&Sequence+1
+		
+		PRINT FORMAT.Decimal(4,&Sequence)+"  BlockAddr: &NextBlock"+"  ActualBlockSize: "+FORMAT.Decimal(7,&ActualBlockSize)+"  AlignWastedSize: "+FORMAT.Decimal(3,&AlignWastedSize)+FORMAT.STRing("  FileName: "+&File,18,' ')+"  LineNum: "+FORMAT.Decimal(5,&Line)
+		
+		&NextBlock=v.value(((BlockLink_t *)&NextBlock)->pxNextBlock)
+	)
+	
+	RETURN
+)
+
+display_free_heap_list:
+(
+	PRIVATE &HeapUsed &NextBlock
+	
+	&HeapUsed=v.value(&xStart)
+	&NextBlock=v.value(((BlockLink_t *)&HeapUsed)->pxNextBlock)
+	
+	PRIVATE &ActualBlockSize &AlignWastedSize &UsedFlag &File &Line
+	
+	PRIVATE &Sequence
+	&Sequence=0
+	
+	PRINT " "
+	PRINT "Heap Free List:"
+	
+	WHILE &NextBlock!=v.value(pxEnd)
+	(
+		GOSUB get_one_Block_msg &NextBlock
+		ENTRY &ActualBlockSize &AlignWastedSize &UsedFlag &File &Line
+		
+		&Sequence=&Sequence+1
+		
+		PRINT FORMAT.Decimal(4,&Sequence)+"  BlockAddr: &NextBlock"+"  ActualBlockSize: "+FORMAT.Decimal(7,&ActualBlockSize)+"  AlignWastedSize: "+FORMAT.Decimal(3,&AlignWastedSize)+FORMAT.STRing("  FileName: "+&File,18,' ')+"  LineNum: "+FORMAT.Decimal(5,&Line)
+		
+		&NextBlock=v.value(((BlockLink_t *)&NextBlock)->pxNextBlock)
+	)
+	
+	RETURN
+)
+
+get_one_Block_msg:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &CurrentBlock
+	&CurrentBlock=&AcceptParameter
+	
+	PRIVATE &ActualBlockSize &AlignWastedSize &UsedFlag &File &Line
+	PRIVATE &FileAddress
+	
+	&ActualBlockSize=V.VALUE(((BlockLink_t *)&CurrentBlock)->xActualBlockSize)
+	&AlignWastedSize=V.VALUE(((BlockLink_t *)&CurrentBlock)->xAlignWastedSize)
+	&UsedFlag=V.VALUE(((BlockLink_t *)&CurrentBlock)->xUsedFlag)
+	&FileAddress=V.VALUE(((BlockLink_t *)&CurrentBlock)->pcFile)
+	&File=Data.STRing(D:&FileAddress)
+	&Line=V.VALUE(((BlockLink_t *)&CurrentBlock)->xLine)
+	
+	RETURN &ActualBlockSize &AlignWastedSize &UsedFlag "&File" &Line
+)

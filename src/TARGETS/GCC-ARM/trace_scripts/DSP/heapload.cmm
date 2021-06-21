@@ -1,0 +1,38 @@
+
+;AREA.Clear  LiteOS_Heap
+
+;AREA.Close  LiteOS_Heap
+
+
+AREA.Create LiteOS_Heap 300  5000
+
+AREA.view LiteOS_Heap
+
+Local &pnode &used
+
+Local &addr &filename &taskname &linenum &size &sizetotal &sizetotal2
+
+Local &id &id2
+
+
+Local &OriginAddr &LoadAddr &LoadAddr2 &LoadAddr3
+
+&id=0
+&id2=0
+
+OPEN #1 ./heap.txt /Create
+
+
+&OriginAddr=v.value(Current_Tcb_Addr)
+
+&LoadAddr=FORMAT.Hex(3,&OriginAddr)
+&LoadAddr2=&LoadAddr>>6
+&LoadAddr3=&LoadAddr2<<6
+&LoadAddr3=&LoadAddr3-0x1000
+
+print "DATA.LOAD.BINARY D:\dsp_current_heap.bin    0x"+FORMAT.Hex(3,&LoadAddr3)+"  /noclear"
+
+WRITE #1 FORMAT.Hex(3,&OriginAddr)
+
+
+CLOSE #1

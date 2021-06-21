@@ -1,0 +1,70 @@
+; --------------------------------------------------------------------------------
+; @Title: FreeRTOS Demo for TRACE32 OS Awareness
+; @Description:
+;
+;   This batchfile loads all necessary files to demonstrate
+;   the OS Awareness for FreeRTOS on Xtensa.
+;
+; @Keywords: Awareness, FreeRTOS
+; @Author: ZDM
+; @Copyright: (C)
+; --------------------------------------------------------------------------------
+
+
+
+SCREEN.ON
+AREA.RESet
+WinPAGE.RESet
+WinCLEAR
+WinPOS 10. 0. 150. 100. 0. 0. W006
+;AREA.view
+
+CD.PEDIT freertos.cmm
+
+; Debugger reset
+PRINT "resetting..."
+RESet
+SYStem.RESet
+
+; Initializing Debugger
+PRINT "initializing..."
+SYStem.CPU XGOLD726-LTX
+SYStem.Up
+SYSTEM.OPTION ENDIANESS LITTLE
+
+; Load application
+PRINT "loading application..."
+
+OPEN #1 ./heap.txt /Create
+
+
+DATA.LOAD.ELF C:\T32\DumpFile\Xinyi_NBIoT_Master_Branch
+
+DATA.LOAD.BINARY C:\T32\DumpFile\NV_ringbuf.bin   0x50019000  /noclear
+
+DATA.LOAD.BINARY C:\T32\DumpFile\dsp_dram.bin     0x3FFD3000  /noclear
+
+DATA.LOAD.BINARY C:\T32\DumpFile\dsp_sram.bin     0x50000000  /noclear
+
+
+
+; Initialize RTOS support
+PRINT "initializing FreeRTOS support..."
+
+MENU.ReProgram ./FreeRTOS.men   ; load FreeRTOS menu
+
+if !OS.DIR(./.temp)
+	MKDIR ./.temp
+
+&OriginAddr=v.value(Current_Tcb_Addr)
+
+&LoadAddr=FORMAT.Hex(3,&OriginAddr)
+&LoadAddr2=&LoadAddr>>6
+&LoadAddr3=&LoadAddr2<<6
+&LoadAddr3=&LoadAddr3-0x1000
+
+DATA.LOAD.BINARY C:\T32\DumpFile\dsp_current.bin    &LoadAddr3  /noclear
+
+;DODECRYPT   "zhudeming" ./heapload.t32
+DODECRYPT   "zhudeming" ./freeRtos_Unwind.t32 2
+

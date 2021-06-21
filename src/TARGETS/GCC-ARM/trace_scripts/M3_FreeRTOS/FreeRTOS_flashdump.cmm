@@ -1,0 +1,58 @@
+; --------------------------------------------------------------------------------
+; @Title: FreeRTOS Demo for TRACE32 OS Awareness
+; @Description:
+;
+;   This batchfile loads all necessary files to demonstrate
+;   the OS Awareness for FreeRTOS on CortexM3.
+;
+; @Keywords: Awareness, FreeRTOS, RTOS
+; @Author: LinJiajun
+; @Copyright: (C)
+; --------------------------------------------------------------------------------
+
+
+SCREEN.ON
+AREA.RESet
+;WinPAGE.RESet
+;WinCLEAR
+;WinPOS 0. 27. 63. 7. 0. 0. W006
+;AREA.view
+
+; Debugger reset
+PRINT "Resetting..."
+RESet
+SYStem.RESet
+
+; Initializing Debugger
+PRINT "Set kernel architecture..."
+SYStem.CPU CortexM3
+SYStem.Up
+
+; load elf and binary files
+PRINT "Load elf and bin files..."
+
+Data.LOAD.Elf C:\T32\DumpFile\xinyiNBSoC.elf
+
+DATA.LOAD.BINARY C:\T32\DumpFile\m3_main_stack.bin   0x2005F000  /noclear
+DATA.LOAD.BINARY C:\T32\DumpFile\ringbuf.bin   0x2001B000  /noclear
+DATA.LOAD.BINARY C:\T32\DumpFile\m3_base.bin   0x2001D000  /noclear
+
+&OriginAddr=v.value(Current_Stack_Addr)
+
+&LoadAddr2=&OriginAddr/0x1000
+&LoadAddr3=&LoadAddr2*0x1000
+
+
+DATA.LOAD.BINARY C:\T32\DumpFile\m3_current_stack.bin   &LoadAddr3  /noclear
+
+
+; initialize RTOS support
+PRINT "Initializing FreeRTOS support..."
+;TASK.CONFIG FreeRTOS           ; load FreeRTOS awareness (freertos.t32)
+MENU.ReProgram ./FreeRTOS.men   ; load FreeRTOS menu (freertos.men)
+;HELP.FILTER.Add rtosfreertos   ; add FreeRTOS awareness manual to filtered help
+; analyze current stack
+;DO ./FreeRTOS_MainStack.cmm
+DODECRYPT "LinJiajun"  ./FreeRTOS_MainStack.t32
+
+PRINT "Mian script end"

@@ -1,0 +1,49 @@
+/** 
+* @file        出厂NV.txt
+* @copyright   Copyright (c) 2020-2030  河北骑士智能科技有限公司
+*
+*
+* @brief 平台出厂NV重要参数，主要关注用户调试过程中修改开关的一些重要NV，可以通过"AT+NV=SET,<param>,<value>"命令进行修改具体参数，然后"AT+NV=SAVE"重启后生效
+* @attention   
+下述列出的产线NV参数仅是调试过程中的重要参数，完整的产线NV，请参看文档"芯翼XY1100 产品NV配置说明"
+* @note  用户必须确保deepsleep_delay、off_debug、user_dog_time、hard_dog_time、watchdog_enable等重要参数的准确设置，如有疑问，必须与FAE联系！
+* @par
+* <table>
+* <tr><th>参数名     <th>变量名      <th>Debug值  <th>默认值    <th>含义                                                           <th>使用说明                                                                                                        </tr>
+* <tr><td>WORKMODE    <td>work_mode   <td>0        <td>?        <td> 设置上电启动时的工作模式。\n 0表示双核启动，常见于外部MCU产品形态；
+* 1表示仅启动M3核，后续根据需要再动态启动DSP核，常见于OPENCPU产品形态。   
+* <td>对于部分用户提出的与平台默认功能相左的实现方案，平台通过该位图来区分不同的实现，如果用户没有提出特别需求，默认值即可。    </tr>
+* <tr><td>DEEPSLEEP    <td>deepsleep_enable   <td>1        <td>?        <td> 设置深睡模式的开关。\n 0表示关闭，常见于长供电场景，WORKLCOK无效；
+* 1表示打开，用于功耗敏感型产品。<td>对于部分用户提出的与平台默认功能相左的实现方案，平台通过该位图来区分不同的实现，如果用户没有提出特别需求，默认值即可。</tr>
+* <td>对于终端触发的数据通信产品，如果确保收完下行数据后才会执行深睡操作，可将该值设0，以加快深睡流程，降低功耗。</tr>
+* <tr><td>DEEPSLEEPDELAY    <td>deepsleep_delay   <td>0        <td>30        <td> 单位为秒，指示当外部PIN中断唤醒系统后，供用户触发动作申请锁的超时时长，一旦超时未申请锁，则会自动深睡；
+* <td> 考虑到可能存在的异常脉冲触发WAKEUP_PIN中断唤醒异常，该值必须设置不为0。   </tr>
+* <tr><td>BACKUPKEEP    <td>keep_retension_mem   <td>0        <td>?        <td> 是否保持retension memory不断电。
+* 该4K内存保存了平台的易变NV，每次工作都会发生变化。对于不支持断电模式产品，可以设置该值为1，以减少写flash的次数，避免坏块风险.   
+* <td> 如果产品使用周期小于3小时，建议设为1，以防止flash坏块的风险。设为1，深睡模式下，该内存会额外增加0.3uA的电流开销。   </tr>  
+* <tr><td>TAURTC    <td>set_tau_rtc   <td>1        <td>?        <td> 1表示设置TAU超时唤醒RTC，进而会造成深睡时因为TCU超时而唤醒执行TAU动作.   
+* <td> 如果客户不需要执行周期性的TAU更新，可以设为0关闭TAU动作，进而达到省电目的 </tr>  
+* <tr><td>CLOSEURC    <td>close_urc   <td>0        <td>1        <td> 1表示过滤掉底板MCU不需要的一些主动上报AT命令URC，以降低功耗开销.   
+* <td> 用户可以在drop_unused_urc接口中添加自己不感兴趣的URC过滤，以降低功耗 </tr> 
+* <tr><td>UARTSET    <td>uart_rate   <td>4        <td>4        <td> 1表示释放锁后存在下行突发数据可能芯片默认AT串口波特率为9600，用户可以修改，以2400倍数方式赋值.   
+* <td> 支持通过“AT+UARTSET”动态修改波特率，但需要通过“AT”“OK”进行握手  </tr>  
+* <tr><td>LOG    <td>log   <td>1        <td>0        <td> 芯片log的开关
+* 0表示关闭所有log；\n 1表示打开所有log；\n 2表示仅输出M3核log；\n 3表示仅输出M3核上xy_printf接口对应的log，即用户log。   
+* <td> 为了降低功耗，减少不必要内存开销，建议用户关闭log输出；若调试需要，可通过AT命令动态打开   </tr>  
+* <tr><td>CLOSEDEBUG    <td>off_debug   <td>0        <td>1        <td> debug调试开关，产品化测试时关闭.    <td> 生产时必须关闭该值   </tr>
+* <tr><td>USERDOG    <td>user_dog_time   <td>0        <td>?        <td> 软看门狗超时时长，单位为分钟，系统上电时会开启软定时，超时后调用用户回调接口user_dog_timeout_hook.    
+* <td> 对于不对芯翼芯片执行断电的产品，必须设置该值，以防止异常时无法深睡造成的功耗过高。   </tr>  
+* <tr><td>WDT    <td>watchdog_enable   <td>0        <td>1        <td> 硬看门狗开关，秒级喂狗，若超过2分钟没有喂狗，则触发硬重启。   <td> 生产时必须打开该值   </tr>  
+* <tr><td>DUMPFLASH    <td>dump_mem_into_flash   <td>1        <td>0        <td> 死机时将RAM内存保存到FOTA差分包所在的flash区域，以便导出定位.    
+* <td> 死机时写flash再次发生异常，将会造成看门狗失效风险，产线上禁止打开   </tr>  
+* <tr><td>SIMVCC    <td>sim_vcc_ctrl   <td>0        <td>0        <td> SIM卡供电参数；
+* 0表示仅支持3伏；\n 1表示仅支持1.8伏；\n 2表示自适应，优先1.8伏.    <td> 若用户为XO晶振，且需要SIM卡自适应功能，设为2即可   </tr>  
+* <tr><td>    <td>resetctl   <td>1        <td>?        <td> 芯片上的复位／唤醒引脚，
+* 0表示高电平大于20毫秒为复位，小于20毫秒为唤醒；\n 1表示高电平大于6秒为复位，小于6秒为唤醒.    
+* <td> 用户根据产品形态和研发阶段，通过AT命令：AT+RESETCTL=<val>来进行配置。   </tr>  
+* <tr><td>MAH    <td>min_mah   <td>0        <td>?        <td> FOTA升级所需的最低电池容量，若小于该容量，则放弃升级.    <td> 电池电量需要由用户提供函数具体实现   </tr>  
+* <tr><td>VBAT    <td>min_mVbat   <td>0        <td>?        <td> 芯片正常工作所需的最低电池电压，若小于该值，则不能进行flash的擦写操作，以防止数据异常.   
+* <td> 接口内部实现考虑了抖动情况   </tr>  
+*
+**********************************************************************************
+*/

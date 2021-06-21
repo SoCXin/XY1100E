@@ -1,0 +1,53 @@
+#ifndef _XY_SUBSYS_CNF_
+#define _XY_SUBSYS_CNF_
+#include "TypeDefine.h"
+#include "xy_nbiot_msg_define.h"
+
+#ifdef XY_BUILT_XML
+// build xml
+typedef struct 
+{
+	int cell_size;
+	OM_CELL_QUAL_INFO_STRU cell_info[4];
+}OM_CELL_QUAL_INFO_ARR_STRU;
+
+typedef struct
+{
+    unsigned short      usHSN;
+    unsigned short      usSFN;
+    unsigned char       ucSubf;
+    unsigned char       ucSN;    //sequence number
+    unsigned short      usLen;
+    unsigned char       ucDataType;
+    unsigned char       ucPadding;
+    unsigned char       aucRawData[0];
+}PHY_RAW_DATA_t;
+#endif
+
+typedef enum
+{
+    XY_SUBSYS_CAIL_CNF_BASE = XY_SUBSYS_CAIL_CNF << 16,
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_START_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_STOP_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_AFC_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_APC_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_AGC_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_DC_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_IMAGE_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_DCCAL_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_CHECK_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_CALI_SWTICHMS_CNF, SUBSYS_CALI_CMM_CNF_t),
+    
+
+    XY_SUBSYS_TEXT_CNF_BASE = XY_SUBSYS_TEXT_CNF << 16,
+    MSG_SHOW_NAME(XY_SUBSYS_TEXT_TXCFG_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_TEXT_RXCFG_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_TEXT_START_CNF, SUBSYS_CALI_CMM_CNF_t),
+    MSG_SHOW_NAME(XY_SUBSYS_TEXT_STOP_CNF, SUBSYS_CALI_CMM_CNF_t),
+
+	XY_SUBSYS_CNF_BASE = XY_SYSSUB_CNF << 16,
+	MSG_SHOW_NAME(XY_SUBSYS_CELL_INFO_CNF, OM_CELL_QUAL_INFO_ARR_STRU),
+	MSG_SHOW_NAME(PHY_RAW_DATA, PHY_RAW_DATA_t),
+}XY_SUBSYS_CNF;
+
+#endif

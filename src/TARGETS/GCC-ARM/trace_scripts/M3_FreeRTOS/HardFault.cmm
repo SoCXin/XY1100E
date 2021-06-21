@@ -1,0 +1,307 @@
+; do Display Task
+GOSUB display_hardfault
+ENDDO
+
+
+display_hardfault:
+(
+	; 设置每个属性列的宽度
+	&R0Len=0xA
+	&R1Len=0xA
+	&R2Len=0xA
+	&R3Len=0xA
+	&R12Len=0xA
+	&LRLen=0xC
+	&PCLen=0xC
+	&xPSRLen=0xA
+	; Box的宽度，即最多显示多少行
+	&BoxWidth=1+2
+	; 两个列之间的间隙
+	&MemberGap=0x1
+	; 中间显示文件的名称
+	&DialogFileName="hardfault_dialog.dlg"
+	
+	;PRIVATE &DrawLine &StartLen
+	PRIVATE &StartLen &StartLenDec &pxCurrentTimer
+	
+	&DrawLine=0x0
+	&StartLen=0x0
+	
+	; 创建 &DialogFileName 的文件，用来显示界面。会覆盖同名文件
+	OPEN #1 &DialogFileName /Create
+	CLOSE #1
+	
+	; 将界面头部信息写入文件
+	GOSUB dialog_show_hardfault_title &DrawLine
+	
+	; 显示中断压栈信息
+	&DrawLine=&DrawLine+0x1
+	GOSUB dialog_show_hardfault_one_line &DrawLine
+	
+	; 显示一些其他信息
+	&DrawLine=&DrawLine+0x1
+	GOSUB dialog_show_hardfault_others &DrawLine
+	
+	;DIALOG.END
+	
+	;WinPOS ,,,,,, task_window
+	;AREA.Delete task_window
+	;AREA.Create task_window ;create a named area that is invisible
+	;AREA.Select task_window ;select this area for output
+	;DIALOG.AREA task_window &DialogFileName
+	DIALOG.View &DialogFileName
+	RM &DialogFileName
+	
+	RETURN
+)
+
+
+dialog_show_hardfault_title:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &DrawLineNum
+	&DrawLineNum=FORMAT.Decimal(2,&AcceptParameter)
+	
+	PRIVATE &CurrentSize &CurrentBoxPosition &CurrentBoxLen &BoxWidthNum
+	
+	&CurrentSize=0
+	&BoxWidthNum=FORMAT.Decimal(2,&BoxWidth)
+	
+	; 以写入的方式打开文件
+	OPEN #1 &DialogFileName /Write
+	
+	; WRITE 是以追加的方式写在文件的末尾
+	; WRITE 的双引号内部是字符，内存也需要写入双引号时，需要两个双引号，如 "该行写入""测试"""
+	
+	WRITE #1 "; '&+' allows you to pass the local macro to a dialog"
+	WRITE #1 "; block that is embedded in a *.cmm file"
+	WRITE #1 ";"
+	WRITE #1 "NAME ""WINDOW_HARDFAULT"""
+	WRITE #1 "HEADER ""HARDFAULT LIST"""
+	WRITE #1 ";"
+	
+	; 对每一列的控件计算其尺寸，尺寸定义在调用这个函数的地方
+	
+	WRITE #1 "; Register R0"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&R0Len)
+	&CurrentSize=&CurrentSize+&R0Len+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""R0"""
+	
+	WRITE #1 "; Register R1"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&R1Len)
+	&CurrentSize=&CurrentSize+&R1Len+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""R1"""
+	
+	WRITE #1 "; Register R2"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&R2Len)
+	&CurrentSize=&CurrentSize+&R2Len+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""R2"""
+	
+	WRITE #1 "; Register R3"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&R3Len)
+	&CurrentSize=&CurrentSize+&R3Len+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""R3"""
+	
+	WRITE #1 "; Register R12"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&R12Len)
+	&CurrentSize=&CurrentSize+&R12Len+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""R12"""
+	
+	WRITE #1 "; Register LR"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&LRLen)
+	&CurrentSize=&CurrentSize+&LRLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""LR"""
+	
+	WRITE #1 "; Register PC"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&PCLen)
+	&CurrentSize=&CurrentSize+&PCLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""PC"""
+	
+	WRITE #1 "; Register xPSR"
+	&CurrentBoxPosition=FORMAT.Decimal(2,&CurrentSize)
+	&CurrentBoxLen=FORMAT.Decimal(2,&xPSRLen)
+	&CurrentSize=&CurrentSize+&xPSRLen+0x1
+	WRITE #1 "POS &CurrentBoxPosition. &DrawLineNum. &CurrentBoxLen. &BoxWidthNum."
+	WRITE #1 "BOX ""xPSR"""
+	
+	WRITE #1 ";"
+	WRITE #1 ";"
+	
+	; 关闭文件
+	CLOSE #1
+	
+	RETURN
+)
+
+
+dialog_show_hardfault_one_line:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &DrawLineNum
+	&DrawLineNum=FORMAT.Decimal(2,&AcceptParameter)
+	
+	PRIVATE &R0 &R1 &R2 &R3 &R12 &LR &PC &xPSR
+	GOSUB get_hardfault_push_register
+	ENTRY &R0 &R1 &R2 &R3 &R12 &LR &PC &xPSR
+	
+	PRIVATE &CurrentMemberPosition &CurrentMemberLen &CurrentSize
+	
+	&CurrentSize=0
+	
+	; 以写入的方式打开文件
+	OPEN #1 &DialogFileName /Write
+	
+	; 把设置线程寄存器的实现移动到BUTTON的功能中，替换原来的调用函数，直接调用函数会找不到symbol(符号)
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&R0Len-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&R0Len+1
+	WRITE #1 "; push register R0"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT ""&R0"""
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&R1Len-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&R1Len+1
+	WRITE #1 "; push register R1"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT ""&R1"""
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&R2Len-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&R2Len+1
+	WRITE #1 "; push register R2"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT ""&R2"""
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&R3Len-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&R3Len+1
+	WRITE #1 "; push register R3"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1"
+	WRITE #1 "TEXT ""&R3"""
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&R12Len-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&R12Len+1
+	WRITE #1 "; push register R12"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT ""&R12"""
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&LRLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&LRLen+1
+	WRITE #1 "; push register LR"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "BUTTON ""&LR"""
+	WRITE #1 "("
+	WRITE #1 "	Break.Set &LR"
+	WRITE #1 "	Break.List"
+	WRITE #1 ")"
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&PCLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&PCLen+1
+	WRITE #1 "; push register PC"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "BUTTON ""&PC"""
+	WRITE #1 "("
+	WRITE #1 "	Break.Set &PC"
+	WRITE #1 "	Break.List"
+	WRITE #1 ")"
+	
+	&CurrentMemberPosition=FORMAT.Decimal(2,&CurrentSize+&MemberGap)
+	&CurrentMemberLen=FORMAT.Decimal(2,&xPSRLen-2*&MemberGap)
+	&CurrentSize=&CurrentSize+&xPSRLen+1
+	WRITE #1 "; push register xPSR"
+	WRITE #1 "POS &CurrentMemberPosition. &DrawLineNum. &CurrentMemberLen. 1."
+	WRITE #1 "TEXT ""&xPSR"""
+	
+	WRITE #1 ";"
+	WRITE #1 ";"
+	
+	; 关闭文件
+	CLOSE #1
+	
+	RETURN
+)
+
+
+dialog_show_hardfault_others:
+(
+	ENTRY &AcceptParameter
+	
+	PRIVATE &DrawLine &DrawLineNum &LineSize &LineSizeNum
+	
+	; 这里再加一防止覆盖BOX控件底端的线
+	&DrawLine=&AcceptParameter
+	&LineSize=&R0Len+1+&R1Len+1+&R2Len+1+&R3Len+1+&R12Len+1+&LRLen+1+&PCLen+1+&xPSRLen
+	&LineSizeNum=FORMAT.Decimal(2,&LineSize)
+	
+	; 以写入的方式打开文件
+	OPEN #1 &DialogFileName /Write
+	
+	PRIVATE &MFSR &BFSR &UFSR &HFSR &DFSR &MMAR &BFAR &AFAR
+	GOSUB get_hardfault_core_status
+	ENTRY &MFSR &BFSR &UFSR &HFSR &DFSR &MMAR &BFAR &AFAR
+	
+	&DrawLine=&DrawLine+1
+	&DrawLineNum=FORMAT.Decimal(2,&DrawLine)
+	WRITE #1 "; core fault register"
+	WRITE #1 "POS 0. &DrawLineNum. &LineSizeNum. 1."
+	WRITE #1 "TEXT ""MFSR:&MFSR   BFSR:&BFSR   UFSR:&UFSR   HFSR:&HFSR   DFSR:&DFSR   MMAR:&MMAR   BFAR:&BFAR   AFAR:&AFAR"""
+	
+	; 关闭文件
+	CLOSE #1
+	
+	RETURN
+)
+
+
+get_hardfault_push_register:
+(
+	PRIVATE &R0 &R1 &R2 &R3 &R12 &LR &PC &xPSR
+	
+	&R0=v.value(m3_push_reg->R0)
+	&R1=v.value(m3_push_reg->R1)
+	&R2=v.value(m3_push_reg->R2)
+	&R3=v.value(m3_push_reg->R3)
+	&R12=v.value(m3_push_reg->R12)
+	&LR=v.value(m3_push_reg->LR)
+	&PC=v.value(m3_push_reg->PC)
+	&xPSR=v.value(m3_push_reg->xPSR)
+	
+	RETURN &R0 &R1 &R2 &R3 &R12 &LR &PC &xPSR
+)
+
+
+get_hardfault_core_status:
+(
+	PRIVATE &MFSR &BFSR &UFSR &HFSR &DFSR &MMAR &BFAR &AFAR
+	
+	&MFSR=v.value(m3_fault.MFSR)
+	&BFSR=v.value(m3_fault.BFSR)
+	&UFSR=v.value(m3_fault.UFSR)
+	&HFSR=v.value(m3_fault.HFSR)
+	&DFSR=v.value(m3_fault.DFSR)
+	&MMAR=v.value(m3_fault.MMAR)
+	&BFAR=v.value(m3_fault.BFAR)
+	&AFAR=v.value(m3_fault.AFAR)
+	
+	RETURN &MFSR &BFSR &UFSR &HFSR &DFSR &MMAR &BFAR &AFAR
+)

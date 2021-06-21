@@ -1,0 +1,32 @@
+; FreeRTOS specific menu
+
+ADD
+MENU
+(
+	POPUP "&FreeRTOS"
+	(
+		MENUITEM "Display &Task"
+		(
+			DODECRYPT "LinJiajun" ./FreeRTOS_Task.t32
+			;DO ./FreeRTOS_Task.cmm
+		)
+		
+		MENUITEM "Display &Heap"
+		(
+			DODECRYPT "LinJiajun" ./FreeRTOS_Heap6.t32
+			;DO ./FreeRTOS_Heap6.cmm
+		)
+		
+		MENUITEM "Display &Timer"
+		(
+			DODECRYPT "LinJiajun" ./FreeRTOS_Timer.t32
+			;DO ./FreeRTOS_Timer.cmm
+		)
+		
+		MENUITEM "Display &HardFault"
+		(
+			DODECRYPT "LinJiajun" ./HardFault.t32
+			;DO ./HardFault.cmm
+		)
+	)
+)

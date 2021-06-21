@@ -1,0 +1,27 @@
+/** 
+* @file     AT指令集.txt
+*
+* @brief 用户调试相关的平台扩展AT命令，详细的平台扩展AT命令请参考文档《QS-100平台扩展AT指令》
+*
+* @attention  此处仅列出了重要的平台扩展AT命令，详细的平台扩展AT命令请参考文档《QS-100平台扩展AT指令》 \n
+*3GPP协议栈相关的AT命令请参考文档《芯翼XY1100 ModemAT指令集》\n
+*RF调试相关的AT命令请参考《芯翼XY1100_RF相关AT命令》
+*
+* @copyright   Copyright (c) 2020-2030  河北骑士智能科技有限公司
+*
+*
+* <table>
+* <tr><th>命令  <th>响应  <th>功能 </tr>
+* <tr><td>AT+NV=SET,<param>,<val>   <td>OK  <td>修改某个出厂NV参数，软重启后生效；具体参数请参看at_nv_req接口 </tr>
+* <tr><td>AT+FASTOFF   <td>OK  <td>该命令用于控制芯片毫秒级进入深睡（deepsleep）模式，流程不可逆转，收到+POWERDOWN主动上报后，必须给芯翼芯片断电。 
+*不得携带参数。 </tr>
+* <tr><td>AT+WORKLOCK=<n>   <td>OK  
+<td>该扩展AT命令为芯片工作锁，目的是在有业务流程进行时禁止芯片进入DEEPSLEEP深睡模式，以确保用户流程不被打断，且提高网络数据传输的实时性。待用户流程结束后，再输入“AT+WORKLOCK=0”，芯片内部会执行完整的PSM睡眠流程，随后芯片进入DEEPSLEEP深睡模式。
+*1表示申请锁，默认值
+*0表示释放锁</tr>
+* <tr><td>AT+NRB   <td>OK  <td>保存修改NV至flash,然后软重启 </tr>
+* <tr><td>AT+NV=SET,WDT,<enable>   <td>OK  <td>用于打开/关闭芯片看门狗功能。当关闭DEBUG模式（AT+NV=SET,CLOSEDEBUG,1）时，开启看门狗功能，若发生死机，硬件看门狗将复位芯片。重启后只保存出厂NV，并清除所有工作态NV。 </tr>
+* <tr><td>AT+NV=SET,DIV,hclk_param, pclk_param   <td>OK  <td>用于调整系统时钟频率，参数为分频系数。hclk_param默认为10，可使用4，5，6，7，8，10，12，16。系统主频计算公式为 系统主频 = 391.68MHz / hclk_div。pclk_param为外设分频系数，目前只支持1</tr>
+* <tr><td>AT+NV=GET,DIV   <td>hclk_param, pclk_param  <td>获取分频系数。hclk_param为系统分频系数。系统主频计算公式为：系统主频 = 391.68MHz / hclk_div。pclk_param为外设分频系数，目前只支持1</tr>
+**********************************************************************************
+*/
