@@ -2,7 +2,7 @@
 
 [![sites](http://182.61.61.133/link/resources/SoC.png)](http://www.SoC.Xin)
 
-* [xinyisemi](http://www.xinyisemi.com)：[Cortex-M4](https://github.com/SoCXin/Cortex)
+* [xinyisemi](http://www.xinyisemi.com)：[Cortex-M3](https://github.com/SoCXin/Cortex)
 * [L5R5](https://github.com/SoCXin/Level)：120MHz, [2.46 CoreMark/MHz](https://www.eembc.org/coremark/scores.php)
 
 ## [简介](https://github.com/SoCXin/XY1100/wiki)
@@ -16,6 +16,7 @@
 * 灵敏度：< -134 dBm
 * 输出功率：23 dBm ± 2 dB
 * 690-960MHz，1.71-2.2GHz
+* 900K RAM (140K)
 
 ### [资源收录](https://github.com/SoCXin)
 
