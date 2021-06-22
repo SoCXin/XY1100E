@@ -3,13 +3,13 @@
 [![sites](http://182.61.61.133/link/resources/SoC.png)](http://www.SoC.Xin)
 
 * [xinyisemi](http://www.xinyisemi.com)：[Cortex-M3](https://github.com/SoCXin/Cortex)
-* [L5R5](https://github.com/SoCXin/Level)：120MHz, [2.46 CoreMark/MHz](https://www.eembc.org/coremark/scores.php)
+* [L5R5](https://github.com/SoCXin/Level)：39.168MHz, [130MIPS](https://www.eembc.org/coremark/scores.php)
 
 ## [简介](https://github.com/SoCXin/XY1100/wiki)
 
 [XY1100](https://github.com/SoCXin/XY1100) 首款集成CMOS PA的NB-IoT系统单芯片
 
-[![sites](docs/XY1100.png)](https://github.com/SoCXin/XY1100)
+<!-- [![sites](docs/XY1100.png)](https://github.com/SoCXin/XY1100) -->
 
 #### 关键特性
 
