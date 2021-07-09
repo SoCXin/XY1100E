@@ -4,9 +4,8 @@ Embedded压缩包文件用于构建编译环境，通过修改SDK文件中的bui
 
 编译后文件使用的注意事项：
 
-* 进入下载模式
-* 下载固件和打印日志使用的波特率921600，注意USB转串口的质量
-* AT固件默认波特率9600
+* 通过boot按键(GPIO_10)断电再上电进入下载模式
+* 如果一直是 Uart Receive Timeout，可能是你的串口工具问题
 
 
 ## [Logview_mini](https://github.com/SoCXin/XY1100/releases/download/1.0.0/Logview_mini.zip)

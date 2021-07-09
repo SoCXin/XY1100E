@@ -1,0 +1,1545 @@
+softVer:TAG_V1_0_8_5_SDK
+$I:1:S:DRV: tx open: freq = %d, cfo=%d
+$I:2:S:Crastal: ulCurRegVal:%d, sFreqErr: %d, ulFrequency: %d, sCalcPpm: %d, sResFreqErr:%d
+$I:3:S:BBPLL: ulCurRegVal:%d, ulSetRegVal:%d, slDetal: %d, sFreqErr: %d, ulFrequency: %d
+$I:4:S:DRV: TX idxLUT:%d, gainDVGA:%d, targetPowdBm: %d, gainFilter:%d, gainMixer:%d, gainPA:%d, usingTxNVFlag:%d
+$I:5:S:Task      CPU
+$I:6:S:%s    %u
+$I:7:S:%s    <1
+$I:8:S:Task   Stat   Priority   StackHighWater   Num
+$I:9:S:Task Run Time Record Start ...
+$I:10:S:Task   Run_Time   CPU
+$I:11:S:Current free heap: %u
+$I:12:S:MIN free heap: %u
+$I:13:S:Task  max_malloc_size  malloc_fail_times
+$I:14:S:getHeapHoldinfoFromxHold fail
+$I:15:S:TASK    HEAK_SIZE    BLOCK_CNT
+$I:16:S:%s    %u    %u
+$I:17:S:QUEUE    ITEM_SIZE    LENGTH    CURRENT_CNT    SEND_FAIL
+$I:18:S:%s    %u    %u    %u    %u
+$I:19:S:LPM_STANDBY_DBG %d %d %d %d %d %d %d
+$I:20:S:LPM_STANDBY %d %d %d %d %d %d
+$I:21:S:LPM_WFI %d %d %d
+$I:22:S:LPM_WFI %d
+$I:23:S:uSim ATR Failed
+$I:24:S:uSim ATR = %x,%x,%x,%x,%x,%x,%x,%x,%x,%x
+$I:25:S:uSim PPS config:F_div_D = %d, CLK_DIV = %d
+$I:26:S:uSim Not in T0 state
+$I:27:S:uSim T0_Cmd_Handler : current_procedure=%d,[CLA,INS,P1,P2,P3]=[%x,%x,%x,%x,%x],sw=[%x %x]
+$I:28:S:uSim SC7816_command Try again,[CLA,INS,P1,P2,P3]=[%x,%x,%x,%x,%x]
+$I:29:S:[LnbVos]pThreadId == NULL in OSAdpThreadCreate!
+$I:30:S:[LnbVos]cbFunName == NULL in OSAdpThreadCreate!
+$I:31:S:[LnbVos]pThreadId == NULL in OSAdpThreadDestroy!
+$I:32:S:[LnbVos]pThreadId == NULL in OSAdpThreadSuspend!
+$I:33:S:[LnbVos]pMsgQueueId == NULL in OSAdpCreMsgQue!
+$I:34:S:[LnbVos]MessageSize is wrong in OSAdpCreMsgQue!
+$I:35:S:[LnbVos]pMsgQueueId == NULL in OSAdpDelMsgQue!
+$I:36:S:[LnbVos]pMsgQueueId == NULL in OSAdpSendMsg!
+$I:37:S:[LnbVos]pMsgQueueId->xMsgHandle == NULL in OSAdpSendMsg!
+$I:38:S:[LnbVos]pMsg == NULL in OSAdpSendMsg!
+$I:39:S:[LnbVos]VOS Send Msg Failed: OS_ERR_PEVENT_NULL
+$I:40:S:[LnbVos]pMsgQueueId == NULL in OSAdpRcvMsg!
+$I:41:S:[LnbVos]pMsg == NULL in OSAdpRcvMsg!
+$I:42:S:[LnbVos]pMsgQueueId == NULL in OSAdpRcvMsgNoWait!
+$I:43:S:[LnbVos]pMsg == NULL in OSAdpRcvMsgNoWait!
+$I:44:S:[LnbVos]pMutexId == NULL in OSAdpMutexCreate!
+$I:45:S:[LnbVos]pMutexId == NULL in OSAdpMutexDestroy!
+$I:46:S:[LnbVos]pMutexId == NULL in OSAdpMutexLock!
+$I:47:S:[LnbVos]pMutexId == NULL in OSAdpMutexUnlock!
+$I:48:S:[LnbVos]pSemaphoreId == NULL in OSAdpSemaphoreCreate!
+$I:49:S:[LnbVos]pSemaphoreId == NULL in OSAdpSemaphoreDestroy
+$I:50:S:[LnbVos]pSemaphoreId == NULL in OSAdpSemaphoreLock!
+$I:51:S:[LnbVos]WaitOption Error in OSAdpSemaphoreLock!
+$I:52:S:[LnbVos]pSemaphoreId == NULL in OSAdpSemaphoreUnlock!
+$I:53:S:[LnbVos]pTimerId == NULL in OSAdpTimerMsgCre !
+$I:54:S:[LnbVos]ulMilliSeconds = 0 in OSAdpTimerMsgCre!
+$I:55:S:[LnbVos]pTimerId == NULL in OSAdpTimerDestroy!
+$I:56:S:[LnbVos]pTimerId == NULL in OSAdpTimerStart!
+$I:57:S:[LnbVos]pTimerId == NULL in OSAdpTimerStop!
+$I:58:S:[LnbMac]Rcv PDCCH Order Param Error
+$I:59:S:LNB_PhyContentionResolutionTimerOutInd state error
+$I:60:S:[LnbMac]MAC PDU LCID entity do not exist,discard MAC PDU
+$I:61:S:AutoSetRegBsr
+$I:62:S:LMac_ConnRaProtectTmrOutInd  not In RA Pro!
+$I:63:S:[LnbMac]CT fail!,%d
+$I:64:S:[LnbMac]DT fail!,%d
+$I:65:S:[LnbMac]pTimer=NULL,%d
+$I:66:S:[LnbMac]ST fail!,%d
+$I:67:S:[LnbMac]TA out!
+$I:68:S:[LnbMac]SR_PROH T out!
+$I:69:S:PDCP Discard TimeOut
+$I:70:S:[LnbRlc]Redundance Grant Retran  Sn=%d
+$I:71:S:[LnbRlc]Rlc Recv Status Pdu AckSn=%d, E1=%d, VtA=%d, usVtS=%d
+$I:72:S:[LnbRlc]Rlc Receive STATUS_PDU NackSn=%d, E1=%d, E2=%d
+$I:73:S:[LnbRlc]Rlc Receive STATUS_PDU  SoStart=%d, usSoEnd=%d
+$I:74:S:[LnbRlc]RLC recv pdu Sn=%d, Poll=%d, FI=%d, Rf=%d
+$I:75:S:[LnbRlc]Rcv Seg PDU ucDataLen=%d, usSo=%d
+$I:76:S:[LnbRlc]ReTx PDU node is all send, Sn=%d
+$I:77:S:[LnbRlc]RLC retx PDU SN=%d, soStart=%d, Length=%d
+$I:78:S:[LnbRlc] FlowCtrlPollCheck IS TRUE!
+$I:79:S:[LnbRlc]RLC send new PDU Sn=%d, FI=%d, Poll=%d
+$I:80:S:[LnbRlc]Status PDU send NACK_SN %d,no SO!
+$I:81:S:[LnbRlc]Status PDU send NACK_SN %d,SoStart %d, SoEnd %d!
+$I:82:S:[LnbRlc]Status PDU send ACK_SN %d!
+$I:83:S:[LnbRlc]Poll Retx Time Out!
+$I:84:S:[LnbRlc]t-Reordering time Out!
+$I:85:S:[LnbRrc]Del intra cell: ID = %d
+$I:86:S:[LnbRrc]Del inter cell:Frequency = %d, ID = %d
+$I:87:S:[LnbRrc]bar cell %d, %d
+$I:88:S:[LnbRrc]User set AT+NEARFCN in NULL State , can't handle
+$I:89:S:[LnbRrc]User set AT+NCSEARFCN in NULL State , can't handle
+$I:90:S:[LnbRrc]Pp Resel Offset : %d
+$I:91:S:[LnbRrc]Relax Monitor Stat %d
+$I:92:S:atSiInfo[ucIdx%d].ucSIValidFlg %d
+$I:93:S:WAKEUP_TYPE =%d,usRcvSIbBitmap=%d,ulDlEarfcn=%d,usCellId =%d,ucSiNum = %d
+$I:94:S:[LnbRrc]G_LRRC_TIMER_T300 EXPIRY
+$I:95:S:[LnbRrc]G_LRRC_TIMER_T301 EXPIRY
+$I:96:S:[LnbRrc]G_LRRC_TIMER_T310 EXPIRY
+$I:97:S:[LnbRrc]G_LRRC_TIMER_T311 EXPIRY
+$I:98:S:[LnbRrc]G_LRRC_TIMER_24HOUR EXPIRY
+$I:99:S:[LnbRrc]G_LRRC_TIMER_PROTECT EXPIRY
+$I:100:S:[LnbRrc]G_LRRC_TIMER_OUT_OF_SERVICE EXPIRY
+$I:101:S:[LnbRrc]G_LRRC_TIMER_SYSINFO_MOD EXPIRY
+$I:102:S:[LnbRrc]G_LRRC_TIMER_RESEL_EVALUATION EXPIRY
+$I:103:S:[LnbRrc]G_LRRC_TIMER_CAMPED_ON_1S EXPIRY
+$I:104:S:[LnbRrc]LRRC_TIMER_OFFSET_TEMP_VALIDITY EXPIRY
+$I:105:S:[LnbRrc]G_LRRC_TIMER_T322 EXPIRY
+$I:106:S:[LnbRrc]G_LRRC_TIMER_RLS_10S EXPIRY
+$I:107:S:Exception :RRC TimerId%d is not exist!
+$I:108:S:[LnbRrc]Received LNB_CphyOutofSyncInd_Conn message in %d state
+$I:109:S:[LnbRrc]Received N310LNB_CphyOutofSyncInd_ChanConfPending message in %d state
+$I:110:S:Cipher Algor = %d RbType = %d aucKeyenc = %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d
+$I:111:S:Cipher RbId = %d Count = %d, Len = %d Dir = %d
+$I:112:S:IP Algor = %d aucKASint = %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d
+$I:113:S:IP Check RbId = %d Count = %d, Len = %d Dir = %d
+$I:114:S:now in API_EPS_Crtdcp_Report_Ind()
+$I:115:S:Send D_EPS_UICCID_CNF
+$I:116:S:***Save CFUN=1***
+$I:117:S:***Process Save CFUN1***
+$I:118:S:ATC_NCONFIG, func:%d, Val:%d
+$I:119:S:ATC_NCONFIG_R
+$I:120:S:ATC_NPSMR_Pro
+$I:121:S:ATC_NMGS_Pro
+$I:122:S:ATC_NMGR_Pro
+$I:123:S:ATC_NQMGS_Pro
+$I:124:S:ATC_NQMGR_Pro
+$I:125:S:ATC_QLWUDATAEX_Pro
+$I:126:S:ATC_NCDP_Pro
+$I:127:S:ATC_CSQ_Pro
+$I:128:S:Invalid Instruction Name!!!
+$I:129:S:------Get UPREQ!
+$I:130:S:ATC_NATSPEED_Pro
+$I:131:S:UDP Send result:%d
+$I:132:S:[LnbMac]SR_PROH T out,%d!
+$I:133:S:[LnbAtc]not support EDRX!
+$I:134:S:[LnbAtc]not support PSM!
+$I:135:S:[LnbAtc]The EDRX value is not support in NB!
+$I:136:S:[LnbAtc]The PSM period Active value is not support!
+$I:137:S:[LnbAtc]The PSM period TAU value is 7, which is not applicable to the T3412 extended value IE!
+$I:138:S:[SaveReserveCsodcp]
+$I:139:S:[LnbRrc]UE don't support EARFCN set by AT+NEARFCN
+$I:140:S:++++++Integrity Protected Failed
+$I:141:S:SecurHeadType %d:Integrity Protected Failed
+$I:142:S:ucMacCheckFailCnt  %d:Integrity Protected Failed Msg discard
+$I:143:S:LnbNas_SecurityModeCommand:SmcIeTypeV.b1Tsc
+$I:144:S:[LnbNas]0x5E == pAttachAccept->T3412ExtendedValue.ucIei
+$I:145:S:[LnbNas]AttachAcceptHandle:g_NasTimerMng.ulT3412Unit %u, g_NasTimerMng.ucT3412TimerValue %u
+$I:146:S:[LnbNas]TimerOutT3324:ucRcvSysInd %d, eEmmSubState %d, ulTriggerProcedFlg %d
+$I:147:S:[LnbNas]EMM old state = %d, EMM old substate = %d, EMM new state = %d, EMM new substate = %d
+$I:148:S:[LnbNas]ulOngoingProcedFlg = %d, ucRcvSysInd = %d, ulTriggerProcedFlg = %d,
+$I:149:S:[LnbNasCom_SetEmmModeCom],ucNWReqActTime %d,T3324 ulTimer %d,
+$I:150:S:T3324 timer start %u
+$I:151:S:[LnbNas]ucEpsSecurContextState=%d
+$I:152:S:Wackup restart T3412, TimerLen=%d
+$I:153:S:Wackup T3412 TimeOut  trigger TAU
+$I:154:S:NAS_WAITTIME_CPDATA,%d
+$I:155:S:[SendReserveCsodc]
+$I:156:S:[DelReserveCsodcp]
+$I:157:S:EMM_TIMER_T3402 TimeOut
+$I:158:S:EMM_TIMER_T3410 TimeOut
+$I:159:S:EMM_TIMER_T3411 TimeOut
+$I:160:S:EMM_TIMER_T3412 TimeOut
+$I:161:S:EMM_TIMER_T3416 TimeOut
+$I:162:S:EMM_TIMER_T3417 TimeOut
+$I:163:S:EMM_TIMER_T3418 TimeOut
+$I:164:S:EMM_TIMER_T3420 TimeOut
+$I:165:S:EMM_TIMER_T3421 TimeOut
+$I:166:S:EMM_TIMER_T3430 TimeOut
+$I:167:S:EMM_TIMER_T3440 TimeOut
+$I:168:S:EMM_TIMER_T3346TimeOut
+$I:169:S:EMM_TIMER_T3324 TimeOut
+$I:170:S:EMM_TIMER_T3245 TimeOut
+$I:171:S:ESM_TIMER_T3480 TimeOut
+$I:172:S:ESM_TIMER_T3481 TimeOut
+$I:173:S:ESM_TIMER_T3482 TimeOut
+$I:174:S:ESM_TIMER_T3492 TimeOut
+$I:175:S:ESM_TIMER_T3396 TimeOut
+$I:176:S:NAS_TIMER_OOS TimeOut
+$I:177:S:NAS_TIMER_PROTECT TimeOut
+$I:178:S:NAS_TIMER_POWEROFF TimeOut
+$I:179:S:NAS_TIMER_6MIN TimeOut
+$I:180:S:EMM_TIMER_T3325 TimeOut
+$I:181:S:EMM_TIMER_EST TimeOut
+$I:182:S:EMM_TIMER_T3448 TimeOut
+$I:183:S:EMM_TIMER_T3247 TimeOut
+$I:184:S:EMM_TIMER_HPPLMN TimeOut
+$I:185:S:NAS_USIM_DETECT_30S TimeOut
+$I:186:S:NAS_USIM_DETECT_PROTECT TimeOut
+$I:187:S:NAS_WAITTIME_CPDATA TimeOut
+$I:188:S:SMS_TIMER_TR1M TimeOut
+$I:189:S:SMS_TIMER_TC1M_MO TimeOut
+$I:190:S:SMS_TIMER_TC1M_MT TimeOut
+$I:191:S:SMS_TIMER_TRAM TimeOut
+$I:192:S:SMS_TIMER_TR2M TimeOut
+$I:193:S:TC_TIMER_START TimeOut
+$I:194:S:UICC_PROAC_POLLING_TIMER_ID TimeOut
+$I:195:S:D_ATC_TIMER_KIND_ABORT TimeOut
+$I:196:S:D_ATC_TIMER_APL_PING TimeOut
+$I:197:S:D_ATC_TIMER_L2_THP TimeOut
+$I:198:S:D_ATC_TIMER_CMGS TimeOut
+$I:199:S:[SaveEsmDataTrans]usSduCount = %d, usSduSumSize = %d
+$I:200:S:[GetFirstEsmDataTrans]usSduCount = %d, usSduSumSize = %d
+$I:201:S:[DelFirstEsmDataTrans]usSduCount = %d, usSduSumSize = %d
+$I:202:S:[SendAllEsmDataTransBuf]usSduCount = %d, usSduSumSize = %d
+$I:203:S:[DelEsmDataTransBuf]usSduCount = %d, usSduSumSize = %d
+$I:204:S:[SendCplaneDataConnect]
+$I:205:S:[LnbNasCom_DataCpToUp]usSduCount = %d, usSduSumSize = %d
+$I:206:S:[LnbNasCom_DataUpToCp]
+$I:207:S:[SaveCpDataForPlmnRateCtrl]usSduCount = %d, usSduSumSize = %d
+$I:208:S:[SendAllCpDataForPlmnRateCtrl]
+$I:209:S:[SendAllCpDataForPlmnRateCtrl] send fail!!!
+$I:210:S:[DelCpDataForPlmnRateCtrl]
+$I:211:S:[EsmDataTransBuf2PlmnRateCtrlBuf]
+$I:212:S:[EsmDataTransBuf]usSduCount = %d, usSduSumSize = %d
+$I:213:S:g_NasTimerMng.ullSleepTimeLength %lld
+$I:214:S:[Nas_PsTestUpReq]Param Error!
+$I:215:S:SC7816_command[IN]: %s
+$I:216:S:SC7816_command[OUT]: %s
+$I:217:S:g_uicc_focus == 1,First PowerOn Usim!
+$I:218:S:L1C: Cnnt Config Npdcch Detected CurTime=%d, NpdcchStartTime=%d, npdcch detection time out
+$I:219:S:L1C: Cnnt Config npdcch StartTime=%d, NpdcchStartTime=%d, NpdcchEndTime=%d, NpdcchInitStartTime=%d
+$I:220:S:L1C: Cnnt calc npdcch next time cur_time=%d, NpdcchInitStartTime=%d, NpdcchStartTime=%d
+$I:221:S:L1C: Cnnt Connected state  null handler: eventid: %d
+$I:222:S:L1C: Cnnt NPUSCH NEW DATA BUFFER IS NULL, datasize=%d
+$I:223:S:L1C: Cnnt NPUSCH send data timer out, curtime=%d, npusch start=%d
+$I:224:S:L1C: Cnnt DCI n0 after TA have expired,discard
+$I:225:S:L1C: Cnnt NPUSCH start timing is odd ms for 3.75k,,slNpuschStartTime=%d,eSubcarrierSpacing=%d
+$I:226:S:L1C: Cnnt NPUSCH Retransimit: NPUSCH Start Time: %d
+$I:227:S:L1C: Cnnt HARQ and DCI excepiton
+$I:228:S:L1C: Cnnt DCI N0 Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, Ru=%d, RV=%d, Delay=%d, SCI=%d
+$I:229:S:L1C: Cnnt DciN0 Dci_Rep=%d, MCS=%d, Rep=%d, RU=%d, Delay=%d, SCI=%d
+$I:230:S:L1C: Cnnt DCI N1 AckRes=%d, Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, RU=%d, Delay=%d
+$I:231:S:L1C: Cnnt DciN1  Dci_Rep=%d, MCS=%d, Rep=%d, RU=%d, Delay=%d
+$I:232:S:L1C: Cnnt dci decode result: %d
+$I:233:S:L1C: Cnnt npucch start timing is odd ms for 3.75k,,slNpuschStartTime=%d,eSubcarrierSpacing=%d
+$I:234:S:L1C: Cnnt start:%d, Invalid:%d, SubFrSta:%d, End:%d, sib1Per:%d, sib1Off:%d, skipPdschType:%d
+$I:235:S:L1C: Cnnt Cnnt have suppended
+$I:236:S:L1C: Cnnt ta expire state, no acknack for npdsch
+$I:237:S:L1C: Cnnt npdsch cnf curSubState: %d is incorrect
+$I:238:S:L1C: Cnnt npdsch startTime: %d, CombinerFlag: %d, LastNewdata: %d, CurNewData: %d
+$I:239:S:L1C: Cnnt NPUCCH Sche npdsch time = %d, cur dl time: %d, duration: %d
+$I:240:S:L1C: Cnnt CDRX CurTime: %d, ulCdrxOnDurStartTime = %d, ulCdrxOnDurationEndTime = %d
+$I:241:S:L1C: Cnnt UL DRX ulCurTime=%d, startTime = %d, ulCdrxOnDurationEndTime = %d
+$I:242:S:L1C: Cnnt DL DRX ulCurTime=%d, starttime=%d, ulCdrxOnDurationEndTime = %d
+$I:243:S:L1C: IDLE GetDeID_H  MTMSIlsb32=%d, Y2=%d, Y1Y2=%d
+$I:244:S:L1C: IDLE config current servingCell: (Earfcn,usPhyCellId)=(%d, %d), NewCell: (Earfcn,usPhyCellId)=(%d, %d)
+$I:245:S:L1C: IDLE Config eDRX sfo (%d, %d, %d, %d)
+$I:246:S:L1C: IDLE Config eDRX recover time: HLS usHsfn=%d, usSfn=%d, CurNetWorkTIme=(%d, %d), NewNetwork=(%d, %d)
+$I:247:S:L1C: IDLE Config eDRX recover sfo: (%d, %d, %d, %d)
+$I:248:S:L1C: IDLE config bandIdx = %d, DLEarfcn=%d, ULEarfcn=%d, ULFreqOffset=%d, DLFrequency=%d, ULFrequency=%d
+$I:249:S:L1C: Scan result Earfcn: %d, Rssi: %d
+$I:250:S:L1C: RLM out of sync id memory fail
+$I:251:S:L1C: RLM insync ind memory fail
+$I:252:S:L1C: CTRL change: %d, curState: %d, nextState: %d, subState:%d
+$I:253:S:L1C: INIT InitState eMainState=%d, eSubState=%d, ulSrcTskId=%d, ulMsgName=%d
+$I:254:S:L1C: UnregState: eMainState=%d, eSubState=%d, ulSrcTskId=%d, ulMsgName=%d
+$I:255:S:L1C: CTRL bufMsg gulBufCount=%d, ucFront=%d, ucRear=%d, ucSize=%d, eEventId=%d
+$I:256:S:L1C: CTRL buffer message is fully, ucSize=%d, eEventId=%d, Queue[0].ucEventId=%d, Queue[1].ucEventId=%d
+$I:257:S:L1C: CTRL bufMsg gulBufCount=%d, ucFront=%d, ucRear=%d, ucSize=%d, NextucEventId=%d, CnfEventId=%d
+$I:258:S:L1C: Power Off
+$I:259:S:L1C: Power On
+$I:260:S:L1C: Time3: callback time d%, over time3 max time
+$I:261:S:L1C: HARQ invalid dci n0,TBS is 0
+$I:262:S:L1C: HARQ invalid dci n0,TBS is wrong
+$I:263:S:L1C: IDLE BG NCELL itr:%d,CurLocalTime:%d CurNcellTime:%d SpareTime:%d deltaTime:%d PagingDur:%d
+$I:264:S:L1C: IDLE BG Ncell CurLocalTime:%d CurNcellTime:%d SpareTime:%d EndTime:%d
+$I:265:S:L1C: IDLE eDRX CurTime=%d, NextPo=%d, ulRefTime=%d, ulPrePtwStart=%d, ulPrePtwEnd=%d
+$I:266:S:L1C: IDLE DRX CurTime=%d, ulRefTime=%d, PagingStartTime=%d
+$I:267:S:L1C: Idle state  null handler: eventid: %d
+$I:268:S:L1C: IdleReadSib1 CellID:%d MaxSib1MergeNum:%d,ReptNumInWin:%d,SibReadMaxCount:%d,SCellNrsSnr:%d,NcellNrsSnr:%d
+$I:269:S:L1C: IdleReadSI CellID:%d, ucMaxSibMergeNum:%d, ReptNumInWin:%d, idx:%d, SI_MaxCount:%d, SCellSNR:%d, NCellSNR:%d ;
+$I:270:S:L1C: Idle time %d paging npdcch dci decode fail
+$I:271:S:L1C: LPM Enter time 32kCounts MSB=0x%x, LSB=0x%x
+$I:272:S:L1C: lpm cur state: %d, next state: %d
+$I:273:S:L1C: lpm Init State does not expect state: %d on init state
+$I:274:S:L1C: lpm Sleep State does not expect state: %d on sleep state
+$I:275:S:L1C: lpm Active State does not expect state: %d on active state
+$I:276:S:L1C: lpm cur state: %d invalid
+$I:277:S:L1C: lpm Exit real SleepTimeLen: %d, 32k/92M:%d, Waiting1MsTimeLen: %d, Compensation 1msCount: %d
+$I:278:S:L1C: lpm lost cell indicate
+$I:279:S:L1C: lpm exit deep sleep failure
+$I:280:S:L1C: lpm exit lpm NPBCH, Phy New:(%d, %d, %d, %d)
+$I:281:S:L1C: lpm exit lpm NPBCH, feo: %d New:(%d, %d, %d, %d)
+$I:282:S:L1C: lpm exit lpm Resync NSSS OldSfo=(%d, %d, %d, %d), NewSfo=(%d, %d, %d, %d),
+$I:283:S:L1C: lpm exit lpm NPSS Fine PeakNum=%d, FreqErr=%d, OldSfo=(%d, %d, %d), NewSfo=(%d, %d, %d)
+$I:284:S:L1C: lpm exit Npss Fine not find %d
+$I:285:S:L1C: lpm exit lpm NPSS Fine Old Sfo(%d, %d, %d, %d)
+$I:286:S:L1C: lpm exit lpm sync exception!
+$I:287:S:L1C: lpm exit NSSS FreqErr: %d, NSSS Sfo: (%d, %d, %d, %d)
+$I:288:S:L1C: lpm exit NSSS Updated Sfo: (%d, %d, %d, %d)
+$I:289:S:L1C: lpm exit lpm resync sib1 fail
+$I:290:S:L1C: lpm exit lpm resync sib1 sucess
+$I:291:S:L1C: Timer3 expire callback time out %d
+$I:292:S:L1C: lpm Enter Sleep_time=%d, LightSleepDuration=%d, slDeepSleepDuration=%d, slCallbackTimeMs=%d
+$I:293:S:L1C: Meas Nsch ServingCell Sinr=%d, NormalCvage=%d
+$I:294:S:L1C: Meas NRS ServingCell pci=%d, Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d, NormalCvage=%d
+$I:295:S:L1C: Ncell Sched Debug Info CS Type=%d, ucIndex=%d, ucNpbchIndex=%d, slOnDurationTime=%d
+$I:296:S:L1C: Meas MIB CurNcellTime:%d, NextMIBStartTime:%d, MIBOnDurationTime:%d
+$I:297:S:L1C: Meas slSpareTimeLen=%d, < %dms,CurNcellTime:%d
+$I:298:S:L1C: Meas miss sched max count  %d %d %d %d %d
+$I:299:S:L1C: Meas CellId=%d, SpareTime=%d, ulCurTime=%d, LocalTime=(%d, %d, %d), SFO=(%d, %d, %d), EndTime=(%d, %d, %d)
+$I:300:S:L1C: Meas sched=%d, slSpareTimeLen=%d, slOnDurationTime=%d
+$I:301:S:L1C: meas CellId: %d, Nrsrp: %d, Sinr: %d
+$I:302:S:L1C: Meas Ncell Config NPSS Corase to phy, ucDetectedType=%d, ucCarrierIdx=%d, ulDlFrequency= %d
+$I:303:S:L1C: Meas Ncell Cnf NPSS Corase: ucPeakNum=%d, cCfgFreqIndex=%d, PeakEg=%d, FreqErr=%d, Sfo=(%d, %d, %d, %d)
+$I:304:S:L1C: Meas Ncell Cnf NPSS Fine Result, ucPeakIndex=%d, cCfgFreqIndex=%d, PeakEg=%d, FreqErr=%d, Sfo=(%d, %d, %d, %d)
+$I:305:S:L1C: Meas Ncell CNF NPSS Fine usCellNum=%d, ucPeakIndex=%d, cCfgFreqIndex=%d
+$I:306:S:L1C: Meas Ncell Config NSSS FreqErr=%d, ucPeakIndex=%d, ucCarrierIdx=%d, ucDetectedType=%d
+$I:307:S:L1C: Meas Ncell Cnf NSSS Cell Info PhyPci: %d, NRSRP: %d, Sinr: %d, FreqErr=%d, Sfo=(%d, %d, %d, %d)
+$I:308:S:L1C: Meas NCell Cnf NSSS: ucNsssCellNum=%d, ucPeakIndex=%d, usCellNum=%d
+$I:309:S:L1C: Meas Ncell config NPBCH sFreqError=%d, ucCarrierIdx=%d, ulDlFrequency=%d, usPhyCellId=%d
+$I:310:S:L1C: Meas Ncell Npbch Cnf result ucCarrierIdx=%d, cellId=%d, ucCrc=%d, sSinr=%d, sRsrp=%d, ucMibRecvCnt=%d, numAntPorts=%d
+$I:311:S:L1C: Meas Ncell End Detected ucMeasTypeMask=%d, ucMeasFreqIndex=%d
+$I:312:S:L1C: Meas Ncell start Nrs Meas usPhyCellId=%d, numNRSPorts=%d, ucOpMode=%d, sRasterOffset=%d
+$I:313:S:L1C: Meas Ncell Cnf result usPhyCellId=%d, bMeasValid=%d, Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d
+$I:314:S:L1C: sched get Nrsrp update measurement bRachMeasEnable=%d, slCurSf=%d, LastMeasTime=%d
+$I:315:S:L1C: Comm npdcch cale next period cur:%d, next:%d, end:%d
+$I:316:S:L1C: Comm calc next PP cur_time=%d, start_time=%d, end_time=%d, slInitStartTime=%d
+$I:317:S:L1C: IDLE DciN2 Dci_req=%d, MCS=%d, Rep=%d, RU=%d
+$I:318:S:L1C: Cnnt UL SFO Adjust TaAjustValue=%d, TxRxSfoDiff=%d, RealAdjust=%d, TxSfo=(%d, %d, %d, %d)
+$I:319:S:L1C: RACH msg3 transmisson state is wrong,g_rach_info.rach_state=%d
+$I:320:S:L1C: RACH NPUSCH start timing is odd ms for 3.75k,,slNpuschStartTime=%d
+$I:321:S:L1C: RACH rach_state=%d, msg3 slNpdcchEndTime=%d, cur_time=%d, slNpuschStartTime=%d
+$I:322:S:L1C: RACH NPUCCH start timing is odd ms for 3.75k,,slNpucchStartTime=%d
+$I:323:S:L1C: Cnnt NPUCCH start timing is odd ms for 3.75k,,slNpucchStartTime=%d
+$I:324:S:L1C: Cnnt Harq buffer is null
+$I:325:S:L1C: Cnnt Npusch Req slNpdcchEndTime=%d, curTime: %d, slNpuschStartTime=%d, slTaValue=%d
+$I:326:S:L1C: Cnnt NPUCCH Sche npucch time = %d, next ul time: %d
+$I:327:S:L1C: RACH slPreambleStartTime = %d,cur_time = %d, rar window failure and preamble start exceed value 12ms
+$I:328:S:L1C: RACH rach_state=%d, preamble_power=%d, ra_trnti=%d
+$I:329:S:L1C: rach first slNpdcchInitStartTime=%d, slNpdcchStartTime=%d, end time=%d
+$I:330:S:L1C: RACH NPRACH Cnf curTime: %d, PreambleStartTime: %d, endTime %d
+$I:331:S:L1C: RACH nl1c_rach_start_window rach_state = %d, is error
+$I:332:S:L1C: Rach calc window_start_time = %d, windows_end_Time=%d
+$I:333:S:L1C: RACH Window Check npdcch start time over window end
+$I:334:S:L1C: Rach window check npdcch end time=%d, before window end =%d
+$I:335:S:L1C: RACH Config npdcch start time %d
+$I:336:S:L1C: RACH DCI N1: AckRes=%d, Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, RU=%d, Delay=%d
+$I:337:S:L1C: RACH DCI N0: Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, RU=%d, RV=%d, Delay=%d, SCI=%d
+$I:338:S:L1C: RACH DCI fail Crc=%d, Rslt=%d
+$I:339:S:L1C: Rach npdcch cnf rach_state=%d,cur_time=%d,dci_result=%d, slNpdschStartTime=%d, repetition_num=%d,resource_assignment=%d
+$I:340:S:L1C: RACH Npdsch Config slNpdcchEndTime=%d,cur_time = %d, slNpdschStartTime = %d
+$I:341:S:L1C: RACH RAR DCI N0: Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, RU=%d, RV=%d, Delay=%d, SCI=%d
+$I:342:S:L1C: RACH Contention resolution not expect state: %d %d
+$I:343:S:L1C: RACH msg3 TBS = %d,g_rach_info.rach_trigger_type =%d, msg3 retransmission TBS is wrong,discard
+$I:344:S:L1C: RACH msg3 retransmission buffer is NULL
+$I:345:S:L1C: RACH contention Resovle do not expect DCI N1
+$I:346:S:L1C: RLM OutOfSyncOffset=%d, InSyncOffset = %d
+$I:347:S:L1C: RLM Config Rmax=%d, ucThrdIndex=%d, usOutOfSyncTimerLen=%d,  usInSyncTimerLen=%d
+$I:348:S:L1C: SRCH srch state null handler: eventid: %d
+$I:349:S:L1C: Srch scan Freq ulCurEarfcn: %d, Frequency: %d, PeakNum: %d, PeakEg=%d
+$I:350:S:L1C: SRCH Scan Freq Npss Corase Cnf ulCurEarfcn: %d, Frequency: %d, PeakNum: %d, MaxPeakEg: %d
+$I:351:S:L1C: SRCH Scan Freq Npss Fine Cnf ulCurEarfcn: %d, Frequency: %d, PeakNum: %d, MaxPeak: %d,  RSSI: %d
+$I:352:S:L1C: Srch NPSS Corase Cnf Result FreqErr: %d, Sfo: (%d, %d, %d, %d)
+$I:353:S:L1C: Srch NPSS Fine Cnf Result FreqErr: %d, Sfo: (%d, %d, %d, %d)
+$I:354:S:L1C: Srch NSSS Cnf Result Cell Info PhyPci: %d, NRSRP: %d, Sinr: %d
+$I:355:S:L1C: Srch NSSS Cnf Cell is black cell
+$I:356:S:L1C: Srch NSSS Cnf Cell is not candicated cell
+$I:357:S:L1C: Srch NSSS Cnf Result Num: %d, CurNum: %d, LastNum: %d
+$I:358:S:L1C: Srch InitNpbch Cnf reult: cellId=%d, sFreqErrDetal=%d, sSinr=%d, sRsrp=%d, numAntPorts=%d
+$I:359:S:L1C: SRCH switch serving cell have found cell %d Context, BBPLL: %d
+$I:360:S:L1C: SRCH switch serving cell does not find cell %d Context
+$I:361:S:L1C: SRCH get MIB PhyCellId=%d, FreqErr=%d
+$I:362:S:L1C: SRCH get next SIB1 curtime: %d, nextsib1time: %d
+$I:363:S:L1C: SrchGetSib1Req ReptNumInWin:%d, MaxSibMergeNum:%d, MaxCount:%d, Snr:%d
+$I:364:S:L1C: SRCH Fill Si SiStartTime=%d, startTime(%d, %d, %d)
+$I:365:S:L1C: SrchGetSiReq siIdx:%d, MaxSibMergeNum:%d, ReptNumInWin:%d, MaxCount:%d, Snr:%d
+$I:366:S:L1C: IDLE BG calc next SI Idx=%d, NextStartTime=%d,SiStartTime=%d, usRemainSiReptNum=%d, FailCount=%d, misscount=%d
+$I:367:S:L1C: IDLE Ncell BG start MIB usOnDurationMs=%d, ulCurTime=%d, slMibStartTime=%d, ucSiMissCount=%d
+$I:368:S:L1C: IDLE Ncell BG start sib1 ulCurTime=%d, Sib1StartTime=%d, SiMissCount=%d
+$I:369:S:L1C: IDLE Ncell BG Read Start ulFrequency=%d, usPci=%d, sFreqError=%d,  Sfo=(%d, %d, %d, %d)
+$I:370:S:L1C: IDLE BG Read NPBCH CNF, Current Cell Earfcn=%d, pci=%d,  Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d, numAntPorts=%d, sFreqError=%d
+$I:371:S:L1C: IDLE BGSI NPDSCH cnf state=%d, Si type error!
+$I:372:S:L1C: IDLE BG Ncell Read Si Npdsch cnf NRS Ncell Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d
+$I:373:S:L1C: IDLE NSSS Resync Config CellId=%d, OnDuration=%d
+$I:374:S:L1C: SRCH read SIB1 ucSchedInfoSib1=%d, usPhyCellId=%d, ucOpModeChoice=%d, ucAntPorts=%d
+$I:375:S:L1C: TA Config ta_start_valid_time: %d, initVal: %d, Ta: %d, TaDelta: %d
+$I:376:S:L1C: UPC RACH Preamble cNrsPower=%d,pathloss=%d,rsrp=%d, TxPower=%d
+$I:377:S:L1C: UPC powerheadroom = %d, is less than -54db
+$I:378:S:L1C: UPC PH ecl=%d, cUeNpuschP0=%d, powerheadroom=%d, pathloss_level=%d
+$I:379:S:L1C: UPC NPUSCH usRepeationNum=%d, ul_power=%d
+$I:380:S:L1C: UPC NPUSCH eSubcarrierSpacing=%d,p0_npusch=%d,stAlpha=%d,m_npusch=%d,pathloss=%d,ul_power=%d
+$I:381:S:PHY: Channel config error!!!
+$I:382:S:PHY: debug info PhyCellId = %d, StickyTTLSNRdb=%d, SINR=%d, TempRsrp=%d
+$I:383:S:PHY: CS NPSS Coarse PeakNum=%d, FreqErr=%d, Sf=%d, CountInSf=%d
+$I:384:S:PHY: Si info CellId = %d, CurSiIdxInBitmap=%d, CombinerFlag=%d, HarqCombiner=%d, LLRBuffer=%d
+$I:385:S:PHY: NPDSCH config error!!!
+$I:386:S:PHY: TTL est TTL smaple = %d
+$I:387:S:PHY: NPRACH config error!!!
+$I:388:S:PHY: NPRACH INIT DFE config error!!!
+$I:389:S:PHY: gapLen=%d, StartTime: sf=%d, sfn=%d, hfn=%d
+$I:390:S:PHY: NPUSCH config error!!!
+$I:391:S:PHY: NPUSCH Avoid Gap Config error!!!
+$I:392:S:PHY: UL gap avoid state  gapLen = %d
+$I:393:S:PHY: false Alarm dci format fail = %d
+$I:394:S:PHY: false Alarm judge fail Format=%d usDurationNum=%d, Sign_counter=%d,  False_Alarm_Threshold=%d
+$I:395:S:PHY: false Alarm Format=%d usDurationNum=%d, Sign_counter=%d,  False_Alarm_Threshold=%d
+$I:396:S:PHY: CS NPSS Coarse Result NumPeak=%d, maxRatio=%d, NCombined_AutoCC=%d, CFO_coarse=%d, posPeak[0]=%d, posPeak[1]=%d
+$I:397:S:PHY: CS NPSS FINE Result numPeak=%d, maxRatio_Fine=%d, NCombined_Fine=%d, CFO_Fine=%d, STO_Fine=%d
+$I:398:S:PHY: CS NSSS NCell=%d, maxRatio=%d, NCombined=%d, CFO=%d, posID[0]=%d, posID[1]=%d, pidx=%d,FSType=%d
+$I:399:S:PHY: L1C Config PHY EventID=%d, Sfo=(%d, %d, %d, %d), StartTime=(%d, %d, %d), EndTime=(%d, %d, %d), FreqErr=%d, ucFTL_Rest=%d, ucCHE_Rest=%d, ucDetectedType=%d, ucForceSearchType=%d
+$I:400:S:PHY: PHY Conf L1C eventId=%d, Crc=%d, subframeCount =%d, NetworkTime=(%d, %d, %d), Sfo=(%d, %d, %d), FreqErr=%d, EstCfoHz=%d, Sinr=%d
+$I:401:S:PHY: TLSNRdB_PSS=%d, TTLSNRdB_PSS=%d, gainRX_RF_LNA=%d, gainRX_RF_MX=%d, gainRX_RF_PGA=%d, gainRX_BB_CIC_linear=%d, gainRX_BB_ACI_linear=%d
+$I:402:S:PHY: Task1 Mips Stat %d, %d, %d, %d, %d, %d, %d, %d, %d, %d
+$I:403:S:cmcc dm unhandled event: %d
+$I:404:S:cmcc dm init!!!
+$I:405:S:start cmcc dm task!!!
+$I:406:S:\n
+$I:407:S:[DM]
+$I:408:S:%s
+$I:409:S:dm_netif_event_callback, netif up
+$I:410:S:operator_type=%d\n
+$I:411:S:dm_netif_event_callback, netif down
+$I:412:S:[DM]sockfd:%d and begin to send data\n
+$I:413:S:[DM]client: server is closed.\n
+$I:414:S:[DM]--->send datalen:[%d],data:\n
+$I:415:S:[DM]--->recv datalen:[%d],data:\n
+$I:416:S:[DM]close fd %d
+$I:417:S:[DM]telecom_dm success
+$I:418:S:[DM]begin to get telecom server addr and telecom domain: %s\n
+$I:419:S:dns retry1! rc=%d, errno=%d\n
+$I:420:S:[DM]get telecom server getaddrinfo success: %s\n
+$I:421:S:[DM]begin create socket\n
+$I:422:S:[DM]error,fd=%d, errno=%d\n
+$I:423:S:[DM]creat ok and begin connect\n
+$I:424:S:[DM]success!\n
+$I:425:S:[DM]close%d\n
+$I:426:S:[DM]start dm again!!!\n
+$I:427:S:[DM]CGSN FAIL %d\n
+$I:428:S:[DM]meid:[%s]\n
+$I:429:S:[DM]CIMI FAIL %d\n
+$I:430:S:[DM]dm imsi:[%s]\n
+$I:431:S:[DM]begin to get dns server addr\n
+$I:432:S:[DM]get dns server addr FAIL and use default dns server\n
+$I:433:S:[DM]get dns server addr success\n
+$I:434:S:[DM]AT+CGCONTRDP FAIL %d\n
+$I:435:S:[DM]dm success and store iccid
+$I:436:S:[DM]Register Fail\n
+$I:437:S:[DM]dm thread exit\n
+$I:438:S:[DM]NCCID FAIL %d\n
+$I:439:S:[DM]dm iccid:[%s]\n
+$I:440:S:[DM]need start dm\n
+$I:441:S:[DM]do not need start dm\n
+$I:442:S:[DM]unicom_dm success
+$I:443:S:[DM]get unicom server addr success: %s\n
+$I:444:S:[DM]dm register overdue and start dm!!!\n
+$I:445:S:[DM]dm iccid:[%s],nv store iccid:[%s]\n
+$I:446:S:current_time=%d,last_reg_time=%d,unicom_timer_flag=%d\n
+$I:447:S:cdp server addr is empty!
+$I:448:S:have registed!
+$I:449:S:have deregisted!
+$I:450:S:nsocl quit set 1!!!
+$I:451:S:nsocl fd set -1!!!
+$I:452:S:recv len:%d
+$I:453:S:recv read_len:%d
+$I:454:S:socket recv thread exit!!!
+$I:455:S:onenetdown\n
+$I:456:S:cis_netif_event_callback, netif up
+$I:457:S:cis_netif_event_callback, netif down
+$I:458:S:xsclose quit set 1!!!
+$I:459:S:xsclose fd set -1!!!
+$I:460:S:PS:%s , not add into xy_at_prefix!!\n
+$I:461:S:recv data from nearps and drop!!!!
+$I:462:S:wait timeout,len=%d,UART DIRTY!!!ERROR!
+$I:463:S:%X
+$I:464:S:len=%d,UART DIRTY!!!ERROR!
+$I:465:S:UART DIRTY!!AT+!ERROR!:
+$I:466:S:UART DIRTY!!!ERROR!:
+$I:467:S:write_nearps[%d].len:%d,at_str:%s\n
+$I:468:S:recv_nearps[%d].len:%d,at_str:%s\n
+$I:469:S:farps_ctx:%s\n
+$I:470:S:nearps_ctx:%s\n
+$I:471:S:dsp_farps[%d],at_str:%s\n
+$I:472:S:reach_num:%d\n
+$I:473:S:dsp_send_farps[%d],at_str:%s\n
+$I:474:S:send_num:%d\n
+$I:475:S:user  RTC  timeout:%d
+$I:476:S:ps netif is not ok!
+$I:477:S:wireshark origin: %d
+$I:478:S:wireshark now: %d
+$I:479:S:xyperf ps netif is not ok!
+$I:480:S:TASK  STAT|CPURESET|CPU
+$I:481:S:HEAP  FREE|MALLOC|HOLD
+$I:482:S:+CTZEU: ERROR,%s
+$I:483:S:+CTZEU:%s
+$I:484:S:creat tbl SUCC\n
+$I:485:S:abnormal power off!need erase old page!\n
+$I:486:S:TAU:%X,now:%X
+$I:487:S:working NV is null\n
+$I:488:S:extern core mem at_cmd=0x%X
+$I:489:S:self core mem at_cmd=0x%X
+$I:490:S:sms context is: %s
+$I:491:S:extern mem free 0x%X
+$I:492:S:wait semaphone!!!
+$I:493:S:addr=0x%X
+$I:494:S:Sample_rate = 1, PowerOnReason %d, poweron mode %d
+$I:495:S:flash-20180811 psm, PowerOnReason %d, poweron mode %d
+$I:496:S:[AT_CTL]input err in OSXY_Timer_Creat !
+$I:497:S:mem track reach the upper limit!\n
+$I:498:S:mem release not match alloc addr!\n
+$I:499:S:de enc_s=%p,size=%d,len=%d\n
+$I:500:S:enc_s mem err\n
+$I:501:S:mem err r1\n
+$I:502:S:Error in select(): %d %s\n
+$I:503:S:Error in recvfrom(): %d %s\n
+$I:504:S:\n%d bytes received from [%s]:%hu\n
+$I:505:S:socket recv thread exit..\n
+$I:506:S:fall in cisnet_init\n
+$I:507:S:cisnet_create\n
+$I:508:S:Cannot malloc cisnet_t
+$I:509:S:Cannot create socket
+$I:510:S:cisnet_destroy\n
+$I:511:S:cisnet_connect\n
+$I:512:S:cisnet_disconnect\n
+$I:513:S:socket sendto [%s:%d] failed.\n
+$I:514:S:socket sendto [%s:%d] %d bytes\n
+$I:515:S:cissys_fault
+$I:516:S:Cannot lock\n
+$I:517:S:cissys_getIMEI %s
+$I:518:S:cissys_getIMSI %s
+$I:519:S:cdp_netif_event_callback, netif up
+$I:520:S:cdp_netif_event_callback, netif down
+$I:521:S:CGSN:%s\n
+$I:522:S:cdp_lwm2m_process out\n
+$I:523:S:Ping timeout\n
+$I:524:S:ping_netif_event_callback, netif up
+$I:525:S:ping_netif_event_callback, netif down
+$I:526:S:start send ping\n
+$I:527:S:\nping ipv4 datalen:%d, timeout:%d, interval_time:%d\n
+$I:528:S:report OOS and exit ping\n
+$I:529:S:reply from %s, %d bytes %d ms %d ttl\n
+$I:530:S:statistics: ping num:%d, reply:%d, longest_rtt:%dms, shortest_rtt:%dms, average_time:%dms\n
+$I:531:S:ping is stopping, please wait!
+$I:532:S:error, ping is in progress, please wait until ping finished!
+$I:533:S:ping6_netif_event_callback, netif up
+$I:534:S:ping6_netif_event_callback, netif down
+$I:535:S:
+$I:536:S:%d,%d,%d
+$I:537:S:\r\nsendto failed and again!!!\r\n
+$I:538:S:%d
+$I:539:S:%d select timeout\n
+$I:540:S:ret=%d, port=%d\n
+$I:541:S:type=%d\n
+$I:542:S:reply from %s, %d bytes %d ms\n
+$I:543:S:recv failed and timeout!!!\n
+$I:544:S:%d,%d,%d,%d,%d
+$I:545:S:unhandled
+$I:546:S:data length can not be more than %d\n
+$I:547:S:printf wireshark data
+$I:548:S:%02d:%02d:%02d,%03d,%03d	ETHER\n
+$I:549:S:\nwireshark nomem !\n
+$I:550:S:\n+---------+---------------+----------+\n
+$I:551:S:|0   |00|00|00|11|00|00|00|00|00|11|00|00|86|dd
+$I:552:S:|0   |00|00|00|00|00|00|00|00|00|00|00|00|86|dd
+$I:553:S:|0   |00|00|00|11|00|00|00|00|00|11|00|00|08|00
+$I:554:S:|0   |00|00|00|00|00|00|00|00|00|00|00|00|08|00
+$I:555:S:\n\n
+$I:556:S:xyperf Failed to send the packet (%d)\n
+$I:557:S:start xyperf\n
+$I:558:S:\nxyperf ipv4 udp remote_ip:%s, remote_port:%d, data_len:%d, bandwidth:%dkbps\n
+$I:559:S:\nxyperf duration:%ds, print_interval:%d, xyperf_rai:%d\n
+$I:560:S:xyperf ERROR! Failed to send the packet (%d)\n
+$I:561:S:xyperf finished
+$I:562:S:xyperf6 Failed to send the packet (%d)\n
+$I:563:S:start xyperf6\n
+$I:564:S:\nxyperf ipv6 udp remote_ip:%s, remote_port:%d, data_len:%d, bandwidth:%dkbps, duration:%ds, print_interval:%d, xyperf_rai:%d\n
+$I:565:S:xyperf6 ERROR! Failed to send the packet (%d)\n
+$I:566:S:xyperf6 finished
+$I:567:S:\nppp qos\n
+$I:568:S:\nppp_read_data1 %d\n
+$I:569:S:\nppp_read_data null\n
+$I:570:S:\nppp_read_data drop %d\n
+$I:571:S:\nppp_qos_timeout\n
+$I:572:S:ppp_msg_proc %x %d %d\n
+$I:573:S:ppp_msg_put %d\n
+$I:574:S:ppp_filter_addr %x %x\n
+$I:575:S:ppp_ReadOneFrame0\n
+$I:576:S:[LnbRrc]Sib Decode fail
+$I:577:S:Sample_rate = 1, TAG_V0_7_1_TCXO PowerOnReason %d, poweron mode %d
+$I:578:S:flash-20180811 psm, TAG_V0_7_1_TCXO PowerOnReason %d, poweron mode %d
+$I:579:S:get ipv6 addr failed\n
+$I:580:S:start send ping6\n
+$I:581:S:datalen:%d, timeout:%d, interval_time:%d
+$I:582:S:seq_no:%d
+$I:583:S:reply_hdr->type=%d\n
+$I:584:S:reply_hdr->id:%d
+$I:585:S:ping_send_num:%d,ping_reply_num:%d,longest_rtt:%d,shortest_rtt:%d,time_average:%d
+$I:586:S:DRV: tx open: freq = %d, cfo=%d, deltLO=%d, ulTxULFrequency=%d
+$I:587:S:DRV: TX idxLUT:%d, gainDVGA:%d, targetPowdBm: %d, gainFilter:%d, gainMixer:%d, gainPA:%d, usingTxNVFlag:%d, using_lowband=%d
+$I:588:S:[Nas_PsTestUpRpt]Param Error!
+$I:589:S:L1C: Meas Ncell Cnf result Frequency=%d, usPhyCellId=%d, bMeasValid=%d, Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d
+$I:590:S:L1C: UPC RACH Preamble cNrsPower=%d, pathloss=%d, ClassPower=%d, TxPower=%d
+$I:591:S:except exist,force to close socket
+$I:592:S:recv 0 BYTES,force to close socket
+$I:593:S:read - BYTES,force to close socket
+$I:594:S:read 0 BYTES,force to close socket
+$I:595:S:rcv 0,force to close socket
+$I:596:S:read - bytes,force to close socket
+$I:597:S:read 0 bytes,force to close socket
+$I:598:S:DSP_farps_ctx:%s\n
+$I:599:S:DSP_nearps_ctx:%s\n
+$I:600:S:Sample_rate = 1, _TAG_V0_7_1_1_TCXO PowerOnReason %d, poweron mode %d
+$I:601:S:flash-20180811 psm, _TAG_V0_7_1_1_TCXO PowerOnReason %d, poweron mode %d
+$I:602:S:Sample_rate = 1, _TAG_V0_7_1_2_TCXO PowerOnReason %d, poweron mode %d
+$I:603:S:flash-20180811 psm, _TAG_V0_7_1_2_TCXO PowerOnReason %d, poweron mode %d
+$I:604:S:DRV: 10powANT=%d, 10longTermPow=%d,gainRX_RF_LNA=%d, gainRX_RF_MX=%d,gainRX_RF_PGA=%d,gainRX_BB_CIC=%d,gainRX_BB_ACI=%d,ampLinearBB=%d,powdB=%d,rssiRX_ANT=%d,rssiRX_ANT_linear=%d,idxLUT=%d
+$I:605:S:g_tsensor_zero, tempADCVal %d,%d
+$I:606:S:DRV: TX idxLUT:%d, gainDVGA:%d, targetPowdBm: %d, gainFilter:%d, gainMixer:%d, gainPA:%d, usingTxNVFlag=%d, temperature=%d
+$I:607:S:LPM_MCNT_DBG %d
+$I:608:S:LPM_STANDBY Phy_Lpminfo %d %d %d %d
+$I:609:S:LPM_STANDBY Ps_Lpminfo %d %d %d %d
+$I:610:S:LPM_STANDBY %d %d %d %d %d
+$I:611:S:[LnbRlc]SnGapTriggerRlcUpdataRxWin!!!
+$I:612:S:[Nas_PsTestPsSpeed]Param Error!
+$I:613:S:[Nas_PsTestPsmReq]Param Error!
+$I:614:S:[Nas_PsTestInitUsim]Param Error!
+$I:615:S:ready to resume onenet context
+$I:616:S:resume_onenet create onenet
+$I:617:S:resume_onenet onenet is not running
+$I:618:S:onenet lifetime expired, %d %d %d\n
+$I:619:S:Sample_rate = 1, _TAG_V0_7_2_SDK_DX PowerOnReason %d, poweron mode %d
+$I:620:S:flash-20180811 psm, _TAG_V0_7_2_SDK_DX PowerOnReason %d, poweron mode %d
+$I:621:S:get ipv6 dst addr failed and result_dns:%d\n
+$I:622:S:get dst addrinfo success: %s\n
+$I:623:S:get ipv6 src addr failed\n
+$I:624:S:dst addr:%s, datalen:%d, timeout:%d, interval_time:%d
+$I:625:S:Sample_rate = 1, _TAG_V0_7_2_SDK_YD PowerOnReason %d, poweron mode %d
+$I:626:S:flash-20180811 psm, _TAG_V0_7_2_SDK_YD PowerOnReason %d, poweron mode %d
+$I:627:S:BBPLL: InitFracN:0x%x, initPpm=%d, initXoPPMValue = %d, initFracN = 0x%x
+$I:628:S:DRV: TX idxLUT:%d, gainDVGA:%d, targetPowdBm: %d, dcI:%d, dcQ:%d, iqAMP:%d, usingTxNVFlag=%d, temperature=%d, dciqNVFlag=%d, RxFifoOverFlowCnt=%d, gvBatVal=%d, chip_type=%d, txDeltaFactor=%d, txTemperaFactor=%d, txVoltFactor=%d, txBaseFactor=%d
+$I:629:S:LPM_DEEPSLEEP %d %d %d %d %lld
+$I:630:S:LPM_DEEPSLEEP_RETURN MALLOC
+$I:631:S:LPM_STANDBY req time:%lld sleeptime:%d advance:%d temp:%d mcnt:%d 32kfactor:%d LOCK_FLAG=%d
+$I:632:S:LPM_STANDBY_RETURN DMA:%d RX:%d TX:%d
+$I:633:S:LPM_STANDBY_RETURN ICM_BUF
+$I:634:S:LPM_STANDBY_RETURN MALLOC
+$I:635:S:LPM_STANDBY_RETURN TIMER3 PENDING
+$I:636:S:LPM StartScheduler %lld temp %d
+$I:637:S:LPM wakeup cnt:%d,tmr:0x%x,almtmr:0x%x
+$I:638:S:LPM_DEEPSLEEP utc:%d,mcnt:%d,cnt:%d,pllold:%d,pllcur:%d
+$I:639:S:LPM_DEEPSLEEP TEMP %d %d
+$I:640:S:LPM_DEEPSLEEP: gFrcTime_before=(%d,%d,%d,%d,%d), gFrcTime_after=(%d,%d,%d,%d,%d)
+$I:641:S:LPM_STANDBY_RETURN countInSubFrame %d
+$I:642:S:LPM_STANDBY_RETURN TIMER3 PENDING 2
+$I:643:S:LPM_STANDBY timer3 %d %d %d %d
+$I:644:S:LPM_STANDBY utc_before=(%x,%x,%x), alarm=(%x,%x), utc_after=(%x,%x,%x)
+$I:645:S:LPM_STANDBY: gFrcTime_before=(%d %d,%d,%d,%d), gFrcTime_after=(%d %d,%d,%d,%d)
+$I:646:S:LPM_STANDBY sleep_ms %d,utc_cnt:%d,MCNT:%d
+$I:647:S:LPM_STANDBY PS_set:%u,wakeup_alarm:%u,plllock:%u,phytmr_start:%u,finished:%u,advanced:%u
+$I:648:S:PLL_LOCK_STATE(0xa0110059) after standby : 0x%x
+$I:649:S:g_xo32k_advance_ms=%lld, g_XY_RC32K_CLK=%d ,Ps_Lpminfo.ulltime_ms=%lld,Ps.ullsleeptime_ms=%lld,Ps.standby_advance_ms=%d,utccnt_before_sleep=%lld,LPM_ADVANCE_STANDBY_MS=%d
+$I:650:S:LPM_STANDBY req time:%lld sleeptime:%d advance:%d
+$I:651:S:LPM_STANDBY stepsyscnt: %d %d ,integer: %d,utccnt: %d
+$I:652:S:LPM_STANDBY countInSubFrame: %d, %d
+$I:653:S:LPM_STANDBY lpmdbg: %d, %d , %d, %d, %d
+$I:654:S:TCMCNT  temp: %d %d mcnt: %d plldivold: %d plldivcur: %d advance_ms: %d feedback:%d
+$I:655:S:LPM_STANDBY utc 10ms err: %d
+$I:656:S:LPM_WFI %d %d %d %d
+$I:657:S:LPM_WFI_RF_ON %d %d %d
+$I:658:S:MCNT by feedback temp %d val %d
+$I:659:S:MCNT temp_cur %d temp_normal %d
+$I:660:S:MCNT return:pll changed %d,%d
+$I:661:S:MCNT temp_cur %d temp_old %d val %d recal %d
+$I:662:S:IDLE Task: DFE last interrupt DFEInt=(%d,%d,%d,%d), DMAInt=(%d,%d,%d,%d), DFETicks=%d, DMATicks=%d
+$I:663:S:UPDATE  MCNT old %d new  %d
+$I:664:S:uSim TS timeout!debug_atr_data:%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,
+$I:665:S:uSim TS dirty %d
+$I:666:S:uSim TS dirty exit!debug_atr_data:%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,
+$I:667:S:uSim TS not support!debug_atr_data:%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,
+$I:668:S:uSim ATR Failed: %x,%x,%x,%x,%x,%x,%x,%x,%x,%x,F/D=%d,clkdiv=%d
+$I:669:S:uSim VoltageClass: %d Failed
+$I:670:S:uSim T=1, not support!
+$I:671:S:uSim warm reset ATR Failed: %x,%x,%x,%x,%x,%x,%x,%x,%x,%x,F/D=%d,clkdiv=%d
+$I:672:S:uSim T0_Cmd_Handler : rcv interrupt timeout
+$I:673:S:uSim INS wrong Lc and Le
+$I:674:S:uSim COMPLEMENT INS wrong Lc and Le
+$I:675:S:uSim wrong STATE_T0_CMD
+$I:676:S:uSim sim_rx_num less than Le
+$I:677:S:uSim PPS failed:PPS_response = %x,%x,%x,%x,%x
+$I:678:S:uSim initial failed!
+$I:679:S:sim proxy :recv_len=%d,sw=[%x %x]
+$I:680:S:gPowerOnMode:%d, WAKEUP_TYPE:%d
+$I:681:S:ptInVar_F->ucChkSumPart1:%d,ucChkSum:%d
+$I:682:S:ptInVar_F->ucChkSum:%d,ucChkSum:%d
+$I:683:S:%d Change to POWER_ON_MODE_NORMAL 1
+$I:684:S:%d Change to POWER_ON_MODE_NORMAL 2
+$I:685:S:[------]TimerID = %d! LeftTimeLen = %d
+$I:686:S:[++++++]TimerID = %d!
+$I:687:S:[ReStart T_PreSchedule]TimeLen = %d!
+$I:688:S:[LnbMac]Only Ack Send Fail!
+$I:689:S:[Start T_PreSchedule]TimeLen = %d!
+$I:690:S:[LnbMac]Set T_RetxBsr to T_L Len %d !
+$I:691:S:[LnbMac]CONNRA_PROTECT T out!
+$I:692:S:[LnbMac]T_PreSchedule out!
+$I:693:S:[LMac_T_SL_TmrOut]UlPreSchedule Trig Ra!
+$I:694:S:[LnbPdcp]ROHC Feedback size is greater than 1600.
+$I:695:S:[LnbPdcp]SDU size is greater than 1600.
+$I:696:S:[LnbPdcp]PDU type error in RLC AM Data Ind.
+$I:697:S:[LnbPdcp]SDU size is greater than 1600, discard.
+$I:698:S:UpUlFlowCtrlCheck
+$I:699:S:[LnbRlc]PreSchedule Triger Retran Sn=%d
+$I:700:S:[LRlc_DiscSrbSduByMui]Succ Disc Sdu, Mui=%d!
+$I:701:S:[LnbRlc]Rlc Receive STATUS_PDU AckSn is out of Tx windows!
+$I:702:S:[LnbRlc]Rlc Receive STATUS_PDU AckSn is out of Tx windows for TwoHarq!
+$I:703:S:[LnbRlc]L2 reach Buf threshold do not receive DL PDU
+$I:704:S:[LnbRlc] usVrR = %d, usVrMs = %d
+$I:705:S:[LRlc_UlPollCheck] True: usDataLen = %d!
+$I:706:S:[LnbRlc] Start t-DelaySend!
+$I:707:S:[LRlc]usSduReTxDataLen(%d) maintain Error, Reset 0!
+$I:708:S:[LnbRlc]t-DelaySend time Out!
+$I:709:S:[LnbRlc]t-AckRls time Out!
+$I:710:S:[LnbRlc]t-Reordering time is Idle!
+$I:711:S:[LnbRrc]LRrc_ConfirmSpecialNasData: MUI = %d The SDU is NOT PRESENT
+$I:712:S:new OP ID = %d The NAS SDU List is OVERFLOW!!! Del 1st data [OP ID] = %d and Snd Succ cnf!!!
+$I:713:S:[LnbRrc]Frequency Offset is error in LRrc_ChkAndCalDLFreqNode_Com
+$I:714:S:[LnbRrc]Assist Data decoder failure
+$I:715:S:[LnbRrc]In Mobility
+$I:716:S:LRrc_DecSaveMibSib: Asn1PerDecoder Fail
+$I:717:S:[LnbRrc]SIB2 or Other SIB decoder failure
+$I:718:S:[LnbRrc]G_LRRC_TIMER_ECID_RESP_EARLY EXPIRY
+$I:719:S:[LnbRrc]G_LRRC_TIMER_ECID_RESP EXPIRY
+$I:720:S:[LnbRrc]G_LRRC_TIMER_ECID_PERIOD EXPIRY
+$I:721:S:[LnbRrc]G_LRRC_TIMER_ECID_RPT_DURING EXPIRY
+$I:722:S:[LnbRrc]G_LRRC_TIMER_OTDOA_RESP_EARLY EXPIRY
+$I:723:S:[LnbRrc]G_LRRC_TIMER_OTDOA_RESP EXPIRY
+$I:724:S:[LnbRrc]G_LRRC_TIMER_OTDOA_PERIOD EXPIRY
+$I:725:S:[ATC_SendErrorRsp]CascadeAtCnt = %d
+$I:726:S:[ATC_SendErrorRsp]RedundancyRpt ERROR
+$I:727:S:[ATC_SendCmeeErr]CascadeAtCnt = %d
+$I:728:S:[ATC_SendCmeeErr]RedundancyRpt CME ERROR
+$I:729:S:[ATC_SendCmsErr]CascadeAtCnt = %d
+$I:730:S:[ATC_SendCmsErr]RedundancyRpt ERROR
+$I:731:S:[ATC_SendOkRsp]CascadeAtCnt = %d
+$I:732:S:[ATC_SendOkRsp]RedundancyRpt OK
+$I:733:S:PS_GetIpAddr Return Fail
+$I:734:S:[ATC_IsCascateAtChk] ucExternalFlg=0
+$I:735:S:[ATC_IsCascateAtChk] abnormal:waitting for cascade at to end
+$I:736:S:[ATC_IsCascateAtChk] new cascade at
+$I:737:S:[ATC_IsCascateAtChk] no cascade at
+$I:738:S:[ATC_CascadeAtProc_NextAt] ucCascadeAtFlg=%d, ucCascadeAtCnt=%d
+$I:739:S:[ATC_CascadeAtProc_NextAt]pCasaadeAtBuff : null
+$I:740:S:[Nas_PsSetSNVal]SN check error!
+$I:741:S:Instruction Name Idx %d!
+$I:742:S:Not Support Read!!!
+$I:743:S:[ATC_CGTFT_R_LNB_Process]  pAtRspBuff is null
+$I:744:S:[LnbNasSend_TAURequest] ulTriggerProcedFlg = %d
+$I:745:S:[LnbNasSend_DetachRequest] ulTriggerProcedFlg = %d
+$I:746:S:Nas_IntegCheck_WithOldEpsSecurContext
+$I:747:S:[LnbNas] authentication failed cnt=%d
+$I:748:S:need to restart ps, fastoff first
+$I:749:S:[LnbNas]EMM: UICC file FPLMN 0x6FD9 read failed.
+$I:750:S:[LnbNas]USIM IMSI different!!!
+$I:751:S:[LnbNas_TimerTDisc]EsmDataBuf:usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:752:S:[LnbNas_TimerTDisc]PlmnRateCtrlBuf：usSduCount = %d, usSduSumSize = %d
+$I:753:S:[Nas_Timer_Stop]TimerId=%d
+$I:754:S:[Nas_Timer_Start]TimerId=%d, TimerLen=%d
+$I:755:S:delete GUTI For SecCtx not Activited!
+$I:756:S:NAS_DEEPSLEEP_PROTECT TimeOut
+$I:757:S:D_ATC_TIMER_PROTECT TimeOut
+$I:758:S:LCS_TIMER_LPPMSG_REQASSTDATA TimeOut
+$I:759:S:LCS_TIMER_LPPMSG_PRVDLOCAIFNO TimeOut
+$I:760:S:LCS_TIMER_MOLR TimeOut
+$I:761:S:LCS_TIMER_MOLR_INTERVAL TimeOut
+$I:762:S:UICC_SIM_ACCESS TimeOut
+$I:763:S:[PlmnRateCtrl start] EsmDataCount=%d
+$I:764:S:[LnbAtc]Dup RAI=0 Data!
+$I:765:S:[PsFlowCtrl]Ap Data discarded, DataLen = %d
+$I:766:S:[SaveEsmDataTrans]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:767:S:[GetFirstEsmDataTrans]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:768:S:[DelFirstEsmDataTrans]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:769:S:[SendAllEsmDataTransBuf]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:770:S:[DelEsmDataTransBuf]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:771:S:[LnbNasCom_DelEsmDataTransBufOfSpecEntity]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:772:S:[LnbNasCom_DelSpecEsmDataTransBuf]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:773:S:[LnbNasCom_AbortSend_Rai1] abort send rai1
+$I:774:S:[LnbNasCom_AddCpSduSendInfo]usWaitCnfSduCount = %d
+$I:775:S:[LnbNasCom_DelSepcCpSduSendInfo]usWaitCnfSduCount = %d
+$I:776:S:[UlBufRateCtrl abnormal] usSduCount = %d, usSduSumSize = %d, usSduLen = %d
+$I:777:S:[LnbNasCom_DataCpToUp]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:778:S:[EsmDataTransBuf]usSduCount = %d, usSduSumSize = %d, usEsmTransBufSduCount = %d
+$I:779:S:[LnbNas]NAS state change: state NAS_EMM_SWITCH_ON
+$I:780:S:[Nas_PsTestSetTauLen]Param Error!
+$I:781:S:[Nas_PsTestSetBandScan]Param Error!
+$I:782:S:[Nas_PsTestSetPowOffSlp]Param Error!
+$I:783:S:[Nas_PsTestSetNoSimSlpTime]Param Error!
+$I:784:S:[Nas_PsTestSetPsRpt]Param Error!
+$I:785:S:[Nas_PsTestSetSnrOff]Param Error!
+$I:786:S:[Nas_PsSetImeiVal]CD check err!
+$I:787:S:[Nas_PsTestSetLowPower]Param Error!
+$I:788:S:[Nas_PsTestOssTimer]Param Error!
+$I:789:S:[Nas_PsSetLockFreqListStat]Param Error!
+$I:790:S:[Nas_PsTestLockFreqListReq]Param Error!
+$I:791:S:[Nas_PsSetDataInactTimer]Param Error!
+$I:792:S:[Nas_PsSetSecAlg]Param Error!
+$I:793:S:[Nas_PsSetTraceLevel]Param Error!
+$I:794:S:[Nas_PsSetDiscLen]Param Error!
+$I:795:S:[PsSendPsComExtMsg]usMsgCnt = %d, Discar PhyDlSchDataInd!
+$I:796:S:[UICC_Drv_Init] usStatusByte=%x, ucReTryCnt=%d
+$I:797:S:[Uicc_SndMsg]StatusByte = 0x6301, ulMsgName = %d!
+$I:798:S:[BIP]Bip_CreateSocket: ucIpType=%d, ucProtocol=%d, IPort=%x
+$I:799:S:[BIP]Bip_CreateSocket: ucDesIpAddr: %d.%d.%d.%d
+$I:800:S:[BIP]Bip_CreateSocket: sock_fd=%x
+$I:801:S:[BIP]Bip_CreateSocket: connect times=%d
+$I:802:S:[BIP]Bip_CreateSocket: ret=%d
+$I:803:S:[BIP]Bip_SendData_WaitAckProc: ucWaitAckTimes=%d
+$I:804:S:[BIP]Bip_RecvTimerProc: recv ret=%d
+$I:805:S:Usim_ProacCmdProc_SendSms: 1
+$I:806:S:Usim_BipProactiveCmdProc: Usim_Decode_ProactiveCmd return false
+$I:807:S:Usim_BipProactiveCmdProc: pDecCmd is null
+$I:808:S:Usim_SendSMSRsp: 1
+$I:809:S:Max used heap peak: %u
+$I:810:S:L1c: cnnt schedNpdcch miss curTime=%d, npdcchEndTime=%d, curNetFRC=(%d,%d)
+$I:811:S:L1C: Cnnt NPUSCH NEW DATA BUFFER IS NULL, HarqID=%d, datasize=%d
+$I:812:S:L1C: Cnnt NPUSCH send data timer out, HarqID=%d, curtime=%d, npusch start=%d
+$I:813:S:L1C: Cnnt NPUSCH start timing slNpuschStartTime=%d ulDciEndTime=%d,ulDciDecodeEndTime=%d,usSubframeFromStart=%d, combSubframeNum=%d, sche_delay_k0=%d
+$I:814:S:L1C: Cnnt suppend: %d, ucSupsendFlag: %d
+$I:815:S:L1C: Cnnt Dci FormatN0 HarqId=%d is the same, discard
+$I:816:S:L1C: Cnnt Dci FormatN0 HarqId=%d, bNpdcchEndFlag=%d, Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, Ru=%d, RV=%d, Delay=%d, SCI=%d, TBS=%d
+$I:817:S:L1C: Cnnt Dci FormatN1 HarqID=%d is the same, discard
+$I:818:S:L1C: Cnnt Dci FormatN1 HarqID=%d, bNpdcchEndFlag=%d, Dci_Rep=%d, MCS=%d, Rep=%d, RU=%d, Delay=%d, acknack_resource=%d, NDI=%d TBS=%d
+$I:819:S:L1C: Cnnt dci decode result: %d, bNpdcchEndFlag=%d
+$I:820:S:L1C: Cnnt npdsch Sche npdsch time = %d, next ul time: %d, ucNpdcchSchingFlag=%d
+$I:821:S:L1C: Cnnt Npdsch time Conflict: will Sched HarqID=%d, startTime=%d, Cance HarqID=%d, startTime=%d
+$I:822:S:L1C: Cnnt Missed Sche npdsch time = %d, cur dl time: %d, duration: %d, ucNpdcchSchingFlag=%d
+$I:823:S:UESTATS: PROTO_SERVING_CELL_MEAS_IND NEARFCN=%d, PCI=%d, nRsrp=%d, nRsrq=%d, nRssi=%d, Snr=%d, EnhancedCvg=%d
+$I:824:S:L1C: Cnnt UL DRX ulNpuschEndTime=%d, ulHarqRttEndTime=%d, startTime = %d, ulCdrxOnDurationEndTime = %d
+$I:825:S:L1C: Cnnt DL DRX slNpucchEndTime=%d, ulHarqRttEndTime=%d, starttime=%d, ulCdrxOnDurationEndTime=%d
+$I:826:S:L1C: release nonAnchor freqErrConvesion curEstError=%d, lastIdx=%d, lastCarrierFreqErr=%d, newIdx=%d, newCarrierFreqErr=%d
+$I:827:S:L1C: IDLE config current servingCell: (Earfcn,usPhyCellId)=(%d, %d), NewCell: (Earfcn,usPhyCellId)=(%d, %d), ucRetentionMemRecovFlg=%d
+$I:828:S:L1C: IDLE config bandIdx = %d, DLEarfcn=%d, ULEarfcn=%d, ULFreqOffset=%d, DLFrequency=%d, ULFrequency=%d, PcchCarrierIndx=%d
+$I:829:S:L1C: cnnt Config nonAnchor freqErrConvesion curEstError=%d, lastIdx=%d, lastCarrierFreqErr=%d, newIdx=%d, newCarrierFreqErr=%d
+$I:830:S:L1C: init NonAnchor RXAGC RSSI=%d, NrsPowerOffset=%ddB, ucFreqCfgIdxDLCur=%d, longTermPow=%d
+$I:831:S:L1C: Rach Power Step set gucRachPowerStepEnable=%d, NewStepEnable = %d
+$I:832:S:L1C: Report SIB1 result is all zeror usCellId=%d, Tbsize=%
+$I:833:S:L1C: random interfer CR0499 Disable flag, CurFlag=%d, nextFlag=%d
+$I:834:S:L1C: discard Phy event eEventId=%d
+$I:835:S:L1C: CTRL bufMsg bBufferMsgFlag=%d, ucFront=%d, ucRear=%d, ucSize=%d, eEventId=%d, bIdleStatusInd=%d, cPhyL1Working=%d, eSubState=%d
+$I:836:S:L1C: Time3: callback time %d, over time3 max time
+$I:837:S:L1C: Sched Self CalibrationDCIQ End, gTempera = %d
+$I:838:S:L1C: carrierRestore freqErrConvesion curEstError=%d, lastIdx=%d, lastCarrierFreqErr=%d, newIdx=%d, newCarrierFreqErr=%d
+$I:839:S:L1C: Carrier Index Restore swtich ucFreqCfgIdxDLCur=%d, ucFreqCfgIdxDLbak=%d
+$I:840:S:L1C: Carrier Index Store ucFreqCfgIdxDLCur=%d, ucFreqCfgIdxDLbak=%d
+$I:841:S:L1C: immediate Stop Phy waitRFTiming=%d, Cur usPhyReqID=%d, Config usPhyReqID=%d
+$I:842:S:L1C: Cnnt Config npdcch CurTime=%d, NpdcchStartTime=%d, NpdcchEndTime=%d, NpdcchInitStartTime=%d, Crnti=%d, Rmax=%d, Tperiod=%d, Toffset=%d
+$I:843:S:L1C: Cnnt Connected RACH State Anchor FTL/TTL
+$I:844:S:L1C: Cnnt Connected IDLE State Anchor FTL/TTL
+$I:845:S:L1C: Cnnt Connected working State Anchor FTL/TTL
+$I:846:S:L1C: Cnnt npucch start timing ucHarqProcID =%d, slCurTime=%d, AckNackStartTime=%d, AckNackEndTime=%d
+$I:847:S:L1C: Cnnt npusch end %d, ucHarqId=%d, ucULHARQSchedBitmask=%x, ucHARQTotalBitmask=%x,ucULHARQSchingBitmask=%x, ucULDataBitmask=%x, ucNpuschSchedNpdcchFlag=%d, ucNpdcchSchingFlag=%d
+$I:848:S:L1C: IDLE DciN2 Dci_req=%d, MCS=%d, Rep=%d, RU=%d, TBS=%d
+$I:849:S:L1C: RACH rach_state ucRnti=%d, msg3 slNpdcchEndTime=%d, cur_time=%d, slNpuschStartTime=%d
+$I:850:S:L1C: Cnnt Harq buffer is null, pos:%d, HarqID:%d
+$I:851:S:L1C: Cnnt Npusch Req HarqID=%d, SubCarrierType=%d, ULReTranFlag=%d, slNpdcchEndTime=%d, curTime=%d, slNpuschStartTime=%d, slTaValue=%d, TxSfoAdjust=%d
+$I:852:S:L1C: HARQ ReTx exception, HarqId=%d, ucHarqRetxCount=%d, TBS=%d, data[0]=%x
+$I:853:S:L1C: IDLE Est before preamble sleepTime=%d, onduration=%d, StartTime=%d, slPreambleStartTime=%d
+$I:854:S:L1C: Ncell exit Lpm Next NsssStartTime=%d, CurTime=%d, OnDuration=%d, Dealine=%d
+$I:855:S:L1C: Ncell Meas Sched Next slMeasStartTime=%d, CurTime=%d, OnDuration=%d, Dealine=%d
+$I:856:S:L1C: BgSI NsssResyncSche scheFlg=%d, cur_time=%d, StartTime=%d, slResyncDurationTime=%d, SpareTime=%d, sinr=%d, disTime=%d
+$I:857:S:L1C: IDLE BG NCELL itr:%d,CurLocalTime:%d CurNcellTime:%d SpareTime:%d deltaTime:%d, deadlineTmp=%d, PagingDur:%d, NsssResyncFlag=%d
+$I:858:S:L1C: IDLE BG Ncell CurScellTime:%d CurNcellTime:%d SpareTime:%d EndTime:%d, wakeupFlag:%d, ResyncFlag:%d
+$I:859:S:L1C: IDLE DRX NRSAGC=%d, NRSResync=%d, ucMaxRep=%d, delta_time=%d
+$I:860:S:L1C: Idle resync not expect!
+$I:861:S:L1C: Idle Rach Anchor Nsch TTL/FTL
+$I:862:S:L1C: Idle SrchCnfHandler not expect!
+$I:863:S:L1C: lowerPower Debug FSleep=%d, freq=%d, lowBand=%d, edrxFlag=%d, drxCycle=%d, sleepMs=%d, BackFoe=%d, freqErr=%d
+$I:864:S:L1C: Debug XO 32k NewMcnt=%d,Gap=%d,difFeo=%d,FeoThd=%d,Reload=%d,DifMnct=%d,DrxCnt=%d,Tdif=%d,LastT=%d,CurT=%d,FShort=%d,FNsss=%d,NsssTblIdx=%d,RecoTime=%d,FValidTime=%d,slRealSleepMs=%d
+$I:865:S:L1C: lpm calc DeaLine=%d, lastNsssBeforeDL=%d, resyncStartTime=%d, syncDuration=%d
+$I:866:S:L1C: lpm Enter interval=%d, [realInterval=%d, lightSleepAdvTime=%d, deepSleepAdvTime=%d], sleepDuration=%d, callbackTimer=%dms
+$I:867:S:L1C: RACH RAR Windows slCurSf=%d,rach_next_time=%d slWindowEndTime=%d
+$I:868:S:L1C: schedulerRach curTime=%d,accessReqTime=%d missCount=%d sched_flag=%d, RachScheValid=%d, delta_time=%d
+$I:869:S:L1C: lpm Exit real SleepTimeLen: %d, bDeepSleepFlag:%d, ucLowPowerState: %d, bStandbyFlag: %d, ucNpdcchOnlySleep=%d, SimType=%d, ucCSResyncIndex=%d, sNschSnr=%d
+$I:870:S:L1C: lpm Exception wakeup ucForceCSFlag=%d, ucNsssTableFlg=%d, slDeltalIdleMs=%d, slEnterLpmDetal=%d
+$I:871:S:L1C: lpm lost cell indicate ucResyncFailCount=%d
+$I:872:S:L1C: lpm start init Nsss Resync slDetal=%d, dis=%d, NsssStartTime=%d, CurTime=%d
+$I:873:S:L1C: lpm start init NpssCoarse slDetal=%d, dis=%d, CoarseStartTime=%d, CurTime=%d,sfo=[%d,%d,%d,%d],NpssTimeOffsetMs=%d,eLpmExitState=%d
+$I:874:S:L1C: lpm start init NpssFine slDetal=%d, dis=%d, NsssStartTime=%d, CurTime=%d
+$I:875:S:L1C: lpm start init NSSS Detect slDetal=%d, dis=%d, NsssStartTime=%d, CurTime=%d
+$I:876:S:L1C: lpm exit lpm Resync NSSS OldSfo=(%d, %d, %d, %d), NewSfo=(%d, %d, %d, %d), CurPeak=%x, CurFreqerr=%d
+$I:877:S:L1C: lpm exit Nsss Resync fail out of thd Peak=%d, Thd=%d, ucMaxNsssResyncNum=%d
+$I:878:S:L1C: lpm exit Nsss Resync again slDetal=%d, dis=%d, NsssStartTime=%d, CurTime=%d
+$I:879:S:L1C: lpm exit lpm srch Old Sfo(%d, %d, %d, %d)
+$I:880:S:L1C: DRX DeepSleep wakeup slDetal=%d, dis=%d, NsssStartTime=%d, CurTime=%d
+$I:881:S:L1C: Timer3 expire callback time out on exiting lpm %d, count=%d, maxCount=%d
+$I:882:S:L1C: debugRSRP Report rsrpValue=%d,rsrpMin=%d,secUsr:%d priUsr:%d
+$I:883:S:L1C: AT NV Meas Filter Coff gucNvMeasFilterCoff= %d,ucMeasFilterCoff = %d, gucNvSignalMeasFilterCoff=%d, ucSignalMeasFilterCoff=%d
+$I:884:S:L1C: Meas NRS ServingCell DlEearfcn=%d, pci=%d, Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d, NormalCvage=%d, NsssRsrp=%d, NsssRssi=%d, NsssSinr=%d, NrsValid=%d, NsssValid=%d
+$I:885:S:L1C: Ncell Sched Debug Info CS ActionType=%d, ucIndex=%d, slOnDurationTime=%d, slSpareTimeLen=%d
+$I:886:S:L1C: Meas miss sched max count Action=%d, slDetalMissTime=%d, action=%d, spacetime=%d, onDuration=%d,CurNcellTime=%d, NextStartTime=%d
+$I:887:S:L1C: Meas CellId=%d, SpareTime=%d, CurServingCellTime=%d, NcellTime=%d, NextStartTime=%d, slMaxEndTime=%d, maxNpbchTime=%d, ucMaxNpbchIndex=%d
+$I:888:S:L1C: Meas Ncell Config NPSS Coarse to phy, ucDetectedIndex=%d, ucCarrierIdx=%d, ulDlFrequency= %d
+$I:889:S:L1C: Meas Ncell Cnf NPSS Coarse: ucPeakNum=%d, cCfgFreqIndex=%d, PeakEg=%d, FreqErr=%d, Sfo=(%d, %d, %d, %d)
+$I:890:S:L1C: Meas Ncell Config NSSS FreqErr=%d, ucPeakIndex=%d, ucCarrierIdx=%d, ucDetectedIndex=%d
+$I:891:S:L1C: Meas update servingCell Timing and FreqErr EARFCN=%d, PhyPci: %d, MinFeo=%d, PPM = %d, Sfo=(%d, %d, %d, %d)
+$I:892:S:L1C: Meas Ncell start Nrs Meas usPhyCellId=%d, numNRSPorts=%d, ucOpMode=%d, sRasterOffset=%d, usMeasTimeMs=%d, ucMeasTypeMask=0x%x, ucMeasAction=0x%x
+$I:893:S:L1C: Meas Ncell Cnf result Frequency=%d, usPhyCellId=%d, freqErr=%d, NSSS Resync Adjust=(%d, %d, %d, %d), Nrsrp=%d, Nrsrq=%d, Rssi=%d, Sinr=%d
+$I:894:S:L1C: Ncell Update Meas result Frequency=%d, usPhyCellId=%d, FilterNrsrp=%d, FilterNrsrq=%d, FitlerRssi=%d, FitlerSinr=%d, NsssRsrp=%d, NsssSinr=%d
+$I:895:S:L1C: Meas Ncell ReadSI NSSS Resync Cnf result Frequency=%d, usPhyCellId=%d, freqErr=%d, NSSS Resync Adjust=(%d, %d, %d, %d)
+$I:896:S:L1C: Meas Ncell ReadSI Cell Info Missed
+$I:897:S:L1C: Meas Ncell NSSS Resync Cnf result Frequency=%d, usPhyCellId=%d, freqErr=%d, NSSS Resync Adjust=(%d, %d, %d, %d), slNSSSResyncPeak=%x
+$I:898:S:L1C: Meas Ncell NSSS Resync Req dlFreq=%d, usPhyCellId=%d, numNRSPorts=%d, ucOpMode=%d, sRasterOffset=%d, usResynWindSize=%d, usCfoLutNum=%d, syncNum=%d, maxNum=%d
+$I:899:S:L1C: Cnnt NPUCCH Sche npucch time = %d, next ul time = %d, ucNpdcchSchingFlag=%d
+$I:900:S:L1C: Cnnt Npucch Ack/Nack time Conflict: will Sched HarqID=%d, startTime=%d, Cance HarqID=%d, startTime=%d
+$I:901:S:L1C: Cnnt NPUSCH Sche Npusch time = %d, Curtime: %d, ucNpdcchSchingFlag=%d
+$I:902:S:L1C: Cnnt Npusch time Conflict: will Sched HarqID=%d, startTime=%d, Cance HarqID=%d, startTime=%d
+$I:903:S:L1C: ULSendDuration ceLevel=%d, prachStart,End=[%d, %d], puschStart,End=[%d, %d], NumOfPeriod=%d, NumTransmtMs=%d, totalDuration=%d
+$I:904:S:L1C: Nprs Meas start,SFO: HFN=%d, SFN_Number=%d, subframe=%d, countInSubFrame=%d
+$I:905:S:L1C: Nprs Meas start sFreqError=%d,%d, ulDlFrequency=%d, sScellRasterOffset=%d
+$I:906:S:L1C: Nprs Meas start usPhyCellId=%d, numNRSPorts=%d, ucCellIndex=%d, RefCellFlag=%d
+$I:907:S:L1C: Nprs Get DeltTime Err
+$I:908:S:L1C: Nprs Meas Config Req In,ncell num:%d,scell pid=%d,ucRptFlg=%d
+$I:909:S:L1C: Nprs Meas Config Req Err,%d
+$I:910:S:L1C: Nprs Meas Config Req Err
+$I:911:S:L1C: Nprs Meas Config Req ,nprsNum=%d,%d
+$I:912:S:L1C: Nprs Meas Config Req Out,ncell num:%d,pId:%d,%d,%d
+$I:913:S:Nprs Meas rpt  ,Done=%d,NCellNum=%d,rstd=%d,refNprsId=%d
+$I:914:S:L1C: Nprs Meas Rpt Req In
+$I:915:S:L1C: Nprs Meas Rpt Req Out
+$I:916:S:L1C: Nprs Meas Del Req
+$I:917:S:Nprs Meas confm In,RefCellMeasFlg=%d,ucNprsId=%d,ucCellIndex=%d
+$I:918:S:Nprs Ref Meas Valid confm In,ucNprsId=%d,ucCellIndex=%d
+$I:919:S:Nprs Ref Meas Invalid confm ,ucNprsId=%d,ucCellIndex=%d
+$I:920:S:Nprs Necll Meas Valid confm ,ucNprsId=%d,ucCellIndex=%d
+$I:921:S:Nprs Necll Meas Invalid confm ,ucNprsId=%d,ucCellIndex=%d
+$I:922:S:Nprs Meas rpt confm ,ucNprsId=%d,ucCellIndex=%d
+$I:923:S:L1C: Nprs Cfg Req  eEventId=%d
+$I:924:S:L1C: Rach init nonanchor NRSbitmap=(0x%x,0x%x,0x%x,0x%x), Bitmap=(0x%x,0x%x,0x%x,0x%x)
+$I:925:S:L1C: Rach init nonAnchor freqErrConvesion curEstError=%d, lastIdx=%d, lastCarrierFreqErr=%d, newIdx=%d, newCarrierFreqErr=%d
+$I:926:S:L1C: Rach init anchor NRSbitmap=(0x%x,0x%x,0x%x,0x%x), Bitmap=(0x%x,0x%x,0x%x,0x%x)
+$I:927:S:L1C: RACH CarrierIndex=%d, rach_state=%d, preamble_power=%d, ra_trnti=%d, CfgIdxDLCur=%d, CfgIdxULCur=%d, CfgIdxDLbak=%d, CfgIdx=ULbak=%d
+$I:928:S:L1C: Rach config curTime=%d, ecl=%d, Sci=%d, ucCarrierIndex=%d
+$I:929:S:L1C: Rach calc window_start_time = %d, windows_end_Time=%d, window_size_ms=%d
+$I:930:S:L1C: RACH Config npdcch slCurSf=%d, start time=%d, Ra-Rnti=%d, Crnti=%d
+$I:931:S:L1c: Rach schedNpdcch miss curTime=%d, npdcchEndTime=%d, curNetFRC=(%d,%d)
+$I:932:S:L1C: RACH NPDSCH Sching Next Action cur_time=%d, slNpdcchEndTime=%d, slNpdschStartTime=%d, ucRachSchingBitMask=%d
+$I:933:S:L1C: RACH Sched missed npdsch time = %d, cur dl time: %d, duration: %d
+$I:934:S:L1C: RACH NL1C_RACH_STATE_MSG3 crc=%d, rach_state=%d, RACHResNum=%d, ECL0Rep=%d, ECL1Rep=%d, ECL2Rep=%d
+$I:935:S:L1C: RACH npdsch cnf rar_sucess=%d,rach_state=%d, usRachContentionFlag=%d
+$I:936:S:L1C: RACH Stop not expect state: %d %d
+$I:937:S:L1C: Rach Npusch missed Sched time = %d, next ul time: %d
+$I:938:S:L1C: RACH no Contention resolution npdcch order!
+$I:939:S:L1C: RACH contention Resovle on Ra-rnti not expect DCI N1
+$I:940:S:L1C: RACH contention Resovle on C-RNTI DCI N1
+$I:941:S:L1C: RACH RRC Reject
+$I:942:S:L1C: RACH RRC Reject not expect state:main=%d, subState=%d, rachState=%d
+$I:943:S:L1C: search startFromSecondary freqNum=%d returnVal=%d
+$I:944:S:L1C: search secondary Scan result Earfcn: %d, Rssi: %d, MaxPeak=%d, idx=%d
+$I:945:S:L1C: search scan NPSS coarsePri cnf CurEarfcn: %d, Frequency: %d, PeakNum: %d, maxPeakRatio:%d, cfo: %d, rssiRX_ANT: %d
+$I:946:S:L1C: search Primary Scan result Earfcn: %d, Rssi: %d, MaxPeakRatio=%d, idx=%d
+$I:947:S:L1C: SRCH scan enter lpm: ucIndex=%d, ucScanBandNum=%d, ucBandIndex=%d, ucPriScanFreqEndFlag=%d
+$I:948:S:L1C: SRCH scan exit lpm: ucIndex=%d, ucScanBandNum=%d, ucBandIndex=%d, ucScanFreqEndFlag=%d
+$I:949:S:L1C: SRCH scan state not expect handler: eventid: %d
+$I:950:S:L1C: search scan NPSS CoarseSec Cnf CurEarfcn: %d, Frequency: %d, PeakNum: %d, MaxPeakRatio: %d, cfo: %d rssiRX_ANT: %d fineFlg=%d, bIsDiscreteScan=%d
+$I:951:S:L1C: search scan NPSS fine Cnf CurEarfcn: %d, Frequency: %d, PeakNum: %d, MaxPeak: %d, cfo: %d,rssiRX_ANT: %d
+$I:952:S:L1C: search detect NPSS Coarse Cnf Result discard earfcn: %d, FreqErr: %d, idx=%d
+$I:953:S:L1C: search detect NPSS Coarse Cnf Result earfcn: %d, FreqErr: %d, Sfo: (%d, %d, %d, %d)
+$I:954:S:L1C: search detect NPSS Corase Cnf CurEarfcn: %d, Frequency: %d, PeakNum: %d, MaxPeak: %d, cfo: %d, rssiRX_ANT: %d
+$I:955:S:L1C: search detect NPSS Fine Cnf trim Peak earfcn: %d, maxPeak: %d, FreqErr: %d, Sfo: (%d, %d, %d, %d)
+$I:956:S:L1C: search detect monitorCellList curEARFCN=%d,curTemp=%d, DBInfo: idx=%d, cellCnt=%d, earfcn=%d, cellID=%d, FreqErr=%d, Sfo=(%d-%d), T=%d, avgPPM100Times=%d
+$I:957:S:L1C: search detect NPSS Fine Cnf trim Peak curEARFCN: %d, maxPeak: %d, FreqErr: %d, Sfo: (%d,%d-%d), refCellNum: %d, avgFreqErr: %d
+$I:958:S:L1C: search detect NPSS Fine Cnf result earfcn: %d, maxPeak: %d, FreqErr: %d, Sfo: (%d, %d, %d, %d)
+$I:959:S:L1C: search detect NSSS Cnf Result Cell Info earfcn: %d, PhyPci: %d, posMetric=%d
+$I:960:S:L1C: search detect NSSS Cnf Cell is black cell
+$I:961:S:L1C: search detect NSSS Cnf Cell is not candicated cell
+$I:962:S:L1C: search detect NSSS Cnf Result Num: %d, CurNum: %d, LastNum: %d
+$I:963:S:L1C: search detect InitNpbch Cnf reult: earfcn=%d, cellId=%d, crc=%d, sFreqErrDetal=%d, sRsrp=%d, sRsrq=%d, sRssi=%d, sSinr=%d, numAntPorts=%d
+$I:964:S:L1C: CS find freqerr mismatch cell,headCellid=%d, FakecellId=%d, headCellfoe=%d, fakecellfoe=%d
+$I:965:S:L1C: IDLE BG calc next SI Idx=%d, ulCurTime=%d, NextStartTime=%d,SiStartTime=%d, usRemainSiReptNum=%d, FailCount=%d, misscount=%d
+$I:966:S:L1C: IDLE NRS Meas Resync Config CellId=%d, OnDuration=%d
+$I:967:S:L1C: SCell NSSS Resync Req CellId=%d, usWindowSize=%d, usCfoLutNum=%d, syncNum=%d, syncMaxNum=%d
+$I:968:S:L1C: search secondary Scan result resort Earfcn: %d, Rssi: %d, MaxPeak=%d, sideLobeFlg=%d
+$I:969:S:L1C: search Primary Scan result add sidelobe Earfcn: %d, Rssi: %d, peak:%d, sidelobe Type=%d{non,up,down,both}, idx=%d
+$I:970:S:L1C: search Primary Scan result Stage0 Earfcn: %d, Rssi: %d, MaxPeakRatio=%d, idx=%d
+$I:971:S:L1C: isSupressSecPeaks Th: %d, maxRsrp: %d, cellId: %d, bIsSupressSecPeaks: %d
+$I:972:S:L1C: UPC PH cUeNpuschP0=%d, p0_npusch=%d, pathloss=%d, powerheadroom=%d
+$I:973:S:L1C: UPC NPUSCH eSubcarrierSpacing=%d, NrsPower=%d, p0_npusch=%d, stAlpha=%d, m_npusch=%d, pathloss=%d, ul_power=%d
+$I:974:S:PHY: NsssResync powRSSI=%d, adjust=%d oldRSSI=%d, newRSSI=%d
+$I:975:S:PHY: processAGC  agcLock ampWinAGC=%d, fPowRMS=%d, RfRssi=%d, adjustCnt=%d
+$I:976:S:PHY: RXGainControlPlant ampLinearBB=%d, powRMS=%d, LNA=%d, MX=%d, PGA=%d, CIC=%d, ACI=%d, powANT=%d, PowAvgLast=%d, PowAvgCur=%d, CIC_linear=%d, ACI_linear=%d powerdB10= %d,oldRSSI=%d
+$I:977:S:PHY: RXGainControlPlant DeltaRfGainDb10=%d, DeltaCicGainDb10=%d, DeltaAciGainDb10=%d, DeltaBBPowDb10=%d, cnntMode=%d
+$I:978:S:PHY: DFE open local CurFrctime=(%d,%d,%d,%d), Start=(%d,%d,%d,%d), Dfe Interrupt=(%d,%d,%d,%d), DFEulTicks=%d
+$I:979:S:PHY: UpdateDataFRC networkFRC (%d,%d,%d)
+$I:980:S:PHY: Event error return event:%d!!!
+$I:981:S:NRS TTL MIPS total:%d diffpos: %d,
+$I:982:S:Nprs set start FLG %d %d %d %d Nprs bitMap %d, %d,%d,%d
+$I:983:S:PHY:Two CRC pass in one subframe!
+$I:984:S:PHY: RF disabled,combinedNum=%d maxCombinedNum=%d!!
+$I:985:S:PHY: CS NPSS Coarse Proc freq=%d khz,combineNum=%d PeakNum=%d, maxPeak=%d  FreqErr[0]=%d, peakFRC[0]=(%d, %d), peakFRC[1]=(%d, %d), marginBit=%d, sfCnt=%d
+$I:986:S:PHY: FINE Setting: minCombNum %d maxCombNum=%d Threshold_Fine:%d
+$I:987:S:PHY: NPDSCH configuration bufferIdx:%d
+$I:988:S:PHY: trigger NPDSCH Decoder config: cur :HFN %d SFN %d subframe %d countInsbu:%d
+$I:989:S:Frequency Domain AGC MIps:%d,rssidBm:%d subframeType:%d adjust:%d commRSSI:%d NRSRSSI: %d NrsrpP1: %d NrsrpP2: %d rssiP1: %d rssiP2: %d powerP1:%d powerP2:%d, SfType:%d, totalCFo:%d, absCfo:%d, FtlCoffVal:%d
+$I:990:S:AGC: Gain Normal Tracking RSSI:%d longterm:%d RFRSSI:%d calRSSI:%d
+$I:991:S:PHY: TTL est TTL smaple = %d, subFrameType=%d, FTLIIRCoef=%d, TTLIIRCoef=%d
+$I:992:S:PHY: PHY_NPRACH_Init: fail to open TX!!!
+$I:993:S:PHY: PHY_NPRACH_Avoid_Init: fail to open TX!!!
+$I:994:S:PHY: PHY_NPUSCH_Init: fail to open TX!!!
+$I:995:S:PHY: UL DMA frc (%d,%d,%d) expect frc (%d %d %d) data:0x%08x, mips=%d
+$I:996:S:PHY: NPUSCH config SubcarrierType=%d, TA=%d, TxPower=%d, mips=%d
+$I:997:S:PHY: PHY_NPUSCH_Avoid_Init: fail to open TX!!!
+$I:998:S:PHY: UL gap avoid state  gapLen = %d,subCounter:%d start SFN: %d subframe: %d
+$I:999:S:PHY: init meas syncTimeLen=%d, usMeasTimeMs=%d
+$I:1000:S:PHY: PHY_SCH_ResyncProc syncNum=%d, SyncMaxNum=%d, winSize=%d, cfoLoopIdx = %d, WinPos=%d, maxCorr=0x%x|%x
+$I:1001:S:PHY: NRS FTL ajdust ucNrsNum=%d TotalCfo=%d, cfoComp=%d, estFreqError=%d
+$I:1002:S:PHY:en CHE:%d CHE COMPARE NRS 0x%08x new CHE: 0x%08x,NPBCH 0x%08x,NPSS 0x%08x,NSSS 0x%08x,SFN:%d subframe:%d,commonChNoise: %d NRSnoise:%d freqErr1ms: %d
+$I:1003:S:PHY,newID:%d oldID:%d changeState:%d
+$I:1004:S:PHY: random interfere slotNum=%d, FrameNum=%d, Rnti=%d, CellID=%d, TotalReNum=%d, mode=%d, scrambleBits=(%d, %d, %d, %d, %d, %d, %d, %d, %d, %d)
+$I:1005:S:PHY: CS NPSS Coarse JudgeThreshold NCombined=%d, NumPeak=%d, peak[0]=[%d, %d, %d, %d], peak[1]=[%d, %d, %d, %d] [pos, peak, ratio, cfo],avgPow=%d
+$I:1006:S:PHY: CS NPSS Fine Result freq=%d kHz, re=%d, im=%d, NCombined_Fine=%d, CFO_Fine=%d, STO_Fine=%d maxIdx=%d maxRation=%d
+$I:1007:S:PHY: CS NSSS startSfn=%d,   cellNum=%d, peakNum=%d, pidx[0-5]  =[%d, %d, %d, %d, %d, %d]
+$I:1008:S:PHY: CS NSSS curSfn=[%d,%d],  nComb=%d, avgPow=%d,  pRatio[0-5]=[%d, %d, %d, %d, %d, %d]
+$I:1009:S:PHY: CS NSSS dlFreq=%dkhz,NCell=%d, maxRatio=%d, NCombined=%d, CFO=%d, posID[0]=%d, posID[1]=%d, pidx=%d
+$I:1010:S:PHY: L1C Config PHY EventID=%d, HarqId=%d, StartTime=(%d, %d, %d), EndTime=(%d, %d, %d), Sfo=(%d, %d, %d, %d), FreqErr=%d, ucFTL_Rest=%d, {NonAnchor:24;InterferRandom:8}=0x%x,{srchComb min:24;max:8}=0x%x
+$I:1011:S:PHY: trigger NPUSCH Encoder config Now! harqId:%d
+$I:1012:S:PHY: Buffer PHY EventID=%d, StartTime=(%d, %d, %d), EndTime=(%d, %d, %d), Sfo=(%d, %d, %d, %d), FreqErr=%d, ucFTL_Rest=%d, ucCHE_Rest=%d, ucDetectedType=%d, ucForceSearchType=%d
+$I:1013:S:PHY: PHY Conf L1C eventId=%d, HarqId=%d, Crc=%d, subframeCount =%d, NetworkTime=(%d, %d, %d), Sfo=(%d, %d, %d), FreqErr=%d, EstCfoHz=%d, Sinr=%d, priUserSNR = %d,secUserSNr = %d, SNRdB_SSS=%d
+$I:1014:S:PHY: gainLNA=%d, gainMX=%d, gainPGA=%d, gainCIC_linear=%d, gainACI_linear=%d,NRS:[Rsrp=%d,NrsSinr=%d],NSSS:[Rsrp=%d,Sinr=%d, Rssi=%d],sinr=%d,pri=%d,sec=%d,couter=%d,measCoeff=%d,SNRdB_PSS=%d
+$I:1015:S:PHY: update timing eventId:%d nextEvId %d spacetype:%d reopenTX:%d
+$I:1016:S:PHY: InstantMeas measSubfrmaCnt=%d, {time, rsrp, sinr}=[%x, %d, %d], [%x, %d, %d], [%x, %d, %d], [%x, %d, %d], [%x, %d, %d]
+$I:1017:S:AGC Gain control RSSI:%d longterm:%d RFRSSI:%d calRSSI:%d
+$I:1018:S:PHY: UL DMA frc (%d,%d,%d,%d) harqId:%d networkFRC(%d %d %d)
+$I:1019:S:PHY: Waiting for configure done!!
+$I:1020:S:L1C: raw print taskDelay delayCnt=%d, logBufferSize=%d, freeHeapSize=%d, logQueuemsgCnt=%d, head=0x%x, writeto=0x%x, readfrom=0x%x
+$I:1021:S:L1C: PHY_NPSS_CoarseProc() delay  for print logBufferSize=%d, freeHeapSize=%d, logQueuemsgCnt=%d, delayTh=%d
+$I:1022:S:L1C: RawPrintConfig enableFlg=%d, printProcedure=%d, emphasizedContet=%d, maxBufSize=%d,curLogSize=%d, extHeapLogSize=%d,extHeapNormalSize=%d
+$I:1023:S:ATE: ATE Before TX Power Swtich TxPower=%d
+$I:1024:S:ATE: ATE TX Power Swtich TxPower=%d, sctype=%d, sc=%d,  eSubStatus=%d
+$I:1025:S:ATE: ATE TX NPUSCH Config ulDlEarfcn=%d, ulDLFrequency=%d, usPhyCellId=%d, usCRnti=%d, Period=%d, Rmax=%d, Offset=%d,mcs=%d,ru=%d,rv=%d,sci=%d,rep=%d
+$I:1026:S:L1C: ATE RX NPDSCH Config ulDlEarfcn=%d, ulDLFrequency=%d, usPhyCellId=%d, usCRnti=%d, OpMode=%d, Mcs=%d, Rep=%d, Ru=%d, TotalNum=%d, Period=%d, Offset=%d, Rmax=%d
+$I:1027:S:L1C: AteNl1cSyncFail Try Num:%d
+$I:1028:S:L1C: ATE NPDSCH cnf rxTestTotal=%d, rxTestPass=%d, crc=%d
+$I:1029:S:L1C: ATE init cabli DCI N0 Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, Ru=%d, RV=%d, Delay=%d, SCI=%d
+$I:1030:S:L1C: ATE TX NPDCCH Schedule CurTime=%d, slNpdcchInitStartTime=%d, slNpdcchStartTime=%d, slNpdcchEndTime=%d, usCRnti=%d, usNpdcchRepetitionsNum=%d,SIB1=%d,AntPorts=%d
+$I:1031:S:L1C: ATE Tx npusch SYNC Schedule CurTime=%d, startTime=%d, usCRnti=%d, Mcs=%d, Rep=%d, Ru=%d,subCarrierInd=%d,AntPorts=%d
+$I:1032:S:L1C: ATE SRCH Earfcn:%d, phyPci:%d, cellNum:%d, lockCell:%d
+$I:1033:S:L1C: ATE RX NPDCCH Schedule CurTime=%d, slNpdcchInitStartTime=%d, slNpdcchStartTime=%d, slNpdcchEndTime=%d, usCRnti=%d, usNpdcchRepetitionsNum=%d,SIB1=%d,AntPorts=%d
+$I:1034:S:L1C: ATE RX NPDSCH SYNC Schedule CurTime=%d, startTime=%d, usCRnti=%d, Mcs=%d, Rep=%d, Ru=%d,SIB1=%d,AntPorts=%d
+$I:1035:S:L1C: AteNl1cMsgHandlerEntry Handler Stop Msg
+$I:1036:S:L1C: AteNL1cTxPowerSwitch Handler  Msg
+$I:1037:S:L1C: AteNl1cMessagehadler  cPhyL1Working = %d eMainStatus=%d eSubStatus=%d
+$I:1038:S:L1C: AteNl1cMessagehadler gulBufCount=%d, ucFront=%d, ucRear=%d, ucSize=%d, eAtMsgName=%d
+$I:1039:S:L1C: AteNl1cMessagehadler message buffer  is fully, ucSize=%d, eAtMsgName=%d
+$I:1040:S:L1C: AteNl1cMessagehadler bufMsg gulBufCount=%d, ucFront=%d, ucRear=%d, ucSize=%d, eAtMsgName=%d,eEventId=%d
+$I:1041:S:ATE: ATC Srch InitNpbch cnf data reult SFN=%d, HFN=%d
+$I:1042:S:ATE: ATC Srch InitNpbch Cnf reult: cellId=%d, crc=%d, sFreqErrDetal=%d, sRsrp=%d, sRsrq=%d, sRssi=%d, sSinr=%d, numAntPorts=%d, Ports=%d, CrsPort=%d, Opt=%d, sib1=%d
+$I:1043:S:L1C: ATE Cnnt NPUSCH start timing is odd ms for 3.75k,,slNpuschStartTime=%d,eSubcarrierSpacing=%d
+$I:1044:S:L1C: ATE DCI N0 Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, Ru=%d, RV=%d, Delay=%d, SCI=%d
+$I:1045:S:L1C: ATE DCI N1 AckRes=%d, Dci_Rep=%d, MCS=%d, NDI=%d, Rep=%d, RU=%d, Delay=%d
+$I:1046:S:L1C: ATE dci decode result: %d
+$I:1047:S:PHY: NPUSCH Encoder config: %d data: 0x%08x startFRC(%d %d %d %d)
+$I:1048:S:Nprs Phy meas maxVal=%d,peak=%d left=%d,right=%d
+$I:1049:S:Nprs Phy meas sendTask2 times:=%d,nprsCenterPos=%d,peakPos=%d,outLen=%d
+$I:1050:S:Nprs Phy meas peakPos=%d,Rstd=%d tsOffset=%d,peakUpTs=%d
+$I:1051:S:Nprs Conf subframeCount=%d,syncTimeLen=%d,isAnchor=%d,isValid=%d
+$I:1052:S:Nprs send to Task2  lastSubFrameType=%d,frmNo = %d,subframe=%d,len=%d
+$I:1053:S:PHY: PHY NPRS MeasEventInit TimeLen=%d:
+$I:1054:S:rcv shm: %s
+$I:1055:S:send to PS: %s
+$I:1056:S:drop unused atcmd: %s\n
+$I:1057:S:recv from NAS: %s\n
+$I:1058:S:ignore atcmd and drop\n
+$I:1059:S:DSP-send_shm:%s\n
+$I:1060:S:no sim!!!\r\n
+$I:1061:S:sim %d!!!\r\n
+$I:1062:S:FLASH TEST NOW!
+$I:1063:S:FLASH TEST SUCCESS!
+$I:1064:S:FLASH TEST IN PRO!
+$I:1065:S:ps netif is OOS!
+$I:1066:S:TEST ASSERT AND DUNMP!
+$I:1067:S:ipc_flash_write_erase destAddr=0x%x, srcAddr=0x%x, size=0x%x, pflashPE->operation=%d
+$I:1068:S:flash_task_entry0 sus_status=%d, pe_status=%d, FLASH_isXIPMode()=%d, g_flash_status.isDone=%d
+$I:1069:S:flash_task_entry1 suspendCount=%d, resumeCount=%d, Record11=%d, Record9=%d, Record0=%d, Record1=%d, Record2=%d
+$I:1070:S:flash_task_entry2 destAddr=0x%x, srcAddr=0x%x, size=0x%x, pflashPE->operation=%d
+$I:1071:S:---------%d,%d,%d,%d,%d,%d,%d
+$I:1072:S:---------%s
+$I:1073:S:ping timeout and break
+$I:1074:S:g_ping_stop == 1\n
+$I:1075:S:g_ping_stop == 0\n
+$I:1076:S:creat ping task fail\n
+$I:1077:S:write data failed and packet dropped!!!
+$I:1078:S:uplink packet drop,and send RAI
+$I:1079:S:parse imsi error!!!\r\n
+$I:1080:S:parse imei error!!!\r\n
+$I:1081:S:flow_control start!!!
+$I:1082:S:zc sms context is: %s
+$I:1083:S:zc recv ipdata from M3
+$I:1084:S:zc printf wireshark data
+$I:1085:S:get ap addr=0x%X
+$I:1086:S:select timeout!!
+$I:1087:S:except exit and close socket!!
+$I:1088:S:SOCKET CLOSE AND TASK EXIT!!
+$I:1089:S:FASTOFF:AT+RAI=2
+&XY_SUBSYS_CALI_START_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_STOP_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_AFC_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_APC_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_AGC_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_DC_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_IMAGE_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_DCCAL_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_CHECK_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CALI_SWTICHMS_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_TEXT_TXCFG_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_TEXT_RXCFG_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_TEXT_START_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_TEXT_STOP_CNF,SUBSYS_CALI_CMM_CNF_t
+&XY_SUBSYS_CELL_INFO_CNF,OM_CELL_QUAL_INFO_ARR_STRU
+&PHY_RAW_DATA,PHY_RAW_DATA_t
+&XY_SUBSYS_CALI_START_REQ,nullStruct
+&XY_SUBSYS_CALI_STOP_REQ,nullStruct
+&XY_SUBSYS_CALI_AFC_REQ,XY_SUBSYS_CALI_APC_REQ_t
+&XY_SUBSYS_CALI_APC_REQ,XY_SUBSYS_CALI_APC_REQ_t
+&XY_SUBSYS_CALI_AGC_REQ,XY_SUBSYS_CALI_APC_REQ_t
+&XY_SUBSYS_CALI_DC_REQ,XY_SUBSYS_CALI_DC_REQ_t
+&XY_SUBSYS_CALI_IMAGE_REQ,XY_SUBSYS_CALI_IMAGE_REQ_t
+&XY_SUBSYS_CALI_DCCAL_REQ,XY_SUBSYS_CALI_DCCAL_REQ_t
+&XY_SUBSYS_CALI_CHECK_REQ,nullStruct
+&XY_SUBSYS_CALI_SWTICHMS_REQ,XY_SUBSYS_CALI_SWTICHMS_REQ_t
+&XY_SUBSYS_TEXT_TXCFG_REQ,XY_SUBSYS_TEXT_TXCFG_REQ_t
+&XY_SUBSYS_TEXT_RXCFG_REQ,XY_SUBSYS_TEXT_RXCFG_REQ_t
+&XY_SUBSYS_TEXT_START_REQ,nullStruct
+&XY_SUBSYS_TEXT_STOP_REQ,nullStruct
+&XY_SYSAPP_DETECT_CNF,nullStruct
+&XY_SYSAPP_READNV_CNF,nullStruct
+&XY_SYSAPP_WRITENV_CNF,nullStruct
+&XY_SYSAPP_MEMREADY_CNF,nullStruct
+&XY_SYSAPP_MEMHAVE_IND,nullStruct
+&XY_SYSAPP_FILTER_CNF,nullStruct
+&XY_SYSAPP_MAXLEN_CNF,nullStruct
+&XY_SYSAPP_WIRESHARK_IND,nullStruct
+&XY_SYSAPP_HEART_CNF,nullStruct
+&XY_SYSAPP_DETECT_REQ,nullStruct
+&XY_SYSAPP_READNV_REQ,nullStruct
+&XY_SYSAPP_WRITENV_REQ,nullStruct
+&XY_SYSAPP_MEMREADY_REQ,nullStruct
+&XY_SYSAPP_ASSERT_REQ,nullStruct
+&XY_SYSAPP_FILTER_REQ,nullStruct
+&XY_SYSAPP_MAXLEN_REQ,nullStruct
+&XY_SYSAPP_HEART_REQ,nullStruct
+&WUEPS_START_REQ,WUEPS_START_REQ_STRU
+&PS_POWER_OFF_REQ,PS_POWER_OFF_REQ_STRU
+&WUEPS_RESTART_REQ,WUEPS_RESTART_REQ_STRU
+&PS_POWER_OFF_CNF,PS_POWER_OFF_CNF_STRU
+&WUEPS_START_CNF,WUEPS_START_CNF_STRU
+&WUEPS_RESTART_CNF,WUEPS_RESTART_CNF_STRU
+&WUEPS_ERROR_RPT_IND,WUEPS_ERROR_RPT_IND_STRU
+&PS_COMM_READY_IND,PS_COMM_READY_IND_STRU
+&PS_POWER_OFF_IND,PS_POWER_OFF_IND_STRU
+&D_ADMIN_PS_RESTART_CNF,ST_ADMIN_PS_RESTART_CNF
+&WUEPS_ACTIVE_REQ,WUEPS_ACTIVE_REQ_STRU
+&WUEPS_ACTIVE_CNF,WUEPS_ACTIVE_CNF_STRU
+&WUEPS_DEACTIVE_IND,WUEPS_DEACTIVE_IND_STRU
+&LNB_PHY_DL_SCH_DATA_IND,LNB_PhyDlSchData_Ind_Payload_STRU
+&LNB_PHY_BCH_DATA_IND,LNB_PhyBchData_Ind_Payload_STRU
+&LNB_PHY_DL_SCH_DATA_IND_LEVEL1,LNB_PhyDlSchData_Ind_Level1_STRU
+&LNB_PHY_ACCESS_REQ,LNB_PhyAccess_Req_STRU
+&LNB_PHY_ACCESS_RESP_IND,LNB_PhyAccessResp_Ind_Payload_STRU
+&LNB_PHY_ACCESS_STOP_REQ,LNB_PhyAccessStop_Req_STRU
+&LNB_PHY_PDCCH_ORDER_IND,LNB_PhyPdcchOrder_Ind_STRU
+&LNB_PHY_RAR_GRANT_CONFIG_REQ,LNB_PhyRARGrantConfig_Req_STRU
+&LNB_PHY_FLUSH_HARQ_BUFFER_REQ,LNB_PhyFlushHarqBuffer_Req_STRU
+&LNB_PHY_CR_END_REQ,LNB_PhyCREnd_Req_STRU
+&LNB_PHY_CR_TIMER_OUT_IND,LNB_PhyCRTimerOut_Ind_STRU
+&LNB_PHY_CRNTI_CONFIG_REQ,LNB_PhyCRNTIConfig_Req_STRU
+&LNB_PHY_TA_CONFIG_REQ,LNB_PhyTAConfig_Req_STRU
+&LNB_PHY_DRX_COMMAND_REQ,LNB_PhyDrxCommand_Req_STRU
+&LNB_PHY_GET_RSRP_REQ,LNB_PhyGetRSRP_Req_STRU
+&LNB_PHY_GET_RSRP_IND,LNB_PhyGetRSRP_Ind_STRU
+&LNB_PHY_GET_UL_DATA_REQ,LNB_PhyGetUlData_Req_STRU
+&LNB_PHY_GET_UL_DATA_CNF,LNB_PhyGetUlData_Cnf_Payload_STRU
+&LNB_PHY_RAPID_CHECK_FAILED_REQ,LNB_PhyRapidCheckFailedReq_STRU
+&LNB_PHY_RA_RESET_REQ,LNB_PhyRaReset_Req_STRU
+&LNB_PHY_GET_UL_DATA_CNF_LEVEL1,LNB_PhyGetUlData_Cnf_Level1_STRU
+&LNB_CPHY_FREQ_SCAN_REQ,LNB_PHY_FREQ_SCAN_REQ_STRU
+&LNB_CPHY_FREQ_SCAN_CNF,LNB_PHY_FREQ_SCAN_CNF_STRU
+&LNB_CPHY_CELL_DETECT_REQ,LNB_PHY_CELL_DETECT_REQ_STRU
+&LNB_CPHY_CELL_DETECT_CNF,LNB_PHY_CELL_DETECT_CNF_STRU
+&LNB_CPHY_GET_MIB_REQ,LNB_PHY_GET_MIB_REQ_STRU
+&LNB_CPHY_GET_SIB1_REQ,LNB_PHY_GET_SIB1_REQ_STRU
+&LNB_CPHY_GET_SI_REQ,LNB_PHY_GET_SI_REQ_STRU
+&LNB_CPHY_STOP_GET_SI_REQ,LNB_PHY_STOP_GET_SIB_REQ_STRU
+&LNB_CPHY_OUT_OF_SYNC_IND,LNB_PHY_OUT_OF_SYNC_IND_STRU
+&LNB_CPHY_IN_SYNC_IND,LNB_PHY_IN_SYNC_IND_STRU
+&LNB_CPHY_INTRA_FREQ_CELL_MEAS_CFG_REQ,LNB_PHY_INTRAF_CELL_MEAS_CFG_REQ_STRU
+&LNB_CPHY_INTRA_FREQ_CELL_MEAS_IND,LNB_PHY_INTRA_FREQ_CELL_MEAS_IND_STRU
+&LNB_CPHY_INTER_FREQ_CELL_MEAS_CFG_REQ,LNB_PHY_INTERF_CELL_MEAS_CFG_REQ_STRU
+&LNB_CPHY_INTER_FREQ_CELL_MEAS_IND,LNB_PHY_INTER_FREQ_CELL_MEAS_IND_STRU
+&LNB_CPHY_COMMON_CH_CONFIG_REQ,LNB_PHY_COMMON_CH_CONFIG_PAYLOAD_STRU
+&LNB_CPHY_COMMON_CH_CONFIG_CNF,LNB_PHY_COMMON_CH_CONFIG_CNF_STRU
+&LNB_CPHY_DEDICATE_CH_CONFIG_REQ,LNB_PHY_DEDICATE_CH_CONFIG_REQ_STRU
+&LNB_CPHY_DEDICATE_CH_CONFIG_CNF,LNB_PHY_DEDICATE_CH_CONFIG_CNF_STRU
+&LNB_CPHY_RESET_REQ,LNB_PHY_RESET_REQ_STRU
+&LNB_CPHY_RESET_CNF,LNB_PHY_RESET_CNF_STRU
+&LNB_CPHY_EDRX_SLEEP_IND,LNB_PHY_EDRX_SLEEP_IND_STRU
+&LNB_CPHY_LOST_CELL_IND,LNB_PHY_LOST_CELL_IND_STRU
+&LNB_CPHY_N310_OUT_OF_SYNC_IND,LNB_PHY_N310_OUT_OF_SYNC_IND_STRU
+&LNB_CPHY_N311_IN_SYNC_IND,LNB_PHY_N311_IN_SYNC_IND_STRU
+&LNB_CPHY_CH_RELEASE_REQ,LNB_PHY_CHANNEL_RELEASE_REQ_STRU
+&LNB_CPHY_CH_RELEASE_CNF,LNB_PHY_CHANNEL_RELEASE_CNF_STRU
+&LNB_CPHY_CQI_IND,LNB_PHY_CQI_IND_STRU
+&LNB_CPHY_PRS_MEAS_CFG_REQ,LCPHY_PRS_MEAS_CFG_REQ_Payload_STRU
+&LNB_CPHY_PRS_MEAS_RPT_REQ,LCPHY_PRS_MEAS_RPT_REQ_STRU
+&LNB_CPHY_PRS_MEAS_RLT_IND,LCPHY_PRS_MEAS_RLT_IND_Payload_STRU
+&LNB_CPHY_PRS_MEAS_DEL_REQ,LCPHY_PRS_MEAS_DEL_REQ_STRU
+&LNB_DLMAC_CCCH_DATA_IND,LNB_DL_MAC_CCCH_DATA_IND_STRU
+&LNB_DLMAC_DL_CRNTI_DATA_IND,LNB_DL_MAC_DL_CRNTI_DATA_IND_STRU
+&LNB_DLMAC_TA_IND,LNB_DL_MAC_TA_IND_STRU
+&LNB_MAC_RRC_DATA_IND,LNB_MAC_RRC_DATA_IND_STRU
+&LNB_MAC_DATA_INACTIVITY_TIMEROUT_IND,LNB_MAC_DATA_INACTIVITY_TIMEROUT_IND_STRU
+&LNB_MAC_UPDATE_ACCESS_REQ,LNB_MAC_UPDATE_ACCESS_REQ_STRU
+&LNB_MAC_CFG_REQ,LNB_MAC_CFG_REQ_STRU
+&LNB_MAC_CFG_CNF,LNB_MAC_CFG_CNF_STRU
+&LNB_MAC_ACCESS_REQ,LNB_MAC_ACCESS_REQ_STRU
+&LNB_MAC_ACCESS_CNF,LNB_MAC_ACCESS_CNF_STRU
+&LNB_MAC_ACCESS_FAILURE_IND,LNB_MAC_ACCESS_FAILURE_IND_STRU
+&LNB_MAC_RST_REQ,LNB_MAC_RST_REQ_STRU
+&LNB_MAC_RST_CNF,LNB_MAC_RST_CNF_STRU
+&LNB_MAC_RLS_REQ,LNB_MAC_RLS_REQ_STRU
+&LNB_MAC_RLS_CNF,LNB_MAC_RLS_CNF_STRU
+&LNB_MAC_CCCH_DATA_IND,LNB_MAC_CCCH_DATA_IND_STRU
+&LNB_MAC_RSRP_IND,LNB_MAC_RSRP_IND_STRU
+&LNB_RLC_CFG_REQ,LNB_RLC_CFG_REQ_STRU
+&LNB_RLC_CFG_CNF,LNB_RLC_CFG_CNF_STRU
+&LNB_RLC_REEST_REQ,LNB_RLC_REEST_REQ_STRU
+&LNB_RLC_REEST_CNF,LNB_RLC_REEST_CNF_STRU
+&LNB_RLC_RLS_REQ,LNB_RLC_RLS_REQ_STRU
+&LNB_RLC_RLS_CNF,LNB_RLC_RLS_CNF_STRU
+&LNB_RLC_SUSPEND_REQ,LNB_RLC_SUSPEND_REQ_STRU
+&LNB_RLC_SUSPEND_CNF,LNB_RLC_SUSPEND_CNF_STRU
+&LNB_RLC_RESUME_REQ,LNB_RLC_RESUME_REQ_STRU
+&LNB_RLC_RESUME_CNF,LNB_RLC_RESUME_CNF_STRU
+&LNB_RLC_LINKLOSS_IND,LNB_RLC_LINKLOSS_IND_STRU
+&LNB_RLC_RELEASE_ACK_REQ,LNB_RLC_RELEASE_ACK_REQ_STRU
+&LNB_RLC_ACK_SND_IND,LNB_RLC_ACK_SND_IND_STRU
+&MSG_LNB_RLC_AM_DATA_REQ,LNB_RLC_AM_DATA_REQ_Payload_STRU
+&MSG_LNB_RLC_AM_DATA_CNF,LNB_RLC_AM_DATA_CNF_STRU
+&MSG_LNB_RLC_AM_DATA_REQ_,LNB_RLC_AM_DATA_REQ_Payload_STRU
+&MSG_LNB_RLC_PDU_DISCARD_REQ,LNB_RLC_PDU_DISCARD_REQ_Payload_STRU
+&MSG_LNB_RLC_AM_DATA_CNF_,LNB_RLC_AM_DATA_CNF_STRU
+&MSG_LNB_RLC_AM_DATA_IND,LNB_RLC_AM_DATA_IND_Payload_STRU
+&MSG_LNB_RLC_AM_DATA_IND_,LNB_RLC_AM_DATA_IND_Payload_STRU
+&MSG_LNB_PDCP_CONFIG_REQ,LNB_PDCP_CONFIG_REQ_STRU
+&MSG_LNB_PDCP_REEST_REQ,LNB_PDCP_REEST_REQ_STRU
+&MSG_LNB_PDCP_REEST_COMP_REQ,LNB_PDCP_REEST_COMP_REQ_STRU
+&MSG_LNB_PDCP_RELEASE_REQ,LNB_PDCP_RELEASE_REQ_STRU
+&MSG_LNB_PDCP_CONFIG_CNF,LNB_PDCP_CONFIG_CNF_STRU
+&MSG_LNB_PDCP_REEST_CNF,LNB_PDCP_REEST_CNF_STRU
+&MSG_LNB_PDCP_RELEASE_CNF,LNB_PDCP_RELEASE_CNF_STRU
+&MSG_LNB_PDCP_SUSPEND_REQ,LNB_PDCP_SUSPEND_REQ_STRU
+&MSG_LNB_PDCP_RESUME_REQ,LNB_PDCP_RESUME_REQ_STRU
+&MSG_LNB_PDCP_SUSPEND_CNF,LNB_PDCP_SUSPEND_CNF_STRU
+&MSG_LNB_PDCP_RESUME_CNF,LNB_PDCP_RESUME_CNF_STRU
+&MSG_LNB_PDCP_PSM_REQ,LNB_PDCP_PSM_REQ_STRU
+&MSG_LNB_PDCP_PSM_RESP,LNB_PDCP_PSM_RESP_Payload_STRU
+&MSG_LNB_PDCP_PSM_CNF,LNB_PDCP_PSM_CNF_Payload_STRU
+&LNB_RRC_EST_REQ,LNB_RRC_EST_REQ_TEST_LONG_INFO_STRU
+&LNB_RRC_DATA_REQ,LNB_RRC_DATA_REQ_TEST_LONG_INFO_STRU
+&LNB_RRC_CONN_REL_REQ,LNB_RRC_CONN_REL_REQ_STRU
+&LNB_RRC_INFO_CHANGE_IND,LNB_RRC_INFO_CHANGE_IND_TEST_LONG_INFO_STRU
+&LNB_RRC_EST_CNF,LNB_RRC_EST_CNF_STRU
+&LNB_RRC_DATA_CNF,LNB_RRC_DATA_CNF_STRU
+&LNB_RRC_DATA_IND,LNB_RRC_Test_DATA_IND_STRU
+&LNB_RRC_SYS_INFO_IND,LNB_RRC_SYS_INFO_IND_STRU
+&LNB_RRC_PAGING_IND,LNB_RRC_PAGING_IND_STRU
+&LNB_RRC_CONN_REL_IND,LNB_RRC_CONN_REL_IND_STRU
+&LNB_RRC_RADIO_QUAL_IND,LNB_RRC_RADIO_QUAL_IND_STRU
+&LNB_RRC_DRB_CHG_IND,LNB_RRC_DRB_CHG_IND_STRU
+&LNB_RRC_START_REQ,LNB_RRC_START_REQ_STRU
+&LNB_RRC_START_CNF,LNB_RRC_START_CNF_STRU
+&LNB_RRC_PLMN_SEARCH_REQ,LNB_RRC_PLMN_SEARCH_REQ_TEST_LONG_INFO_STRU
+&LNB_RRC_PLMN_SEARCH_CNF,LNB_RRC_PLMN_SEARCH_CNF_STRU
+&LNB_RRC_POWER_OFF_REQ,LNB_RRC_POWER_OFF_REQ_STRU
+&LNB_RRC_POWER_OFF_CNF,LNB_RRC_POWER_OFF_CNF_STRU
+&LNB_RRC_OOS_IND,LNB_RRC_OOS_IND_STRU
+&LNB_RRC_RESUME_FALLBACK_IND,LNB_RRC_RESUME_FALLBACK_IND_STRU
+&LNB_RRC_DEACTIVE_REQ,LNB_RRC_DEACTIVE_REQ_STRU
+&LNB_RRC_SMC_INFO_IND,LNB_RRC_SMC_INFO_IND_STRU
+&LNB_RRC_DEACTIVE_CNF,MSG_HEADER_STRU
+&LNB_RRC_ACTIVE_REQ,LNB_RRC_ACTIVE_REQ_STRU
+&LNB_RRC_ACTIVE_CNF,LNB_RRC_ACTIVE_CNF_STRU
+&LNB_RRC_EDRX_SLEEP_IND,LNB_RRC_EDRX_SLEEP_IND_STRU
+&LNB_RRC_AT_NEARFCN_REQ,LNB_RRC_AT_NEARFCN_REQ_STRU
+&LNB_RRC_DATA_IND_LONG_INFO,MSG_HEADER_STRU
+&LNB_LPP_LOCA_MEAS_CFG_REQ,LPP_LOCA_MEAS_CFG_REQ_STRU
+&LNB_LPP_LOCA_MEAS_DEL_REQ,LPP_LOCA_MEAS_DEL_REQ_STRU
+&LNB_LPP_ASSIST_DATA_REQ,LPP_ASSIST_DATA_REQ_STRU
+&LNB_LPP_ASSIST_DATA_DEL_REQ,LPP_LOCA_ASSTDATA_DEL_REQ_STRU
+&MSG_LNB_PDCP_DATA_REQ,LNB_PDCP_DATA_REQ_Payload_STRU
+&MSG_LNB_PDCP_DATA_IND,LNB_PDCP_DATA_IND_Payload_STRU
+&MSG_LNB_PDCP_UL_FC_IND,LNB_PDCP_UL_FC_IND_STRU
+&UICC_STATUS_REQ,UICC_STATUS_REQ_MSG_STRU
+&UICC_STATUS_CNF,UICC_STATUS_CNF_MSG_STRU
+&UICC_READ_FILE_REQ,UICC_READ_FILE_REQ_MSG_STRU
+&UICC_STATUS_IND,UICC_STATUS_IND_MSG_STRU
+&UICC_UPDATE_FILE_REQ,UICC_UPDATE_FILE_REQ_MSG_LOG_STRU
+&UICC_READ_FILE_CNF,UICC_READ_FILE_CNF_MSG_LOG_STRU
+&UICC_USIM_AUTHENTICATION_REQ,UICC_USIM_AUTH_REQ_MSG_STRU
+&UICC_USIM_AUTHENTICATION_CNF,UICC_USIM_AUTHENTICATION_CNF_MSG_STRU
+&UICC_RESTRICTED_ACCESS_REQ,UICC_RESTRICT_ACCESS_REQ_MSG_STRU
+&UICC_MM_RESTART_IND,UICC_MM_RESTART_IND_STRU
+&UICC_PIN_CHECK_REQ,UICC_PIN_CHECK_REQ_MSG_STRU
+&UICC_USER_PLMN_CHANGE_IND,UICC_USER_PLMN_CHANGE_IND_STRU
+&UICC_PIN_STATUS_READ_REQ,UICC_PIN_STATUS_READ_REQ_MSG_STRU
+&UICC_UPDATE_FILE_CNF,UICC_UPDATE_FILE_CNF_MSG_STRU
+&UICC_PIN_CHANGE_REQ,UICC_PIN_CHANGE_REQ_MSG_STRU
+&UICC_RESTRICTED_ACCESS_CNF,UICC_RESTRICT_ACC_CNF_MSG_STRU
+&UICC_USAT_REFRESH_RSP,UICC_USAT_REFRESH_RSP_MSG_STRU
+&UICC_PIN_STATUS_READ_CNF,UICC_PIN_STATUS_READ_CNF_MSG_STRU
+&UICC_PIN_CHANGE_CNF,UICC_PIN_CHANGE_CNF_MSG_STRU
+&UICC_LOCK_REQ,UICC_LOCK_REQ_MSG_STRU
+&UICC_LOCK_CNF,UICC_LOCK_CNF_MSG_STRU
+&UICC_USAT_REFRESH_IND,UICC_USAT_REFRESH_IND_MSG_STRU
+&UICC_GSM_AUTHENTICATION_REQ,MSG_HEADER_STRU
+&UICC_GSM_AUTHENTICATION_CNF,MSG_HEADER_STRU
+&UICC_PIN_CHECK_CNF,UICC_PIN_CHECK_CNF_MSG_STRU
+&UICC_GET_RECORD_FILE_STATUS_REQ,UICC_GET_RECORD_FILE_STATUS_REQ_MSG_STRU
+&UICC_READ_RECORD_CNF,UICC_READ_RECORD_CNF_MSG_LOG_STRU
+&UICC_READ_RECORD_REQ,UICC_READ_RECORD_REQ_MSG_STRU
+&UICC_UPDATE_RECORD_REQ,UICC_UPDATE_RECORD_REQ_MSG_LOG_STRU
+&UICC_UPDATE_RECORD_CNF,UICC_UPDATE_RECORD_CNF_MSG_STRU
+&UICC_GET_RECORD_FILE_STATUS_CNF,UICC_GET_RECORD_FILE_STATUS_CNF_MSG_STRU
+&UICC_PIN_VER_IND,UICC_PIN_VER_IND_STRU
+&UICC_PUK_VER_IND,UICC_PUK_VER_IND_STRU
+&UICC_PUK_BLOCKED_IND,UICC_PUK_BLOCKED_IND_STRU
+&UICC_CHANGE_FILE_STATUS_REQ,MSG_HEADER_STRU
+&UICC_CHANGE_FILE_STATUS_CNF,UICC_CHANGE_FILE_STATUS_CNF_MSG_STRU
+&UICC_SUSPEND_REQ,UICC_SUSPEND_REQ_MSG_STRU
+&UICC_SUSPEND_CNF,UICC_SUSPEND_CNF_MSG_STRU
+&UICC_RESUME_REQ,UICC_RESUME_REQ_MSG_STRU
+&UICC_RESUME_CNF,UICC_RESUME_CNF_MSG_STRU
+&UICC_PERIOD_DETECT_CTRL_IND,UICC_PERIOD_DETECT_CTRL_IND_MSG_STRU
+&UICC_PRESENT_DETECT_REQ,UICC_PRESENT_DETECT_REQ_MSG_STRU
+&UICC_PRESENT_DETECT_CNF,UICC_PRESENT_DETECT_CNF_MSG_STRU
+&UICC_SMS_DATA_REQ,UICC_SMS_DATA_REQ_STRU
+&UICC_SMS_DATA_CNF,UICC_SMS_DATA_CNF_STRU
+&UICC_SMS_DATA_IND,UICC_SMS_DATA_IND_STRU
+&UICC_SMS_DATA_RSP,UICC_SMS_DATA_RSP_STRU
+&UICC_BIP_CREATE_SOCKET_CNF,BIP_CREATE_SOCKET_CNF
+&UICC_BIP_SEND_DATA_CNF,BIP_SEND_DATA_CNF
+&UICC_BIP_RECIVE_DATA_IND,BIP_DATA_IND
+&UICC_BIP_SOCKET_CLOSE_IND,BIP_CLOSE_SOCKET_IND
+&UICC_EVENT_DATA_AVAILABLE,EVET_DATA_AVALIABLE_IND
+&UICC_EVENT_CHANL_STATUS,EVET_CHANL_STATIS_IND
+&UICC_RESET_IND,BIP_SEND_RESET_IND
+&UICC_BIP_CLOSE_SOCKET_CNF,BIP_CLOSE_SOCKET_CNF
+&BIP_MSG_CREATE_SOCKET_REQ,BIP_CREATE_SOCKET_REQ
+&BIP_MSG_CLOSE_SOCKET_REQ,BIP_CREATE_SOCKET_REQ
+&BIP_MSG_SEND_DATA_REQ,BIP_SEND_DATA_REQ
+&UICC_PIN_RETRIES_REQ,UICC_PIN_RETRIES_REQ_MSG_STRU
+&UICC_PIN_RETRIES_CNF,UICC_PIN_RETRIES_CNF_MSG_STRU
+&UICC_DRIVE_CARD_INSERT,MSG_HEADER_STRU
+&UICC_DRIVE_CARD_REMOVE,MSG_HEADER_STRU
+&UICC_DEACTIVE_UICC_REQ,MSG_HEADER_STRU
+&UICC_TERMINAL_PROFILE_REQ,MSG_HEADER_STRU
+&UICC_ENVELOP_REQ,MSG_HEADER_STRU
+&UICC_TERMINAL_RSP_REQ,MSG_HEADER_STRU
+&UICC_MANAGE_CHANNEL_REQ,UICC_MANAGE_CHANNEL_REQ_MSG_STRU
+&UICC_MANAGE_CHANNEL_CNF,UICC_MANAGE_CHANNEL_CNF_MSG_STRU
+&UICC_USIM_ACCESS_REQ,UICC_USIM_ACCESS_REQ_MSG_STRU
+&UICC_USIM_ACCESS_CNF,UICC_USIM_ACCESS_CNF_MSG_STRU
+&LNB_DLMAC_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_DLMAC_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_DLMAC_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_DLMAC_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_ULMAC_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_ULMAC_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_ULMAC_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_ULMAC_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_DLRLC_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_DLRLC_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_DLRLC_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_DLRLC_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_ULRLC_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_ULRLC_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_ULRLC_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_ULRLC_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_RRCF_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_RRCF_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_RRCF_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_RRCF_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_PDCP_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_PDCP_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_PDCP_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_PDCP_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_NAS_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_NAS_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_NAS_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_NAS_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_SMS_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_SMS_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_SMS_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_SMS_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_EMM_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_EMM_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_EMM_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_EMM_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_ESM_GLOBAL_GET_REQ,MSG_HEADER_STRU
+&LNB_ESM_GLOBAL_GET_CNF,MSG_HEADER_STRU
+&LNB_ESM_GLOBAL_SET_REQ,MSG_HEADER_STRU
+&LNB_ESM_GLOBAL_SET_CNF,MSG_HEADER_STRU
+&LNB_TIMEOUT_CHEATING_IND,LNB_TIMEOUT_CHEATING_IND_STRUCT
+&LNB_POWERON_MODE_NOTIFY_IND,LNB_POWERON_MODE_NOTIFY_IND_STRUCT
+&D_EPS_PDN_CONNECT_REQ,LNB_PDN_CONNECT_REQ_STRU
+&D_EPS_PDN_DISCONNECT_REQ,LNB_PDN_DISCONNECT_REQ_STRU
+&D_EPS_ATTACH_REQ,LNB_ATTACH_REQ_STRU
+&D_EPS_DETACH_REQ,LNB_DETACH_REQ_STRU
+&D_EPS_OPELIST_SRCH_REQ,LNB_OPELIST_SRCH_REQ_STRU
+&D_EPS_OPELIST_SRCH_ABORT_REQ,MSG_HEADER_STRU
+&D_EPS_OPERATOR_SELETE_REQ,LNB_OPERATOR_SELETE_REQ_STRU
+&D_EPS_OPESELINF_READ_REQ,LNB_OPESELINF_READ_REQ_STRU
+&D_EPS_BEARER_RESOURCE_ALLOC_REQ,LNB_BEARER_RESOURCE_ALLOC_REQ_STRU
+&D_EPS_BEARER_RESOURCE_MODIFY_REQ,LNB_BEARER_RESOURCE_MODIFY_REQ_STRU
+&D_EPS_BEARER_CONTEXT_ACTIVE_RSP,MSG_HEADER_STRU
+&D_EPS_OPERATOR_SELETE_ABORT_REQ,MSG_HEADER_STRU
+&D_EPS_CSODCP_SEND_REQ,LNB_EPS_CSODCP_SEND_REQ_STRU
+&D_EPS_CEDRXS_CPSMS_SET_REQ,LNB_EPS_CPSMS_CEDRXS_SET_REQ_STRU
+&D_EPS_DEACTIVE_RESPONSE,LNB_EPS_DEACTIVE_RESPONSE_STRU
+&D_EPS_ACTIVE_RESPONSE,LNB_EPS_ACTIVE_RESPONSE_STRU
+&D_EPS_BEARER_ACTIVE_IND,LNB_BEARER_ACTIVE_IND_STRU
+&D_EPS_BEARER_MODIFY_IND,LNB_BEARER_MODIFY_IND_STRU
+&D_EPS_BEARER_DEACTIVE_IND,LNB_BEARER_DEACTIVE_IND_STRU
+&D_EPS_PDN_CONNECT_CNF,LNB_PDN_CONNECT_CNF_STRU
+&D_EPS_PDN_DISCONNECT_CNF,LNB_PDN_DISCONNECT_CNF_STRU
+&D_EPS_BEARER_RESOURCE_MODIFY_CNF,LNB_BEARER_RESOURCE_MODIFY_CNF_STRU
+&D_EPS_BEARER_RESOURCE_ALLOC_CNF,LNB_BEARER_RESOURCE_ALLOC_CNF_STRU
+&D_EPS_ATTACH_CNF,LNB_ATTACH_CNF_STRU
+&D_EPS_ATTACH_IND,LNB_ATTACH_IND_STRU
+&D_EPS_DETACH_CNF,LNB_DETACH_CNF_STRU
+&D_EPS_DETACH_IND,LNB_DETACH_IND_STRU
+&D_EPS_RADIO_CELL_QUAL_INFO,LNB_RADIO_QUAL_IND_STRU
+&D_EPS_OPELIST_SRCH_CNF,LNB_OPELIST_SRCH_CNF_STRU
+&D_EPS_OPERATOR_SELETE_CNF,LNB_OPERATOR_SELETE_CNF_STRU
+&D_EPS_USIM_STATUS_IND,MSG_HEADER_STRU
+&D_EPS_EMM_INFO_IND,LNB_EMM_INFO_IND_STRU
+&D_EPS_START_COMP_IND,LNB_START_COMP_IND_STRU
+&D_EPS_PDN_CONNECT_IND,LNB_PDN_CONNECT_IND_STRU
+&D_EPS_DEACTIVE_IND,LNB_EPS_DEACTIVE_IND_STRU
+&D_EPS_CSODCP_CNF,LNB_CSODCP_SEND_CNF_STRU
+&D_EPS_CRTDCP_REPORT_IND,LNB_CRTDCP_REPORT_IND_STRU
+&D_EPS_CGAPNRC_INFO_IND,LNB_CGAPNRC_INFO_IND_STRU
+&D_EPS_ACTIVE_IND,LNB_EPS_ACTIVE_IND_STRU
+&D_EPS_UICCID_CNF,MSG_HEADER_STRU
+&D_EPS_REG_STATUS_IND,LNB_REG_STATUS_IND_STRU
+&D_EPS_SIGNAL_CONN_STATUS_IND,LNB_SIGNAL_CONN_STATUS_IND_STRU
+&D_EPS_EDRX_PARA_CHANGE_IND,LNB_EDRX_PARA_CHANGE_IND_STRU
+&D_EPS_CSODCP_ABORT_CNF,LNB_CSODCP_ABORT_CNF_STRU
+&D_EPS_CCIOTOPT_REPORT_IND,MSG_HEADER_STRU
+&D_EPS_UICC_ID_REQ,LNB_EPS_UICC_ID_REQ_STRU
+&D_EPS_CSODCP_ABORT_REQ,LNB_EPS_CSODCP_ABORT_REQ_STRU
+&D_EPS_CCIOTOPT_SET_REQ,LNB_EPS_CCIOTOPT_SET_REQ_STRU
+&D_EPS_PDN_IPDNS_IND,LNB_PDN_IPDNS_IND_STRU
+&D_ATC_DATA_REQ,ST_ATC_DATA_REQ_LOG
+&D_ATC_DATA_IND,ST_ATC_DATA_IND
+&D_ATC_ATO_IND,ST_ATC_ATO_IND
+&D_ATC_UPLANE_START_IND,MSG_HEADER_STRU
+&D_ATC_UPLANE_STOP_IND,MSG_HEADER_STRU
+&D_ATC_PS_PROGRESS_IND,MSG_HEADER_STRU
+&D_EPS_USER_DATA_REQ,LNB_USER_DATA_REQ_STRU
+&D_EPS_USER_DATA_IND,MSG_HEADER_STRU
+&D_EPS_APL_DATA_SEND_REQ,LNB_EPS_APL_DATA_SEND_REQ_STRU
+&START_UART_DATA,START_UART_DATA_STRU
+&STOP_UART_DATA,STOP_UART_DATA_STRU
+&START_APL_DATA,START_APL_DATA_STRU
+&D_ATC_DATA_REQ_LONG_INFO,MSG_HEADER_STRU
+&D_SMS_RL_DATA_REQ,LNB_SMS_RL_DATA_REQ_STRU
+&D_SMS_RL_REPORT_REQ,LNB_SMS_RL_REPORT_REQ_STRU
+&D_SMS_RL_DATA_IND,LNB_SMS_RL_DATA_IND_STRU
+&D_SMS_RL_REPORT_IND,LNB_SMS_RL_REPORT_IND_STRU
+&SECURITY_HDR_TYPE_PLAIN_NAS,ST_LTE_MSG_HEADER
+&SECURITY_HDR_TYPE_INTEGRITY,ST_LTE_MSG_HEADER
+&SECURITY_HDR_TYPE_INTEGRITY_AND_CIPHERED,ST_LTE_MSG_HEADER
+&SECURITY_HDR_TYPE_INTEGRITY_WITH_NEW_EPS_SECURITY_CONTEXT,ST_LTE_MSG_HEADER
+&SECURITY_HDR_TYPE_INTEGRITY_AND_CIPHERED_WITH_NEW_EPS_SECURITY_CONTEXT,ST_LTE_MSG_HEADER
+&SECURITY_HDR_TYPE_INTEGRITY_AND_PARTAILLY_CIPHERED_NAS_MESSAGE,ST_LTE_MSG_HEADER
+&SECURITY_HDR_TYPE_SERVICE_REQUEST,ST_LTE_MSG_HEADER
+&PD_EPS_SESSION_MANAGEMENT,ST_LTE_BEARER_MSG_HEADER
+&PD_EPS_MOBILITY_MANAGEMENT,ST_LTE_MSG_HEADER
+&PD_TC_MOBILITY_MANAGEMENT,ST_LTE_MSG_HEADER
+&MESSAGE_TYPE_ATTACH_REQUEST,ST_LTE_ATTACH_REQ
+&MESSAGE_TYPE_ATTACH_ACCEPT,ST_LTE_ATTACH_ACCEPT
+&MESSAGE_TYPE_ATTACH_COMPLETE,ST_LTE_ATTACH_COMPLETE
+&MESSAGE_TYPE_ATTACH_REJECT,ST_LTE_ATTACH_REJECT
+&MESSAGE_TYPE_DETACH_REQUEST,ST_LTE_DETACH_REQUEST_ORI
+&MESSAGE_TYPE_DETACH_ACCEPT,ST_LTE_DETACH_ACCEPT_ORI
+&MESSAGE_TYPE_TRACKING_AREA_UPDATE_REQUEST,ST_LTE_TRACKING_AREA_UPDATE_REQ
+&MESSAGE_TYPE_TRACKING_AREA_UPDATE_ACCEPT,ST_LTE_TRACKING_AREA_UPDATE_ACCEPT
+&MESSAGE_TYPE_TRACKING_AREA_UPDATE_COMPLETE,ST_LTE_TAU_COMPLETE
+&MESSAGE_TYPE_TRACKING_AREA_UPDATE_REJECT,ST_LTE_TRACKING_AREA_UPDATE_REJECT
+&MESSAGE_TYPE_EXTENDED_SERVICE_REQUEST,ST_LTE_EXTENDED_SERVICE_REQ
+&MESSAGE_TYPE_CP_SERVICE_REQUEST,ST_LTE_SERVICE_REQ
+&MESSAGE_TYPE_SERVICE_REJECT,ST_LTE_SERV_REJECT
+&MESSAGE_TYPE_SERVICE_ACCEPT,ST_LTE_SERV_ACCEPT
+&MESSAGE_TYPE_GUTI_REALLOCATION_COMMAND,ST_LTE_GUTI_REALLOCATION_COMMAND
+&MESSAGE_TYPE_GUTI_REALLOCATION_COMPLETE,ST_LTE_GUTI_REALLOCATION_COMPLETE
+&MESSAGE_TYPE_AUTHENTICATION_REQUEST,ST_LTE_AUTHENTICATION_REQUEST
+&MESSAGE_TYPE_AUTHENTICATION_RESPONSE,ST_LTE_AUTHENTICATION_RESPONSE
+&MESSAGE_TYPE_AUTHENTICATION_REJECT,ST_LTE_AUTHENTICATION_REJECT
+&MESSAGE_TYPE_AUTHENTICATION_FAILURE,ST_AUTH_FAIL_IE
+&MESSAGE_TYPE_IDENTITY_REQUEST,ST_LTE_IDENTITY_REQUEST
+&MESSAGE_TYPE_IDENTITY_RESPONSE,ST_LTE_ID_RESPONSE
+&MESSAGE_TYPE_SECURITY_MODE_COMMAND,ST_LTE_SECUR_MODE_COMMAND
+&MESSAGE_TYPE_SECURITY_MODE_COMPLETE,ST_LTE_MSG_SECUR_MODE_CMPL
+&MESSAGE_TYPE_SECURITY_MODE_REJECT,ST_LTE_SECURITY_MODE_REJECT
+&MESSAGE_TYPE_EMM_STATUS,ST_LTE_EMM_STATUS
+&MESSAGE_TYPE_EMM_INFORMATION,ST_LTE_EMM_INFORMATION
+&MESSAGE_TYPE_DOWNLINK_NAS_TRANSPORT,ST_LTE_DOWNLINK_NAS_TRANSPORT
+&MESSAGE_TYPE_UPLINK_NAS_TRANSPORT,ST_LTE_UL_NAS_TRANSP
+&MESSAGE_TYPE_CS_SERVICE_NOTIFICATION,ST_LTE_CS_SERVICE_NOTIFICATION
+&MESSAGE_TYPE_DOWNLINK_GENERIC_NAS_TRANSPORT,ST_LTE_DL_GENERIC_NAS_TRANSP
+&MESSAGE_TYPE_UPLINK_GENERIC_NAS_TRANSPORT,ST_LTE_UL_GENERIC_NAS_TRANSP
+&MESSAGE_TYPE_CLOSE_UE_TEST_LOOP,ST_LTC_CLOSE_UE_TEST_LOOP
+&MESSAGE_TYPE_CLOSE_UE_TEST_LOOP_COMPLETE,ST_LTC_CLOSE_UE_TEST_LOOP_COMPLETE
+&MESSAGE_TYPE_OPEN_UE_TEST_LOOP,ST_LTC_CLOSE_UE_TEST_LOOP
+&MESSAGE_TYPE_OPEN_UE_TEST_LOOP_COMPLETE,ST_LTC_OPEN_UE_TEST_LOOP_COMPLETE
+&MESSAGE_TYPE_ACTIVE_TEST_MODE,ST_LTC_ACTIVATE_TEST_MODE
+&MESSAGE_TYPE_ACTIVE_TEST_MODE_COMPLETE,ST_LTC_ACTIVATE_TEST_MODE_COMPLETE
+&MESSAGE_TYPE_DEACTIVE_TEST_MODE,ST_LTC_DEACTIVATE_TEST_MODE
+&MESSAGE_TYPE_DEACTIVE_TEST_MODE_COMPLETE,ST_LTC_DEACTIVATE_TEST_MODE_COMPLETE
+&MESSAGE_TYPE_ACTIVATE_DEFAULT_EPS_BEARER_CONTEXT_REQUEST,ST_LTE_MODIFY_EPS_BEARER_CONTEXT_REQ
+&MESSAGE_TYPE_ACTIVATE_DEFAULT_EPS_BEARER_CONTEXT_ACCEPT,ST_LTE_MODIFY_EPS_BEARER_CONTEXT_ACCEPT
+&MESSAGE_TYPE_ACTIVATE_DEFAULT_EPS_BEARER_CONTEXT_REJECT,ST_LTE_MODIFY_EPS_BEARER_CONTEXT_REJECT
+&MESSAGE_TYPE_ACTIVATE_DEDICATED_EPS_BEARER_CONTEXT_REQUEST,ST_LTE_ACTIVATE_DDCTD_EPS_BEARER_CONTEXT_REQ
+&MESSAGE_TYPE_ACTIVATE_DEDICATED_EPS_BEARER_CONTEXT_ACCEPT,ST_LTE_ACTIVATE_DDCTD_EPS_BEARER_CONTEXT_ACCEPT
+&MESSAGE_TYPE_ACTIVATE_DEDICATED_EPS_BEARER_CONTEXT_REJECT,ST_LTE_ACTIVATE_DDCTD_EPS_BEARER_CONTEXT_REJECT
+&MESSAGE_TYPE_MODIFY_EPS_BEARER_CONTEXT_REQUEST,ST_LTE_MODIFY_EPS_BEARER_CONTEXT_REQ
+&MESSAGE_TYPE_MODIFY_EPS_BEARER_CONTEXT_ACCEPT,ST_LTE_MODIFY_EPS_BEARER_CONTEXT_ACCEPT
+&MESSAGE_TYPE_MODIFY_EPS_BEARER_CONTEXT_REJECT,ST_LTE_MODIFY_EPS_BEARER_CONTEXT_REJECT
+&MESSAGE_TYPE_DEACTIVATE_EPS_BEARER_CONTEXT_REQUEST,ST_LTE_DEACTIVATE_EPS_BEARER_CONTEXT_REQ
+&MESSAGE_TYPE_DEACTIVATE_EPS_BEARER_CONTEXT_ACCEPT,ST_LTE_DEACTIVATE_EPS_BEARER_CONTEXT_ACCEPT
+&MESSAGE_TYPE_PDN_CONNECTIVITY_REQUEST,ST_LTE_PDN_CONNECTIVITY_REQ
+&MESSAGE_TYPE_PDN_CONNECTIVITY_REJECT,ST_LTE_PDN_CONNECTIVITY_REJECT
+&MESSAGE_TYPE_PDN_DISCONNECT_REQUEST,ST_LTE_PDN_DISCONNECT_REQ
+&MESSAGE_TYPE_PDN_DISCONNECT_REJECT,ST_LTE_PDN_DISCONNECT_REJECT
+&MESSAGE_TYPE_BEARER_RESOURCE_ALLOCATION_REQUEST,ST_LTE_BEARER_RESOURCE_ALLOC_REQ
+&MESSAGE_TYPE_BEARER_RESOURCE_ALLOCATION_REJECT,ST_LTE_BEARER_RESOURCE_ALLOC_REJECT
+&MESSAGE_TYPE_BEARER_RESOURCE_MODIFICATION_REQUEST,ST_LTE_BEARER_RESOURCE_MODIFICATION_REQ
+&MESSAGE_TYPE_BEARER_RESOURCE_MODIFICATION_REJECT,ST_LTE_BEARER_RESOURCE_MODIFICATION_REJECT
+&MESSAGE_TYPE_ESM_INFORMATION_REQUEST,ST_LTE_ESM_INFO_REQ
+&MESSAGE_TYPE_ESM_INFORMATION_RESPONSE,ST_LTE_ESM_INFO_RESPONSE
+&MESSAGE_TYPE_NOTIFICATION,ST_LTE_NOTIFICATION_IE
+&MESSAGE_TYPE_ESM_DUMMY_MESSAGE,ST_LTE_ESM_DUMMY_MSG
+&MESSAGE_TYPE_ESM_STATUS,ST_LTE_ESM_STA
+&MESSAGE_TYPE_REMOTE_UE_REPORT,REMOTE_UE_REPORT_RSP
+&MESSAGE_TYPE_REMOTE_UE_REPORT_RESPONSE,REMOTE_UE_REPORT_RSP
+&MESSAGE_TYPE_ESM_DATA_TRANSPORT,ST_LTE_ESM_DATA_TRANSP
+&LNB_Security_protected_NAS_message_STATIC,MSG_HEADER_STRU
+&LNB_Service_request_STATIC,ST_LTE_SERVICE_REQ

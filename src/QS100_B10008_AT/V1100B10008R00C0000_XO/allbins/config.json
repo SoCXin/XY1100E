@@ -1,0 +1,31 @@
+{
+    "configVersion": "1.0.0",
+
+    "internal": 
+    {
+        "Images": [        
+            "secondarybootloader.img", 
+            "arm.img",
+            "dsp.img"
+        ],
+            
+        "NVs": [
+            ["factoryNV.img", "flashEreaseEnable"],
+			["rfnv.img", "flashEreaseEnable"]
+        ],
+
+        "SHA":["0x270000E0", "20"],
+
+        "Others":["loginfo.info"]
+    },
+    
+    "extends":
+    {
+        "Images":[],
+
+        "NVs":[
+        ],
+
+        "Others":[]
+    }
+}
