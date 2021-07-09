@@ -17,13 +17,13 @@ MAKEFILE_DIR = ./TARGETS/GCC-ARM/make
 
 
 all:
-	@cd $(MAKEFILE_DIR);$(TIME) make --no-print-directory -j 10 -f Makefile all
+	@cd $(MAKEFILE_DIR);$(TIME) make --no-print-directory -j 12 -f Makefile all
 
 clean:
 	@cd $(MAKEFILE_DIR);$(TIME) make --no-print-directory -f Makefile clean
-	
+
 shows:
 	@cd $(MAKEFILE_DIR);make --no-print-directory -f Makefile shows
-	
+
 shown:
 	@cd $(MAKEFILE_DIR);make --no-print-directory -f Makefile shown

@@ -26,8 +26,13 @@
 
 ### [选型建议](https://github.com/SoCXin)
 
-[XY1100](https://github.com/SoCXin/XY1100) 具有竞争力的NB-IoT方案
+[XY1100](https://github.com/SoCXin/XY1100) 具有竞争力的双核NB-IoT芯片，高性价比openCPU设计。
 
 * QFN52(6x6mm)
+
+#### 相关开发板
+
+[![sites](docs/B.jpg)](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17013502267.35.409ff27fKSCoCI&id=646752053427)
+
 
 ### [探索芯世界 www.SoC.xin](http://www.SoC.Xin)
