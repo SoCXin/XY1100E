@@ -1,0 +1,1446 @@
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcV1/Src/rohc_v1_decmp_udp.c</key>
+    <ListEntry key="__FILE__" value="&quot;mp_udp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+    <ListEntry key="__FILE__" value="&quot;ectors&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_decmp_uncmp.c</key>
+    <ListEntry key="__FILE__" value="&quot;_uncmp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cCommLib.c</key>
+    <ListEntry key="__FILE__" value="&quot;ommLib&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cFreqInfo.c</key>
+    <ListEntry key="__FILE__" value="&quot;eqInfo&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMbasic_Com.c</key>
+    <ListEntry key="__FILE__" value="&quot;ic_Com&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/xy_memtrack.c</key>
+    <ListEntry key="__FILE__" value="&quot;mtrack&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/export/src/PhyLayerTask3.c</key>
+    <ListEntry key="__FILE__" value="&quot;rTask3&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvphy.c</key>
+    <ListEntry key="__FILE__" value="&quot;rcvphy&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/sema.c</key>
+    <ListEntry key="__FILE__" value="&quot;sema&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyCellSearch.c</key>
+    <ListEntry key="__FILE__" value="&quot;Search&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/OmTxRtss.c</key>
+    <ListEntry key="__FILE__" value="&quot;TxRtss&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/utc.c</key>
+    <ListEntry key="__FILE__" value="&quot;utc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyRX_PDCCH_Search.c</key>
+    <ListEntry key="__FILE__" value="&quot;Search&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lpdcp/Src/LPdcpUlDataHandle.c</key>
+    <ListEntry key="__FILE__" value="&quot;Handle&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/export/src/PhyLayerTask1.c</key>
+    <ListEntry key="__FILE__" value="&quot;rTask1&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_api.c</key>
+    <ListEntry key="__FILE__" value="&quot;tc_api&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasMain.c</key>
+    <ListEntry key="__FILE__" value="&quot;asMain&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/export/src/PhyLowResTimer.c</key>
+    <ListEntry key="__FILE__" value="&quot;sTimer&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UiccGlobal.c</key>
+    <ListEntry key="__FILE__" value="&quot;Global&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_mem_dump.c</key>
+    <ListEntry key="__FILE__" value="&quot;m_dump&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_proc_other.c</key>
+    <ListEntry key="__FILE__" value="&quot;_other&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cCnntDrx.c</key>
+    <ListEntry key="__FILE__" value="&quot;nntDrx&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/CommonSNOW3G.c</key>
+    <ListEntry key="__FILE__" value="&quot;SNOW3G&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc</key>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/log2LUT.c</key>
+    <ListEntry key="__FILE__" value="&quot;og2LUT&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/scl_sqrt16x16_fusion.c</key>
+    <ListEntry key="__FILE__" value="&quot;fusion&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_ram.c</key>
+    <ListEntry key="__FILE__" value="&quot;tc_ram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cIram.c</key>
+    <ListEntry key="__FILE__" value="&quot;1cIram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/StopToDebug.c</key>
+    <ListEntry key="__FILE__" value="&quot;oDebug&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/sim_csp.c</key>
+    <ListEntry key="__FILE__" value="&quot;im_csp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_cmp.c</key>
+    <ListEntry key="__FILE__" value="&quot;om_cmp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrom.c</key>
+    <ListEntry key="__FILE__" value="&quot;rcfrom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DspSysHaL/FreeRTOS_trace.c</key>
+    <ListEntry key="__FILE__" value="&quot;_trace&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/vec128_twiddleNormalizedStage3.c</key>
+    <ListEntry key="__FILE__" value="&quot;Stage3&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/RXAGC.c</key>
+    <ListEntry key="__FILE__" value="&quot;RXAGC&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_mem_dump_ram.c</key>
+    <ListEntry key="__FILE__" value="&quot;mp_ram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/uplink/src/fusion_prepend_dummy_lsb.c</key>
+    <ListEntry key="__FILE__" value="&quot;my_lsb&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/Encryption.c</key>
+    <ListEntry key="__FILE__" value="&quot;yption&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_protocol_print.c</key>
+    <ListEntry key="__FILE__" value="&quot;_print&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cCnntCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;ntCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/scl_log10_16x16_fusion.c</key>
+    <ListEntry key="__FILE__" value="&quot;fusion&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/xy_worklock.c</key>
+    <ListEntry key="__FILE__" value="&quot;rklock&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lmac/src/lmacram.c</key>
+    <ListEntry key="__FILE__" value="&quot;macram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimInit.c</key>
+    <ListEntry key="__FILE__" value="&quot;imInit&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UiccUsimProc.c</key>
+    <ListEntry key="__FILE__" value="&quot;imProc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/IpcMsgDrv/ipcmsg_hal.c</key>
+    <ListEntry key="__FILE__" value="&quot;sg_hal&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfram.c</key>
+    <ListEntry key="__FILE__" value="&quot;rcfram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Dummy/Dummy_Lphytaskentry.c</key>
+    <ListEntry key="__FILE__" value="&quot;kentry&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_IsPrintLog.c</key>
+    <ListEntry key="__FILE__" value="&quot;intLog&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Vos/Src/voscfgram.c</key>
+    <ListEntry key="__FILE__" value="&quot;cfgram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/NasCodec/Src/NasRom.c</key>
+    <ListEntry key="__FILE__" value="&quot;NasRom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMspec_Cell.c</key>
+    <ListEntry key="__FILE__" value="&quot;c_Cell&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cLpm.c</key>
+    <ListEntry key="__FILE__" value="&quot;L1cLpm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cUpc.c</key>
+    <ListEntry key="__FILE__" value="&quot;L1cUpc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/gpio.c</key>
+    <ListEntry key="__FILE__" value="&quot;gpio&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/IpcMsgDrv/ipcmsg_drv.c</key>
+    <ListEntry key="__FILE__" value="&quot;sg_drv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteSmsCell.c</key>
+    <ListEntry key="__FILE__" value="&quot;msCell&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lmac/src/l2tsk.c</key>
+    <ListEntry key="__FILE__" value="&quot;l2tsk&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/FFT_PFA.c</key>
+    <ListEntry key="__FILE__" value="&quot;FT_PFA&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/scl_log10_16x16_fusion.c</key>
+    <ListEntry key="__FILE__" value="&quot;fusion&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_os.c</key>
+    <ListEntry key="__FILE__" value="&quot;com_os&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcMsgRcv.c</key>
+    <ListEntry key="__FILE__" value="&quot;MsgRcv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Inc</key>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/print/debugprint.c</key>
+    <ListEntry key="__FILE__" value="&quot;gprint&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteSmsCom.c</key>
+    <ListEntry key="__FILE__" value="&quot;SmsCom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lpdcp/Src/LPdcpDlDataHandle.c</key>
+    <ListEntry key="__FILE__" value="&quot;Handle&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>FreeRTOSfiles/src/croutine.c</key>
+    <ListEntry key="__FILE__" value="&quot;outine&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimAccess.c</key>
+    <ListEntry key="__FILE__" value="&quot;Access&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/IpcMsgDrv/ipcmsg_ringbuf.c</key>
+    <ListEntry key="__FILE__" value="&quot;ingbuf&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lpdcp/Src/LPdcpConfigHandle.c</key>
+    <ListEntry key="__FILE__" value="&quot;Handle&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cConfToHigherLayer.c</key>
+    <ListEntry key="__FILE__" value="&quot;rLayer&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/lpm/low_power.c</key>
+    <ListEntry key="__FILE__" value="&quot;_power&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimAccessRestricted.c</key>
+    <ListEntry key="__FILE__" value="&quot;ricted&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Api/L1SndAsApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;dAsApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/os_adapt.c</key>
+    <ListEntry key="__FILE__" value="&quot;_adapt&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimTerminalProfile.c</key>
+    <ListEntry key="__FILE__" value="&quot;rofile&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_api.c</key>
+    <ListEntry key="__FILE__" value="&quot;hc_api&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_primitive_print_ram.c</key>
+    <ListEntry key="__FILE__" value="&quot;nt_ram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/idxNK_PFA.c</key>
+    <ListEntry key="__FILE__" value="&quot;NK_PFA&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyFreScan.c</key>
+    <ListEntry key="__FILE__" value="&quot;reScan&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMbasic_AirMsg.c</key>
+    <ListEntry key="__FILE__" value="&quot;AirMsg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cNpusch.c</key>
+    <ListEntry key="__FILE__" value="&quot;Npusch&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimCommon.c</key>
+    <ListEntry key="__FILE__" value="&quot;Common&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/OmActComm.c</key>
+    <ListEntry key="__FILE__" value="&quot;ctComm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lmac/src/lmacrcv.c</key>
+    <ListEntry key="__FILE__" value="&quot;macrcv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/phytimer/phytimer.c</key>
+    <ListEntry key="__FILE__" value="&quot;ytimer&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_ram.c</key>
+    <ListEntry key="__FILE__" value="&quot;om_ram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc</key>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cHarqCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;rqCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcDataSnd.c</key>
+    <ListEntry key="__FILE__" value="&quot;ataSnd&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Pscfg/Src/pscfg.c</key>
+    <ListEntry key="__FILE__" value="&quot;pscfg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvpdcp.c</key>
+    <ListEntry key="__FILE__" value="&quot;cvpdcp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/FFT_CTA.c</key>
+    <ListEntry key="__FILE__" value="&quot;FT_CTA&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimAuthenticate.c</key>
+    <ListEntry key="__FILE__" value="&quot;ticate&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/simulator/src/PhySW_Simu.c</key>
+    <ListEntry key="__FILE__" value="&quot;W_Simu&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/xtensa_init.c</key>
+    <ListEntry key="__FILE__" value="&quot;a_init&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/heap_4.c</key>
+    <ListEntry key="__FILE__" value="&quot;heap_4&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;1cCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Lcs/Src/LteLcsSs.c</key>
+    <ListEntry key="__FILE__" value="&quot;eLcsSs&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/net/ping/ping.c</key>
+    <ListEntry key="__FILE__" value="&quot;ping&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/simulator/src/PhySimMain.c</key>
+    <ListEntry key="__FILE__" value="&quot;imMain&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/smartcard_proxy/smartcard_proxy.c</key>
+    <ListEntry key="__FILE__" value="&quot;_proxy&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cIdleCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;leCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/NasCodec/Src/SsEnCode.c</key>
+    <ListEntry key="__FILE__" value="&quot;EnCode&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsndphy.c</key>
+    <ListEntry key="__FILE__" value="&quot;sndphy&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/dma.c</key>
+    <ListEntry key="__FILE__" value="&quot;dma&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/Integrity.c</key>
+    <ListEntry key="__FILE__" value="&quot;egrity&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/smartcard/smartcard.c</key>
+    <ListEntry key="__FILE__" value="&quot;rtcard&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcMsgSnd.c</key>
+    <ListEntry key="__FILE__" value="&quot;MsgSnd&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cProcessPSMsg.c</key>
+    <ListEntry key="__FILE__" value="&quot;sPSMsg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Api/AsSndL1Api.c</key>
+    <ListEntry key="__FILE__" value="&quot;dL1Api&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfcommon.c</key>
+    <ListEntry key="__FILE__" value="&quot;common&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimPin.c</key>
+    <ListEntry key="__FILE__" value="&quot;simPin&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/watchdog.c</key>
+    <ListEntry key="__FILE__" value="&quot;tchdog&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Dummy/Dummy_L2TaskEntry.c</key>
+    <ListEntry key="__FILE__" value="&quot;kEntry&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/export/src/PhyHighResTimer.c</key>
+    <ListEntry key="__FILE__" value="&quot;sTimer&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsndmac.c</key>
+    <ListEntry key="__FILE__" value="&quot;sndmac&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cOtdoa.c</key>
+    <ListEntry key="__FILE__" value="&quot;cOtdoa&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcRam.c</key>
+    <ListEntry key="__FILE__" value="&quot;RlcRam&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_cmp_uncmp.c</key>
+    <ListEntry key="__FILE__" value="&quot;_uncmp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/uplink/src/ULFunctions.c</key>
+    <ListEntry key="__FILE__" value="&quot;ctions&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcV1/Src/rohc_v1_decmp_com.c</key>
+    <ListEntry key="__FILE__" value="&quot;mp_com&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_string_print_ram.c</key>
+    <ListEntry key="__FILE__" value="&quot;nt_ram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/Common.c</key>
+    <ListEntry key="__FILE__" value="&quot;Common&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/AGC.c</key>
+    <ListEntry key="__FILE__" value="&quot;AGC&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/Frmwkcom.c</key>
+    <ListEntry key="__FILE__" value="&quot;mwkcom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcV1/Src/rohc_v1_cmp_com.c</key>
+    <ListEntry key="__FILE__" value="&quot;mp_com&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimSearch.c</key>
+    <ListEntry key="__FILE__" value="&quot;Search&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimEnvelop.c</key>
+    <ListEntry key="__FILE__" value="&quot;nvelop&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_rom.c</key>
+    <ListEntry key="__FILE__" value="&quot;tc_rom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyGeneral.c</key>
+    <ListEntry key="__FILE__" value="&quot;eneral&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UiccDummy.c</key>
+    <ListEntry key="__FILE__" value="&quot;cDummy&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyDFE_Adapter.c</key>
+    <ListEntry key="__FILE__" value="&quot;dapter&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcV1/Src/rohc_v1_cmp_list.c</key>
+    <ListEntry key="__FILE__" value="&quot;p_list&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/bakmem_stack/bakmem_stack.c</key>
+    <ListEntry key="__FILE__" value="&quot;_stack&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/tempera_drv.c</key>
+    <ListEntry key="__FILE__" value="&quot;ra_drv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/tableTXPC.c</key>
+    <ListEntry key="__FILE__" value="&quot;leTXPC&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/vec128_twiddleNormalizedStage2.c</key>
+    <ListEntry key="__FILE__" value="&quot;Stage2&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMbasic_Cell.c</key>
+    <ListEntry key="__FILE__" value="&quot;c_Cell&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/SpectrumAnalysis.c</key>
+    <ListEntry key="__FILE__" value="&quot;alysis&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhySS_Time2Freq.c</key>
+    <ListEntry key="__FILE__" value="&quot;e2Freq&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Asn1Ber/lib/Adpter_ber.c</key>
+    <ListEntry key="__FILE__" value="&quot;er_ber&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/xtensa_intr.c</key>
+    <ListEntry key="__FILE__" value="&quot;a_intr&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsndnas.c</key>
+    <ListEntry key="__FILE__" value="&quot;sndnas&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Pscfg/Src/psinterface.c</key>
+    <ListEntry key="__FILE__" value="&quot;erface&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Vos/Src/vosconfig_freertos.c</key>
+    <ListEntry key="__FILE__" value="&quot;eertos&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DspSysHaL/sysHal.c</key>
+    <ListEntry key="__FILE__" value="&quot;sysHal&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_cmd_other.c</key>
+    <ListEntry key="__FILE__" value="&quot;_other&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_read_msg.c</key>
+    <ListEntry key="__FILE__" value="&quot;ad_msg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvnas.c</key>
+    <ListEntry key="__FILE__" value="&quot;rcvnas&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/lpm/lpm_func.c</key>
+    <ListEntry key="__FILE__" value="&quot;m_func&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasRom.c</key>
+    <ListEntry key="__FILE__" value="&quot;NasRom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvos.c</key>
+    <ListEntry key="__FILE__" value="&quot;frcvos&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyEventExecute.c</key>
+    <ListEntry key="__FILE__" value="&quot;xecute&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cMeas.c</key>
+    <ListEntry key="__FILE__" value="&quot;1cMeas&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/socket_proxy/sock_proxy_demo.c</key>
+    <ListEntry key="__FILE__" value="&quot;y_demo&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_cmd_cnf_flash.c</key>
+    <ListEntry key="__FILE__" value="&quot;_flash&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/positioning/src/funcMAF.c</key>
+    <ListEntry key="__FILE__" value="&quot;uncMAF&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMbasic_SndApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;SndApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcV1/Src/rohc_v1_decmp_list.c</key>
+    <ListEntry key="__FILE__" value="&quot;p_list&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_analysis.c</key>
+    <ListEntry key="__FILE__" value="&quot;alysis&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_decmp.c</key>
+    <ListEntry key="__FILE__" value="&quot;_decmp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/timer.c</key>
+    <ListEntry key="__FILE__" value="&quot;timer&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc</key>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/CommonAES.c</key>
+    <ListEntry key="__FILE__" value="&quot;monAES&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/export/src/PhyConfigInterface.c</key>
+    <ListEntry key="__FILE__" value="&quot;erface&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Nvm/Src/NvmTaskEntry.c</key>
+    <ListEntry key="__FILE__" value="&quot;kEntry&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyCommon.c</key>
+    <ListEntry key="__FILE__" value="&quot;Common&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/rtc_tmr/src/rtc_adapt.c</key>
+    <ListEntry key="__FILE__" value="&quot;_adapt&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Inc</key>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+    <ListEntry key="__FILE__" value="&quot;ontext&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/net/utils/ip_packet_proc.c</key>
+    <ListEntry key="__FILE__" value="&quot;t_proc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>FreeRTOSfiles/src/tasks.c</key>
+    <ListEntry key="__FILE__" value="&quot;tasks&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyRX_ChannelEstimation.c</key>
+    <ListEntry key="__FILE__" value="&quot;mation&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_cmd_cnf.c</key>
+    <ListEntry key="__FILE__" value="&quot;md_cnf&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;simApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/RXAGC.c</key>
+    <ListEntry key="__FILE__" value="&quot;RXAGC&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcflppmeas.c</key>
+    <ListEntry key="__FILE__" value="&quot;ppmeas&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/scl_sqrt16x16_fusion.c</key>
+    <ListEntry key="__FILE__" value="&quot;fusion&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/FFT_interface.c</key>
+    <ListEntry key="__FILE__" value="&quot;erface&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimOsConfig.c</key>
+    <ListEntry key="__FILE__" value="&quot;Config&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasRam.c</key>
+    <ListEntry key="__FILE__" value="&quot;NasRam&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimControl.c</key>
+    <ListEntry key="__FILE__" value="&quot;ontrol&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_main.c</key>
+    <ListEntry key="__FILE__" value="&quot;c_main&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/CommonZUC.c</key>
+    <ListEntry key="__FILE__" value="&quot;monZUC&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/positioning/src/PhyOtdoa.c</key>
+    <ListEntry key="__FILE__" value="&quot;yOtdoa&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/dfe.c</key>
+    <ListEntry key="__FILE__" value="&quot;dfe&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/scl_log10_32x32_fusion.c</key>
+    <ListEntry key="__FILE__" value="&quot;fusion&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvmac.c</key>
+    <ListEntry key="__FILE__" value="&quot;rcvmac&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cRlm.c</key>
+    <ListEntry key="__FILE__" value="&quot;L1cRlm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcCom/Src/rohc_com_rom.c</key>
+    <ListEntry key="__FILE__" value="&quot;om_rom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Asn1/lib/Adpter.c</key>
+    <ListEntry key="__FILE__" value="&quot;Adpter&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcftaskentry.c</key>
+    <ListEntry key="__FILE__" value="&quot;kentry&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasEMM_Cell.c</key>
+    <ListEntry key="__FILE__" value="&quot;M_Cell&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/csp.c</key>
+    <ListEntry key="__FILE__" value="&quot;csp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/tableDFE.c</key>
+    <ListEntry key="__FILE__" value="&quot;bleDFE&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>OSAL/FreeRTOS/Source/FreeRTOS_trace_task.c</key>
+    <ListEntry key="__FILE__" value="&quot;e_task&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>OSAL/FreeRTOS/Source/osal.c</key>
+    <ListEntry key="__FILE__" value="&quot;osal&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cValidSubframe.c</key>
+    <ListEntry key="__FILE__" value="&quot;bframe&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/shm_msg/src/shm_msg_api.c</key>
+    <ListEntry key="__FILE__" value="&quot;sg_api&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/NasCodec/Src/NasApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;NasApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsndrlc.c</key>
+    <ListEntry key="__FILE__" value="&quot;sndrlc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteSmsRcv.c</key>
+    <ListEntry key="__FILE__" value="&quot;SmsRcv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/powMeasurement.c</key>
+    <ListEntry key="__FILE__" value="&quot;rement&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/oss_nv.c</key>
+    <ListEntry key="__FILE__" value="&quot;oss_nv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_format.c</key>
+    <ListEntry key="__FILE__" value="&quot;format&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimUpdate.c</key>
+    <ListEntry key="__FILE__" value="&quot;Update&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_proc_basic.c</key>
+    <ListEntry key="__FILE__" value="&quot;_basic&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyConstants.c</key>
+    <ListEntry key="__FILE__" value="&quot;stants&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/Omrom.c</key>
+    <ListEntry key="__FILE__" value="&quot;Omrom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasEMM_AirMsg.c</key>
+    <ListEntry key="__FILE__" value="&quot;AirMsg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>OSAL/FreeRTOS/Source/FreeRTOS_trace.c</key>
+    <ListEntry key="__FILE__" value="&quot;_trace&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/rf_drv.c</key>
+    <ListEntry key="__FILE__" value="&quot;rf_drv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/simulator/src/PhyROM_Simu.c</key>
+    <ListEntry key="__FILE__" value="&quot;M_Simu&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasEMM_SndApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;SndApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcCom.c</key>
+    <ListEntry key="__FILE__" value="&quot;RlcCom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasEMM_Com.c</key>
+    <ListEntry key="__FILE__" value="&quot;MM_Com&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/SimTrace.c</key>
+    <ListEntry key="__FILE__" value="&quot;mTrace&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/OmVosApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;VosApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcDataRcv.c</key>
+    <ListEntry key="__FILE__" value="&quot;ataRcv&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/vec_log_table.c</key>
+    <ListEntry key="__FILE__" value="&quot;_table&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/port.c</key>
+    <ListEntry key="__FILE__" value="&quot;port&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_proc_sms.c</key>
+    <ListEntry key="__FILE__" value="&quot;oc_sms&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimProactiveCmd.c</key>
+    <ListEntry key="__FILE__" value="&quot;iveCmd&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/main.c</key>
+    <ListEntry key="__FILE__" value="&quot;main&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvrlc.c</key>
+    <ListEntry key="__FILE__" value="&quot;rcvrlc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cTaCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;TaCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/complex_vec_math.c</key>
+    <ListEntry key="__FILE__" value="&quot;c_math&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimIncrease.c</key>
+    <ListEntry key="__FILE__" value="&quot;crease&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/RF_MT.c</key>
+    <ListEntry key="__FILE__" value="&quot;RF_MT&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/time_statistics.c</key>
+    <ListEntry key="__FILE__" value="&quot;istics&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_string_print_phy.c</key>
+    <ListEntry key="__FILE__" value="&quot;nt_phy&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/xy_log_send.c</key>
+    <ListEntry key="__FILE__" value="&quot;g_send&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/patch.c</key>
+    <ListEntry key="__FILE__" value="&quot;patch&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsnduumsg.c</key>
+    <ListEntry key="__FILE__" value="&quot;duumsg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMspec_SndApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;SndApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/spi.c</key>
+    <ListEntry key="__FILE__" value="&quot;spi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Rohc/RohcV1/Src/rohc_v1_cmp_udp.c</key>
+    <ListEntry key="__FILE__" value="&quot;mp_udp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyROM.c</key>
+    <ListEntry key="__FILE__" value="&quot;PhyROM&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_string_print.c</key>
+    <ListEntry key="__FILE__" value="&quot;_print&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Vos/Src/vosconfig.c</key>
+    <ListEntry key="__FILE__" value="&quot;config&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_primitive_print.c</key>
+    <ListEntry key="__FILE__" value="&quot;_print&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lmac/src/lmaccom.c</key>
+    <ListEntry key="__FILE__" value="&quot;maccom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/xy_mem.c</key>
+    <ListEntry key="__FILE__" value="&quot;xy_mem&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Security/KeyDerFunc.c</key>
+    <ListEntry key="__FILE__" value="&quot;erFunc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cRachCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;chCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/powMeasurement.c</key>
+    <ListEntry key="__FILE__" value="&quot;rement&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>FreeRTOSfiles/src/list.c</key>
+    <ListEntry key="__FILE__" value="&quot;list&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cFlash.c</key>
+    <ListEntry key="__FILE__" value="&quot;cFlash&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/vec_log_table.c</key>
+    <ListEntry key="__FILE__" value="&quot;_table&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/positioning/src/funcComplexMultiplyConj.c</key>
+    <ListEntry key="__FILE__" value="&quot;lyConj&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyGoldSeqGen.c</key>
+    <ListEntry key="__FILE__" value="&quot;SeqGen&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UiccSimProc.c</key>
+    <ListEntry key="__FILE__" value="&quot;imProc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimRead.c</key>
+    <ListEntry key="__FILE__" value="&quot;imRead&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_cmd_basic.c</key>
+    <ListEntry key="__FILE__" value="&quot;_basic&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/prcm.c</key>
+    <ListEntry key="__FILE__" value="&quot;prcm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsndpdcp.c</key>
+    <ListEntry key="__FILE__" value="&quot;ndpdcp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyRX_PDSCH_Process.c</key>
+    <ListEntry key="__FILE__" value="&quot;rocess&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsysytemtest.c</key>
+    <ListEntry key="__FILE__" value="&quot;emtest&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyRXNPBCHProcess.c</key>
+    <ListEntry key="__FILE__" value="&quot;rocess&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/flash_vendor.c</key>
+    <ListEntry key="__FILE__" value="&quot;vendor&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/common/src/PhyFRC_Time.c</key>
+    <ListEntry key="__FILE__" value="&quot;C_Time&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/NasCodec/Src/SsDeCode.c</key>
+    <ListEntry key="__FILE__" value="&quot;DeCode&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_out.c</key>
+    <ListEntry key="__FILE__" value="&quot;ag_out&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/OmSerialize.c</key>
+    <ListEntry key="__FILE__" value="&quot;ialize&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimBip.c</key>
+    <ListEntry key="__FILE__" value="&quot;simBip&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/OmInterface.c</key>
+    <ListEntry key="__FILE__" value="&quot;erface&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cNcellMeas.c</key>
+    <ListEntry key="__FILE__" value="&quot;llMeas&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/rtc_tmr/src/rtc_tmr.c</key>
+    <ListEntry key="__FILE__" value="&quot;tc_tmr&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_cmd_sms.c</key>
+    <ListEntry key="__FILE__" value="&quot;md_sms&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/aes.c</key>
+    <ListEntry key="__FILE__" value="&quot;aes&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/tableRF.c</key>
+    <ListEntry key="__FILE__" value="&quot;ableRF&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/RXSpurCancellation.c</key>
+    <ListEntry key="__FILE__" value="&quot;lation&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimGlobals.c</key>
+    <ListEntry key="__FILE__" value="&quot;lobals&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/socket_proxy/socket_proxy.c</key>
+    <ListEntry key="__FILE__" value="&quot;_proxy&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/portclib.c</key>
+    <ListEntry key="__FILE__" value="&quot;rtclib&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfrcvuumsg.c</key>
+    <ListEntry key="__FILE__" value="&quot;vuumsg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Vos/Src/Voshook.c</key>
+    <ListEntry key="__FILE__" value="&quot;oshook&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>FreeRTOSfiles/src/queue.c</key>
+    <ListEntry key="__FILE__" value="&quot;queue&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/AGC.c</key>
+    <ListEntry key="__FILE__" value="&quot;AGC&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lpdcp/Src/LPdcpMsgSend.c</key>
+    <ListEntry key="__FILE__" value="&quot;sgSend&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/shm_msg/src/inter_core_msg.c</key>
+    <ListEntry key="__FILE__" value="&quot;re_msg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/sram_fusionF1lib0119b.c</key>
+    <ListEntry key="__FILE__" value="&quot;b0119b&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/eftl/src/xy_flash.c</key>
+    <ListEntry key="__FILE__" value="&quot;_flash&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrlc/src/LRlcTimer.c</key>
+    <ListEntry key="__FILE__" value="&quot;cTimer&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cSrchCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;chCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cNpdsch.c</key>
+    <ListEntry key="__FILE__" value="&quot;Npdsch&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/scl_log10_32x32_fusion.c</key>
+    <ListEntry key="__FILE__" value="&quot;fusion&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/TXCalibration.c</key>
+    <ListEntry key="__FILE__" value="&quot;ration&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/Omsoc.c</key>
+    <ListEntry key="__FILE__" value="&quot;Omsoc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/adc.c</key>
+    <ListEntry key="__FILE__" value="&quot;adc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasPlmn_Cell.c</key>
+    <ListEntry key="__FILE__" value="&quot;n_Cell&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+    <ListEntry key="__FILE__" value="&quot;ortasm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/export/src/PhyLayerTask2.c</key>
+    <ListEntry key="__FILE__" value="&quot;rTask2&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Pscfg/Src/pscfgram.c</key>
+    <ListEntry key="__FILE__" value="&quot;cfgram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/qspi_flash.c</key>
+    <ListEntry key="__FILE__" value="&quot;_flash&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Lcs/Src/LteLcsLpp.c</key>
+    <ListEntry key="__FILE__" value="&quot;LcsLpp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/DumpData_collectedData.c</key>
+    <ListEntry key="__FILE__" value="&quot;edData&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteSmsRom.c</key>
+    <ListEntry key="__FILE__" value="&quot;SmsRom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>FreeRTOSfiles/src/event_groups.c</key>
+    <ListEntry key="__FILE__" value="&quot;groups&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/at_ctrl/src/at_ext_proc.c</key>
+    <ListEntry key="__FILE__" value="&quot;t_proc&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DspSysHaL/FreeRTOS_trace_task.c</key>
+    <ListEntry key="__FILE__" value="&quot;e_task&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteSmsSend.c</key>
+    <ListEntry key="__FILE__" value="&quot;msSend&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/uplink/src/ULTable.c</key>
+    <ListEntry key="__FILE__" value="&quot;LTable&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lmac/src/lmacsnd.c</key>
+    <ListEntry key="__FILE__" value="&quot;macsnd&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/agc/polyrsqrtq23_tbl.c</key>
+    <ListEntry key="__FILE__" value="&quot;23_tbl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+    <ListEntry key="__FILE__" value="&quot;tr_asm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/vec128_twiddleNormalizedStage4.c</key>
+    <ListEntry key="__FILE__" value="&quot;Stage4&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimDecode.c</key>
+    <ListEntry key="__FILE__" value="&quot;Decode&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/eftl/src/flash_adapt.c</key>
+    <ListEntry key="__FILE__" value="&quot;_adapt&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/net/utils/net_utils.c</key>
+    <ListEntry key="__FILE__" value="&quot;_utils&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasAplApi.c</key>
+    <ListEntry key="__FILE__" value="&quot;AplApi&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/polyrsqrtq23_tbl.c</key>
+    <ListEntry key="__FILE__" value="&quot;23_tbl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lpdcp/Src/LPdcpMsgDistrib.c</key>
+    <ListEntry key="__FILE__" value="&quot;istrib&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/alphaFilter.c</key>
+    <ListEntry key="__FILE__" value="&quot;Filter&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/downlink/src/PhyFTLTTL.c</key>
+    <ListEntry key="__FILE__" value="&quot;FTLTTL&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/Admin.c</key>
+    <ListEntry key="__FILE__" value="&quot;Admin&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/heap_5.c</key>
+    <ListEntry key="__FILE__" value="&quot;heap_5&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/shm_msg/src/zero_copy_shm.c</key>
+    <ListEntry key="__FILE__" value="&quot;py_shm&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UiccMain.c</key>
+    <ListEntry key="__FILE__" value="&quot;ccMain&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/mcnt.c</key>
+    <ListEntry key="__FILE__" value="&quot;mcnt&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/at_ctrl/src/at_ext_register.c</key>
+    <ListEntry key="__FILE__" value="&quot;gister&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfmsghandle.c</key>
+    <ListEntry key="__FILE__" value="&quot;handle&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/simulator/src/PhySysSimu.c</key>
+    <ListEntry key="__FILE__" value="&quot;ysSimu&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/simulator/src/PhyHW_Simu.c</key>
+    <ListEntry key="__FILE__" value="&quot;W_Simu&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Pscfg/Src/pscfgrom.c</key>
+    <ListEntry key="__FILE__" value="&quot;cfgrom&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>OSAL/FreeRTOS/Source/osal_freertos_hook.c</key>
+    <ListEntry key="__FILE__" value="&quot;s_hook&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Inc</key>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMspec_AirMsg.c</key>
+    <ListEntry key="__FILE__" value="&quot;AirMsg&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lrrc/Lrrcf/Src/lrrcfsndos.c</key>
+    <ListEntry key="__FILE__" value="&quot;fsndos&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/src/sys_app_init.c</key>
+    <ListEntry key="__FILE__" value="&quot;p_init&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/at_ctrl/src/at_phy_self_test.c</key>
+    <ListEntry key="__FILE__" value="&quot;f_test&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_com.c</key>
+    <ListEntry key="__FILE__" value="&quot;tc_com&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/vec128_shuffleIdx.c</key>
+    <ListEntry key="__FILE__" value="&quot;fleIdx&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UsimTermRsp.c</key>
+    <ListEntry key="__FILE__" value="&quot;ermRsp&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/common/driverlib/uart.c</key>
+    <ListEntry key="__FILE__" value="&quot;uart&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/findMax.c</key>
+    <ListEntry key="__FILE__" value="&quot;indMax&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>FreeRTOSfiles/src/timers.c</key>
+    <ListEntry key="__FILE__" value="&quot;timers&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/TXPowerCtrl.c</key>
+    <ListEntry key="__FILE__" value="&quot;erCtrl&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/L1c/src/PhyL1cNpdcch.c</key>
+    <ListEntry key="__FILE__" value="&quot;Npdcch&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/Om/Src/Omram.c</key>
+    <ListEntry key="__FILE__" value="&quot;Omram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/SpeAna/source/log2.c</key>
+    <ListEntry key="__FILE__" value="&quot;log2&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Enas/Src/LteNasESMspec_Com.c</key>
+    <ListEntry key="__FILE__" value="&quot;ec_Com&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/NasCodec/Src/NasEnCode.c</key>
+    <ListEntry key="__FILE__" value="&quot;EnCode&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Usim/Src/UiccMsgCnf.c</key>
+    <ListEntry key="__FILE__" value="&quot;MsgCnf&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/positioning/src/funcComplexAdd.c</key>
+    <ListEntry key="__FILE__" value="&quot;lexAdd&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/Atc/Src/atc_cell_lte.c</key>
+    <ListEntry key="__FILE__" value="&quot;ll_lte&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>sys_app/diag_ctrl/src/diag_protocol_print_ram.c</key>
+    <ListEntry key="__FILE__" value="&quot;nt_ram&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/lpm/lpm_tc_mcnt.c</key>
+    <ListEntry key="__FILE__" value="&quot;c_mcnt&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Framework/NasCodec/Src/NasDeCode.c</key>
+    <ListEntry key="__FILE__" value="&quot;DeCode&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>drivers/DFE/source/RXCalibration.c</key>
+    <ListEntry key="__FILE__" value="&quot;ration&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>Systemfiles/src/xtensa_overlay_os_hook.c</key>
+    <ListEntry key="__FILE__" value="&quot;s_hook&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>PhysicalLayer/Phy/uplink/src/fusion_bitmatrix_transpose.c</key>
+    <ListEntry key="__FILE__" value="&quot;nspose&quot;"/>
+            </OverriddenSettingsEntry>
+            <OverriddenSettingsEntry>
+                <key>NBIotPs/Ps/As/Lmac/src/lmactmr.c</key>
+    <ListEntry key="__FILE__" value="&quot;mactmr&quot;"/>
+            </OverriddenSettingsEntry>
