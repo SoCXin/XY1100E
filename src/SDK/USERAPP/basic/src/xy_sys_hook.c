@@ -92,18 +92,31 @@ int user_allow_deepsleep_hook()
 /**
  * @brief 芯片进入deepsleep前会调用该函数，用户可以在此保存私有数据到flash中，也可以进行RTC事件异常的容错等
  * @warning 在成功进入深睡前可能会多次从idle线程中退出，例如外部中断，进而会造成该接口可能被执行多次，需要用户在接口实现时考虑到多次调用带来的影响。
- * @warning 该接口在idle线程中调用，因此内部不能使用信号量、互斥量、消息收发等阻塞或释放调度权的操作，例如不能进行flash的擦写操作、xy_printf打印等。
+ * @warning 该接口在idle线程中调用，因此内部不能使用信号量、互斥量、消息收发等阻塞或释放调度权的操作，例如不能进行xy_printf打印等。
+ * @warning 该接口在idle线程中调用，因此用户添加的代码可能会延长睡眠时长，造成功耗略微增加，尤其是写flash动作。
  */
 void user_deepsleep_before_hook()
 {
+#if USER_CARE
 	//对于周期性RTC唤醒模型产品，若没有设置RTC事件，则表明发生异常，用户必须根据自己产品设置一个合理的RTC时刻点，以触发唤醒后再次运行。
 	if(rtc_get_next_event() == NULL)
 	{
-#if 0		
 		lpm_string_output("NOT SET RTC WAKEUP EVENT!!!\r\n", strlen("NOT SET RTC WAKEUP EVENT!!!\r\n"));
 		xy_rtc_timer_create(RTC_TIMER_USER1,10*60,NULL,NULL);
-#endif
 	}
+	//对于开启DRX/eDRX，且关闭PSM的产品，由于存在搜不到小区而强制进入深睡的可能，需要用户自行设置下一次唤醒工作的延迟RTC
+	else if(xy_rtc_next_offset_by_ID(RTC_TIMER_LPM)==0)
+	{
+		lpm_string_output("3GPP NOT campon!!!\r\n", strlen("3GPP NOT campon!!!\r\n"));
+		xy_rtc_timer_create(RTC_TIMER_LPM,30*60,NULL,NULL);
+	}
+#endif
+
+#if USER_CARE
+	uint8_t  user_data[100];
+	xy_ftl_write((unsigned int)(USER_FLASH_BASE),0,user_data,sizeof(user_data));
+	xy_flash_write((unsigned int)(USER_FLASH_BASE),user_data,sizeof(user_data));
+#endif
 }
 
 

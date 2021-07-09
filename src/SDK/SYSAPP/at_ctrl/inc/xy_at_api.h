@@ -100,21 +100,11 @@ typedef int (*ser_req_func)(char *at_paras, char **rsp_cmd);
 */
 typedef int (*inform_act_func)(char *at_paras);
 
-/**
-  * @brief  AT通道传输透传数据的回调函数声明
-  */
-typedef int (*data_proc_func)(char *data,int data_len);
 
 /*******************************************************************************
  *                       Global variable declarations                          *
  ******************************************************************************/
 extern char g_req_type;		//record request cmd type
-
-/**
-  * @brief  AT通道传输透传数据的回调函数指针全局声明
-  * @note  默认赋值NULL，表示当前传输的是AT命令；否则为透传数据，具体函数实现需要用户完成，请参考at_transparent_mode.c
-  */
-extern data_proc_func g_at_transparent_data_hook;
 
 /*******************************************************************************
  *                       Global function declarations                          *

@@ -274,6 +274,15 @@ typedef enum
     SEND_PENDING,
 } data_send_status_e;
 
+typedef enum enum_cdp_msg_type
+{
+    cdp_CON = 0x00,
+    cdp_NON = 0x01,
+    cdp_NON_RAI = 0x02,
+    cdp_CON_RAI = 0x03,  //没有应用场景
+    cdp_CON_WAIT_REPLY_RAI = 0x04,
+}cdp_msg_type_e;
+
 typedef void (*atiny_ack_callback) (atiny_report_type_e type, int cookie, data_send_status_e status, int mid);
 
 typedef struct _data_report_t
@@ -283,6 +292,7 @@ typedef struct _data_report_t
     int len;                      /*数据长度，不应大于MAX_REPORT_DATA_LEN*/
     uint8_t* buf;                 /*数据缓冲区首地址*/
     atiny_ack_callback callback;  /*ack回调*/
+    cdp_msg_type_e msg_type;      /*rai标识位,XY ADD*/
 } data_report_t;
 
 /**

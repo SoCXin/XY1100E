@@ -11,6 +11,8 @@
 #ifndef __ZOS_LOG_H__
 #define __ZOS_LOG_H__
 
+#define ZOS_DLOG_BUF_SIZE 256
+
 void zos_printf(const char *fmt, ...);
 
 

@@ -92,15 +92,6 @@ int cdp_lifetime_update(int timeout);
 
 /**
  * @ingroup cdpapi
- * @brief 更新云平台的lifetime时间,报文中携带快速释放连接(RAI)标志位
- * @param timeout is cloud replay ack time out
- * @return BOOL,see  @ref  xy_ret_Status_t.
- * @warning   当用户认为后续没有报文交互需求时，调用该接口来伴随触发RAI，以降低功耗。必须设置出厂NV参数close_rai为1，否则在用户释放最后一把锁后会由芯翼平台自触发RAI
- */
-int cdp_lifetime_update_with_rai(int timeout);
-
-/**
- * @ingroup cdpapi
  * @brief 检测是否可以发送数据到云平台
  * @return BOOL,see  @ref  xy_ret_Status_t.
  */

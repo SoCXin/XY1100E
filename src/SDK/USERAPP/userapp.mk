@@ -18,7 +18,7 @@ LIB_USERAPP_SRC  = $(USERAPP_LIB_DIR)/lib$(LIB_USERAPP_NAME).a
 # include other makefile to include source
 ####################################################################################################
 -include $(USERAPP_SRC_DIR)/basic/basic.mk
--include $(USERAPP_SRC_DIR)/examples/examples.mk
+
 
 ####################################################################################################
 # SRCS_USERAPP_RAM   SRCS_USERAPP_FLASH   DEPS_PATH_USERAPP

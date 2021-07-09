@@ -19,6 +19,7 @@ LIB_APPLIB_SRC  = $(APPLIB_LIB_DIR)/lib$(LIB_APPLIB_NAME).a
 ####################################################################################################
 -include $(APPLIB_SRC_DIR)/cloud/cloud.mk
 -include $(APPLIB_SRC_DIR)/lwip/lwip.mk
+-include $(APPLIB_SRC_DIR)/xy_ps/xy_ps.mk
 
 ifeq ($(XY_PING_SUPPORT),y)
 -include $(APPLIB_SRC_DIR)/ping/ping.mk

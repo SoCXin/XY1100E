@@ -24,17 +24,17 @@
 #include "xy_api.h"
 
 
-#define TimHandle          		TimCounterHandle
-
-HAL_TIM_HandleTypeDef TimHandle;
-
 //任务参数配置
 #define TIMER_TASK_PRIORITY     10
 #define TIMER_STACK_SIZE        0x400
 
+//demo宏定义
+#define TimHandle          		TimCounterHandle
+HAL_TIM_HandleTypeDef TimHandle;
+
 //任务全局变量
-osThreadId_t  g_hal_counter_time_TskHandle = NULL;
-osSemaphoreId_t  g_hal_counter_time_sem = NULL;
+osThreadId_t  g_hal_counter_timer_TskHandle = NULL;
+osSemaphoreId_t  g_hal_counter_timer_sem = NULL;
 
 //demo静态全局变量
 static uint32_t counter_value = 0;
@@ -52,44 +52,21 @@ void HAL_TIM2_IRQHandler(void) __RAM_FUNC;
 __weak void HAL_TIM2_IRQHandler(void)
 {
 	interrupt_times++;
-	osSemaphoreRelease(g_hal_counter_time_sem);
+	osSemaphoreRelease(g_hal_counter_timer_sem);
 }
 
 
 /**
- * @brief TIMER初始化函数
- * @code
- *	//创建信号量
-	g_hal_counter_time_sem = osSemaphoreNew(0xFFFF, 0);
-
-	//映射GPIO为Timer的输入引脚
-	HAL_GPIO_InitTypeDef gpio_init;
-
-	gpio_init.Pin		= HAL_GPIO_PIN_NUM_8;
-	gpio_init.Mode		= GPIO_MODE_AF_INPUT;
-	gpio_init.Pull		= GPIO_PULLUP;
-	gpio_init.Alternate	= HAL_REMAP_TMR2_AF_INPUT;
-	HAL_GPIO_Init(&gpio_init);
-
-	//初始化Timer
-	TimHandle.Instance				=	HAL_TIM2;
-	TimHandle.Init.Mode				=	HAL_TIM_MODE_COUNTER;
-	TimHandle.Init.Reload			=	1800;
-	TimHandle.Init.TIMPolarity		=	HAL_TIM_Polarity_Set;
-	HAL_TIM_Init(&TimHandle);
-
-	//注册Timer中断服务函数
-	HAL_TIM_IT_REGISTER(&TimHandle);
-
-	//开启Timer
-	HAL_TIM_Start(&TimHandle);
- * @endcode
- *
+ * @brief TIMER counter模式初始化函数
+ *  	这个函数描述了timer初始化为counter模式时需要的相关步骤。\n
+ * 		在初始化函数内部需要设置counter模式的输入引脚与GPIO引脚的对应关系、复用方式、上下拉状态， \n
+ * 		以及定时器的编号、工作模式、重载值、时钟极性等\n
+ * 		且需要注册定时中断，然后打开定时器。\n
  */
 void hal_counter_timer_init(void)
 {
 	//创建信号量
-	g_hal_counter_time_sem = osSemaphoreNew(0xFFFF, 0);
+	g_hal_counter_timer_sem = osSemaphoreNew(0xFFFF, 0);
 
 	//映射GPIO为Timer的输入引脚
 	HAL_GPIO_InitTypeDef gpio_init;
@@ -121,10 +98,12 @@ void hal_counter_timer_init(void)
  */
 void hal_counter_timer_work_task(void)
 {
+
+
 	while(1)
 	{
 		//等待获取信号量，释放线程控制权
-		if(osOK == osSemaphoreAcquire(g_hal_counter_time_sem, osWaitForever))
+		if(osOK == osSemaphoreAcquire(g_hal_counter_timer_sem, osWaitForever))
 		{
 			//获取counter寄存器的值
 			counter_value = HAL_TIM_GetCount(&TimHandle);
@@ -143,7 +122,7 @@ void hal_counter_timer_work_task(void)
  */
 void hal_counter_timer_work_task_init(void)
 {
-	g_hal_counter_time_TskHandle = osThreadNew((osThreadFunc_t)hal_counter_timer_work_task,NULL,"hal_counter_timer_work_task",TIMER_STACK_SIZE,osPriorityNormal);
+	g_hal_counter_timer_TskHandle = osThreadNew((osThreadFunc_t)hal_counter_timer_work_task,NULL,"hal_counter_timer_work_task",TIMER_STACK_SIZE,osPriorityNormal);
 }
 
 

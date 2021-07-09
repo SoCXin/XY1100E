@@ -26,6 +26,11 @@
 //任务参数配置
 #define TIMER_TASK_PRIORITY     10
 #define TIMER_STACK_SIZE        0x400
+
+//demo宏定义
+#define TimHandle          		TimCapAndCmpHandle
+HAL_TIM_HandleTypeDef TimHandle;
+
 //任务全局变量
 osThreadId_t g_hal_cap_and_cmp_timer_TskHandle = NULL;
 osSemaphoreId_t g_hal_cap_and_cmp_timer_sem = NULL;
@@ -33,10 +38,9 @@ osSemaphoreId_t g_hal_cap_and_cmp_timer_sem = NULL;
 //demo静态全局变量
 static uint32_t counter_value = 0;
 static uint16_t interrupt_times = 0;
-//demo宏定义
-#define TimHandle          		TimCapAndCmpHandle
 
-HAL_TIM_HandleTypeDef TimHandle;
+
+
 
 /**
  * @brief TIMER中断处理函数
@@ -55,35 +59,11 @@ __weak void HAL_TIM2_IRQHandler(void)
 
 
 /**
- * @brief TIMER初始化函数
- * @code
- *	//创建信号量
-	g_hal_cap_and_cmp_timer_sem = osSemaphoreNew(0xFFFF, 0);
-
-	//映射GPIO为Timer的输入引脚
-	HAL_GPIO_InitTypeDef gpio_init;
-
-	gpio_init.Pin		= HAL_GPIO_PIN_NUM_8;
-	gpio_init.Mode		= GPIO_MODE_AF_INPUT;
-	gpio_init.Pull		= GPIO_PULLUP;
-	gpio_init.Alternate	= HAL_REMAP_TMR2_AF_INPUT;
-	HAL_GPIO_Init(&gpio_init);
-
-	//初始化Timer
-	TimHandle.Instance				=	HAL_TIM2;
-	TimHandle.Init.Mode				=	HAL_TIM_MODE_CAP_AND_CMP;
-	TimHandle.Init.Reload			=	306 * 3000;
-	TimHandle.Init.ClockDivision	=	HAL_TIM_CLK_DIV_128;
-	TimHandle.Init.TIMPolarity		=	HAL_TIM_Polarity_Set;
-	HAL_TIM_Init(&TimHandle);
-
-	//注册Timer中断服务函数
-	HAL_TIM_IT_REGISTER(&TimHandle);
-
-	//开启Timer
-	HAL_TIM_Start(&TimHandle);
- * @endcode
- *
+ * @brief TIMER capture/compare模式初始化函数
+ *    	这个函数描述了timer初始化为capture/compare模式时需要的相关步骤。\n
+ * 		在初始化函数内部需要设置capture/compare模式的输入引脚与GPIO引脚的对应关系、复用方式、上下拉状态， \n
+ * 		以及定时器的编号、工作模式、重载值、时钟分频、时钟极性等\n
+ * 		且需要注册定时中断，然后打开定时器。\n
  */
 void hal_cap_and_cmp_timer_init(void)
 {

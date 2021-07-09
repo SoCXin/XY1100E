@@ -287,7 +287,7 @@ FIRST_POWERON:
 			softap_printf(USER_LOG, WARN_LOG, "[DM]dm success and store iccid");
 			strncpy((char *)g_softap_var_nv->dm_cfg.ue_iccid,(char *)nccid_dm,20);  //store g_ueiccid,20 byte	
 			NETDOG_AT_STATICS(dbg_dm_success_num++);
-			if(xy_ftl_write(NV_FLASH_DSP_VOLATILE_BASE,DSP_VOLATILE_ALL_LEN,((unsigned char *)g_softap_var_nv),sizeof(softap_var_nv_t))!=XY_OK)
+			if(xy_ftl_write(NV_FLASH_DSP_VOLATILE_BASE,DSP_VOLATILE_ALL_LEN-4,((unsigned char *)g_softap_var_nv),sizeof(softap_var_nv_t))!=XY_OK)
 			{
 				xy_assert(0);
 			}

@@ -4,7 +4,7 @@
   * @brief	此文件包含GPIO外设的变量，枚举，结构体定义，函数声明等.
   * @note	对于输入模式，每个GPIO并不同时支持上拉和下拉，仅支持上拉或下拉中的其中一种状态。在XY1100芯片中，GPIO10/11/12仅支持下拉，其余的GPIO仅支持上拉.\n
   * 		对于输出模式，仅支持推挽输出，开漏输出模式目前尚未支持.\n
-  *			对于中断触发方式，支持下降沿触发，双边沿触发，高电平触发，上升沿触发目前尚未支持。如果外部输入信号并不平稳，需要外部增加消抖电路，推荐电容大小为0.1uF.\n
+  *			对于中断触发方式，支持下降沿触发，双边沿触发，高电平触发，上升沿触发目前尚未支持。如果外部输入信号并不平稳，需要外部增加消抖电路\n
   *			Analog模式目前尚未支持.\n
   ******************************************************************************
   */
@@ -174,9 +174,42 @@ typedef struct
   HAL_GPIORemap_TypeDef Alternate;	/*!< GPIO重映射引脚. 详情参考 @ref HAL_GPIORemap_TypeDef */
 }HAL_GPIO_InitTypeDef;
 
+/**  @brief GPIO 可配置模式 \n
+  *			定义规则	: 0xX0x0y0YZ \n
+  *           - X  : 用于区分普通GPIO模式、中断模式 \n
+  *           - x  : 用于区分GPIO中断类型 \n
+  *           - y  : 用于区分普通GPIO模式、复用模式 \n
+  *           - Y  : 用于区分GPIO推挽输出、开漏输出 \n
+  *           - Z  : 用于区分GPIO输入模式、输出模式
+  */
+
+
+#define  GPIO_MODE_AF_PER                		0x00001000U   /*!< 复用外设模式			*/
+
+#define  GPIO_MODE_AF_INPUT                  	0x00002000U   /*!< 复用外设输入模式		*/
+#define  GPIO_MODE_AF_PP                  		0x00002001U   /*!< 复用外设推挽输出模式	*/
+#define  GPIO_MODE_AF_OD                  		0x00002011U   /*!< 复用外设开漏输出模式	*/
+
+
+#define  GPIO_MODE_INPUT                        0x00000000U   /*!< 普通GPIO输入模式		*/
+
+#define  GPIO_MODE_IT_FALLING                   0x10200000U   /*!< 下降沿外部中断模式	*/
+#define  GPIO_MODE_IT_RISING_FALLING            0x10400000U   /*!< 双边沿外部中断模式	*/
+#define  GPIO_MODE_IT_HIGH_LEVEL                0x10800000U   /*!< 高电平外部中断模式	*/
+
+#define  GPIO_MODE_OUTPUT_PP                    0x00000001U   /*!< 推挽输出模式	*/
+#define  GPIO_MODE_OUTPUT_OD                    0x00000011U   /*!< 开漏输出模式	*/
+
+#define  GPIO_MODE_INOUT                        0x00000003U   /*!< 输入输出模式	*/
 
 
 
+ /**
+   * @brief GPIO 上拉下拉状态
+   */
+#define  GPIO_NOPULL        0x00000000U   /*!< 无上下拉  */
+#define  GPIO_PULLUP        0x00000001U   /*!< 上拉		*/
+#define  GPIO_PULLDOWN      0x00000002U   /*!< 下拉		*/
 
 /**
   * @brief  初始化GPIO.
@@ -251,45 +284,4 @@ uint32_t HAL_GPIO_ReadAndClearIntFlag(HAL_GPIOPin_TypeDef GPIOPin);
   * @retval 无
   */
 void HAL_GPIO_IT_REGISTER(void);
-
-
-
-
-/**  @brief GPIO 可配置模式 \n
-  *			定义规则	: 0xX0x0y0YZ \n
-  *           - X  : 用于区分普通GPIO模式、中断模式 \n
-  *           - x  : 用于区分GPIO中断类型 \n
-  *           - y  : 用于区分普通GPIO模式、复用模式 \n
-  *           - Y  : 用于区分GPIO推挽输出、开漏输出 \n
-  *           - Z  : 用于区分GPIO输入模式、输出模式
-  */ 
-#define  GPIO_MODE_AF_PER                		0x00001000U   /*!< 复用外设模式			*/
-
-#define  GPIO_MODE_AF_INPUT                  	0x00002000U   /*!< 复用外设输入模式		*/
-#define  GPIO_MODE_AF_PP                  		0x00002001U   /*!< 复用外设推挽输出模式	*/
-#define  GPIO_MODE_AF_OD                  		0x00002011U   /*!< 复用外设开漏输出模式	*/
-
-
-#define  GPIO_MODE_INPUT                        0x00000000U   /*!< 普通GPIO输入模式		*/
-
-#define  GPIO_MODE_IT_FALLING                   0x10200000U   /*!< 下降沿外部中断模式	*/
-#define  GPIO_MODE_IT_RISING_FALLING            0x10400000U   /*!< 上升沿外部中断模式	*/
-#define  GPIO_MODE_IT_HIGH_LEVEL                0x10800000U   /*!< 高电平外部中断模式	*/
-
-#define  GPIO_MODE_OUTPUT_PP                    0x00000001U   /*!< 推挽输出模式	*/
-#define  GPIO_MODE_OUTPUT_OD                    0x00000011U   /*!< 开漏输出模式	*/
-
-#define  GPIO_MODE_INOUT                        0x00000003U   /*!< 输入模式	*/
-
-
-
- /** 
-   * @brief GPIO 上拉下拉状态
-   */ 
-#define  GPIO_NOPULL        0x00000000U   /*!< 无上下拉  */
-#define  GPIO_PULLUP        0x00000001U   /*!< 上拉		*/
-#define  GPIO_PULLDOWN      0x00000002U   /*!< 下拉		*/
-
-
-
 

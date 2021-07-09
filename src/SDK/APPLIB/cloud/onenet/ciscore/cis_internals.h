@@ -458,6 +458,7 @@ struct st_notify
     cis_data_t*         value;
     cis_uri_t           uri;
     bool                isResponse;
+    uint8_t             raiflag;
     uint16_t            ackID;
 };
 
@@ -474,6 +475,7 @@ struct st_server
     void *            sessionH;     // as cisnet_t
     
     et_status_t       status;
+    uint8_t           raiflag;
     char *            location;
     bool              dirty;
 
@@ -697,7 +699,7 @@ int         uri_make(cis_oid_t objectId,cis_iid_t instanceId,cis_rid_t resourceI
 bool        uri_exist(const st_uri_t * uri1,const st_uri_t * uri2);
 
 st_transaction_t * transaction_new(coap_message_type_t type, unsigned int method, char * altPath, st_uri_t * uriP, uint16_t mID, uint8_t token_len, uint8_t* token);
-bool        transaction_send(st_context_t * contextP, st_transaction_t * transacP);
+bool        transaction_send(st_context_t * contextP, st_transaction_t * transacP, uint8_t raiflag);
 void        transaction_free(st_transaction_t * transacP);
 void        transaction_remove(st_context_t * contextP, st_transaction_t * transacP);
 void        transaction_removeAll(st_context_t* contextP);
@@ -715,8 +717,8 @@ coap_status_t   object_writeInstance(st_context_t * contextP,st_uri_t * uriP,st_
 
 bool            object_isInstanceNew(st_context_t * contextP, cis_oid_t  objectId, cis_iid_t  instanceId);
 int             object_getRegisterPayload(st_context_t * contextP, uint8_t * buffer, size_t length);
-coap_status_t   object_asynAckReadData(st_context_t * context,st_request_t* request,cis_coapret_t result);
-coap_status_t   object_asynAckNodata(st_context_t * context,st_request_t* request,cis_coapret_t result);
+coap_status_t   object_asynAckReadData(st_context_t * context,st_request_t* request,cis_coapret_t result,uint8_t raiflag);
+coap_status_t   object_asynAckNodata(st_context_t * context,st_request_t* request,cis_coapret_t result,uint8_t raiflag);
 coap_status_t   object_asynAckBlockWrite(st_context_t * context,st_request_t* request,cis_coapret_t result,uint8_t code);
 void            object_removeAll(st_context_t* context);
 bool            object_checkInstExisted(uint8_t* inst_bitmap, cis_iid_t iid);
@@ -742,8 +744,8 @@ void            management_destoryServer(st_context_t * context,st_server_t * se
 void            management_refreshDirtyServer(st_context_t * contextP);
 
 //Observe
-coap_status_t   observe_asynAckNodata(st_context_t * context,st_request_t* request,cis_coapret_t result);
-coap_status_t   observe_asynReport(st_context_t* contextP,const st_observed_t* observe,st_notify_t* notify);
+coap_status_t   observe_asynAckNodata(st_context_t * context,st_request_t* request,cis_coapret_t result,uint8_t raiflag);
+coap_status_t   observe_asynReport(st_context_t* contextP,const st_observed_t* observe,st_notify_t* notify,uint8_t raiflag);
 void            observe_removeAll(st_context_t* contextP);
 
 coap_status_t   observe_handleRequest(st_context_t * contextP, st_uri_t * uriP,coap_packet_t * message, coap_packet_t * response);
@@ -763,7 +765,7 @@ int discover_serialize( st_context_t *contextP,st_uri_t *uriP,int size,st_data_t
 
 // send a registration update to the server
 // If withObjects is true, the registration update contains the object list.
-int             registration_update_registration(st_context_t * contextP, bool withObjects);
+int             registration_update_registration(st_context_t * contextP, bool withObjects,uint8_t raiflag);
 coap_status_t   registration_handleRequest(st_context_t * contextP, st_uri_t * uriP, coap_packet_t * message, coap_packet_t * response);
 void            registration_deregister(st_context_t * contextP);
 coap_status_t   registration_start(st_context_t * contextP);
@@ -884,7 +886,7 @@ void packet_asynRemoveNotifyAll(st_context_t * context);
 void packet_handle_packet(st_context_t * contextP, void* session, uint8_t * buffer, int length);
 void packet_step(st_context_t *context, cis_time_t currentTime);
 bool packet_read(st_context_t *context);
-coap_status_t   packet_send(st_context_t * contextP, coap_packet_t * message);
+coap_status_t   packet_send(st_context_t * contextP, coap_packet_t * message,uint8_t raiflag);
 
 
 /////memory related

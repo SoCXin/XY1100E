@@ -15,8 +15,7 @@
 extern "C" {
 #endif
 
-#include "zos.h"
-
+#include "zos_def.h"
 
 #define	PIN_2	2
 #define	PIN_3	3

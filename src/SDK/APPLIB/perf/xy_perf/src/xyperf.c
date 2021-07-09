@@ -137,7 +137,7 @@ int xyperf_udp_ipv4_client(unsigned int duration, unsigned int packet_size, unsi
 
 	xyperf_upload_fin(fd, nb_packets, end_time, packet_size, (struct sockaddr *)&remote_sockaddr,rai_val);
     softap_printf(USER_LOG, WARN_LOG, "xyperf finished");
-	send_rsp_str_to_ext("+XYPERF:finished\r\n");
+	send_rsp_str_to_ext("\r\n+XYPERF:finished\r\n");
 
     if (fd != -1)
     {

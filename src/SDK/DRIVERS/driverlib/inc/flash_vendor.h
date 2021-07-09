@@ -127,6 +127,7 @@ extern void FLASH_BlockErase32K(QSPI_FLASH_Def *flash_vendor, unsigned int addre
 extern void FLASH_BlockErase64K(QSPI_FLASH_Def *flash_vendor, unsigned int address);
 extern void FLASH_WriteData(QSPI_FLASH_Def *flash_vendor, unsigned long ulSrcAddr, unsigned long ulDstAddr, unsigned long ulLenByte, unsigned long ulChannelNum);
 extern void FLASH_ReadData(QSPI_FLASH_Def *flash_vendor, unsigned long ulSrcAddr, unsigned long ulDstAddr, unsigned long ulLenByte, unsigned long ulChannelNum);
+extern void FLASH_WriteEnable(QSPI_FLASH_Def *flash_vendor);
 extern void FLASH_WaitIdle(QSPI_FLASH_Def *flash_vendor);
 extern void FLASH_EnableQEFlag(QSPI_FLASH_Def *flash_vendor);
 extern void FLASH_EnterQPIMode(QSPI_FLASH_Def *flash_vendor);

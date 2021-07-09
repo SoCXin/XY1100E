@@ -143,7 +143,7 @@ cis_ret_t cisnet_create      (cisnet_t* netctx,const char* host,void* context);
 void      cisnet_destroy     (cisnet_t netctx);
 cis_ret_t cisnet_connect     (cisnet_t netctx);
 cis_ret_t cisnet_disconnect  (cisnet_t netctx);
-cis_ret_t cisnet_write       (cisnet_t netctx,const uint8_t* buffer,uint32_t length);
+cis_ret_t cisnet_write(cisnet_t netctx,const uint8_t * buffer,uint32_t  length, uint8_t raiflag);
 cis_ret_t cisnet_read        (cisnet_t netctx,uint8_t** buffer,uint32_t *length);
 cis_ret_t cisnet_free        (cisnet_t netctx,uint8_t* buffer,uint32_t length);
 

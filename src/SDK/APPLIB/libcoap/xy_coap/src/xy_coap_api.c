@@ -130,13 +130,13 @@ static int append_to_output(coap_pdu_t *received ,const uint8_t *data, size_t le
    // xy_fota_by_coap_hook(data, len);
 #endif
     if(len <= 0 )
-        snprintf(coap_rsp,40, "\r\n+COAPURC:%s, %d.%02d,%d\r\n",COAP_PDU_IS_REQUEST(received) ==TRUE ? "request":"response",\
+        snprintf(coap_rsp,40, "\r\n+COAPURC:%s,%d.%02d,%d\r\n",COAP_PDU_IS_REQUEST(received) ==TRUE ? "request":"response",\
                                 (received->code >> 5), (received->code & 0x1F),received->tid);
     else
     {
         str_coap_rsp = (char*)xy_zalloc(len * 2 +1);
         bytes2hexstr(data, len,  str_coap_rsp, len * 2+1);
-        snprintf(coap_rsp,40 + len*2, "\r\n+COAPURC:%s, %d.%02d,%d,%d,%s\r\n",COAP_PDU_IS_REQUEST(received) ==TRUE ? "request":"response",\
+        snprintf(coap_rsp,40 + len*2, "\r\n+COAPURC:%s,%d.%02d,%d,%d,%s\r\n",COAP_PDU_IS_REQUEST(received) ==TRUE ? "request":"response",\
                                        (received->code >> 5), (received->code & 0x1F),received->tid,len,str_coap_rsp);
     }
     send_rsp_str_to_ext(coap_rsp);

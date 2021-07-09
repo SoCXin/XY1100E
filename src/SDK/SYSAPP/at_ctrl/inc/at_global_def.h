@@ -90,7 +90,7 @@ struct at_debug_stat
 
 typedef struct
 {
-	int errno;
+	int error_number;
 	char *errname;
 } at_err_msg_t;
 
@@ -143,7 +143,7 @@ extern at_ctrl_callback g_at_ctrl_cbk;
  * @return error descriptor with string
  * @note 
  */
-char *get_at_err_string(int errno);
+char *get_at_err_string(int error_number);
 
 /**
  * @brief judge at request is offtime_related or not

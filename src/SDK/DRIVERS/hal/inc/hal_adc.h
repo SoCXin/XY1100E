@@ -114,14 +114,6 @@ int32_t HAL_ADC_GetConverteValue(HAL_ADC_HandleTypeDef *hadc, int32_t realvalue)
 int32_t HAL_ADC_GetVoltageValue(HAL_ADC_HandleTypeDef *hadc, int32_t conv_val);
 
 /**
-  * @brief  将中间值转换为圆整值.
-  * @param  hadc 指向一个包含ADC具体配置信息的 HAL_ADC_HandleTypeDef 结构体的指针.
-  *         详情参考 @ref HAL_ADC_HandleTypeDef.
-  * @retval 圆整值
-  */
-int32_t HAL_ADC_GetRoundingValue(HAL_ADC_HandleTypeDef *hadc, int32_t conv_val);
-
-/**
   * @brief  将中间值转换为校验后的电压值.
   * @param  hadc 指向一个包含ADC具体配置信息的 HAL_ADC_HandleTypeDef 结构体的指针.
   *         详情参考 @ref HAL_ADC_HandleTypeDef.

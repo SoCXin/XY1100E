@@ -2,6 +2,7 @@
 #define _CLOUD_UTILS__H
 #define MUTEX_LOCK_INFINITY 0xFFFFFFFF
 
+#include "lwip/sockets.h"
 
 uint8_t cloud_get_IMEI(char *buffer, uint32_t maxlen);
 uint8_t cloud_get_IMSI(char* buffer,uint32_t maxlen);

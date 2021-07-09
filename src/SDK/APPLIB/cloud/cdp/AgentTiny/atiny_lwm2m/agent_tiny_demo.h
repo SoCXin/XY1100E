@@ -40,15 +40,6 @@
 #include "xy_utils.h"
 void agent_tiny_entry(void);
 
-typedef enum enum_cdp_msg_type
-{
-    cdp_CON = 0x00,
-    cdp_NON = 0x01,
-    cdp_NON_RAI = 0x02,
-    cdp_CON_RAI = 0x03,
-    cdp_CON_WAIT_REPLY_RAI = 0x04,
-}cdp_msg_type_t;
-
 typedef struct
 {
     char ip_addr_str[16];
@@ -60,7 +51,7 @@ typedef struct buffer_list_s
     struct buffer_list_s *next;
     char *data;
     int data_len;
-    cdp_msg_type_t type;
+    cdp_msg_type_e type;
 } buffer_list_t;
 
 typedef struct

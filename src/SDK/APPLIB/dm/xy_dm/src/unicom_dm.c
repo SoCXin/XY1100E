@@ -285,7 +285,7 @@ FIRST_POWERON:
 			dm_timer_overdue = osTimerNew((osTimerFunc_t)(dm_register_overdue_proc), osTimerOnce, NULL, "dm_register_overdue");
 			osTimerStart(dm_timer_overdue, g_softap_fac_nv->dm_reg_time*1000);
 			NETDOG_AT_STATICS(dbg_dm_success_num++);
-			if(xy_ftl_write(NV_FLASH_DSP_VOLATILE_BASE,DSP_VOLATILE_ALL_LEN,((unsigned char *)g_softap_var_nv),sizeof(softap_var_nv_t))!=XY_OK)
+			if(xy_ftl_write(NV_FLASH_DSP_VOLATILE_BASE,DSP_VOLATILE_ALL_LEN-4,((unsigned char *)g_softap_var_nv),sizeof(softap_var_nv_t))!=XY_OK)
 			{
 				xy_assert(0);
 			}

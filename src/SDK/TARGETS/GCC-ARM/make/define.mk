@@ -10,8 +10,8 @@ DEFINES += -D_REENT_SMALL -D_REENT_GLOBAL_ATEXIT
 # use to define hardware platform
 DEFINES += -D__SOC_XINYI_1100__
 
-DEFINES+= -DMODULE_VER=\"BC28\"
-DEFINES+= -DPRODUCT_VER=\"BC28JDR01A04_ONT\"
+DEFINES+= -DMODULE_VER=\"QS-100\"
+DEFINES+= -DPRODUCT_VER=\"QS-100_v1.0\"
 DEFINES+= -DCOMPILE_TIME='"$(shell date +"%Y-%m-%d %H:%M:%S")"'
 
 ####################################################################################################
@@ -109,6 +109,13 @@ ifeq ($(TRACEALYZER_SUPPORT),y)
 	DEFINES += -DTRACEALYZER_ENABLE=1
 endif
 
+ifeq ($(ATQEU_FORMAT),y)
+	DEFINES += -DATFORMAT_QEU=1
+endif
+
+ifeq ($(TELECOM_FOTA_AUTOREG),y)
+	DEFINES += -DFOTA_AUTOREG=1
+endif
 
 ####################################################################################################
 # export variable to use sub makefile

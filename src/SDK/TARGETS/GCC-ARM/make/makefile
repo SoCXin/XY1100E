@@ -62,14 +62,12 @@ include feature.mk
 include reduce.mk
 include define.mk
 
--include $(TOP_DIR)/SYSLIB/syslib.mk
 -include $(TOP_DIR)/ARCH/arch.mk
 -include $(TOP_DIR)/DRIVERS/drivers.mk
 -include $(TOP_DIR)/KERNEL/kernel.mk
 -include $(TOP_DIR)/SYSAPP/sysapp.mk
 -include $(TOP_DIR)/APPLIB/applib.mk
 -include $(TOP_DIR)/USERAPP/userapp.mk
-
 
 
 ####################################################################################################
@@ -124,11 +122,7 @@ secondary_outputs: $(TARGET).elf
 	@$(READELF) -a $(TARGET).elf > $(TARGET).dumpelf
 	@echo "Calculating size..."
 	@$(OBJSIZE) --format=berkeley "$(TARGET).elf"
-ifeq ($(LC_OS_NAME),cygwin)
-	@cmd /c "m3ld.exe ./"
-else
 	@python m3ld.py ./
-endif
 	@echo "Moving files..."
 	@$(MKDIR) $(BIN_DIR)
 	@$(MKDIR) $(ELF_DIR)

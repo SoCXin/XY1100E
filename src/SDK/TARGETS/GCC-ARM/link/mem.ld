@@ -13,7 +13,7 @@
 
 MEMORY
 {
-	FLASH (xrw)   : ORIGIN = 0x2711F000, LENGTH = 0xCD000	/* text in flash */
+	FLASH (xrw)   : ORIGIN = 0x2713F000, LENGTH = 0xAD000	/* text in flash */
 	RAM (xrw)     : ORIGIN = 0x2001D000, LENGTH = 0x43000	/* text/data/bss/heap/stack in RAM */
 }
 

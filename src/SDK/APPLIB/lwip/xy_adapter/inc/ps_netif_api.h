@@ -17,6 +17,8 @@
 			g_nonip_func = NULL;         \
 	} while (0)
 
+#define INVALID_CID 0xFF
+
 /*******************************************************************************
  *                             Type definitions                                *
  ******************************************************************************/
@@ -52,7 +54,7 @@ typedef struct
 /* activation information specific to the PS network, which cid used to identify different PS network port*/
 struct pdp_active_info
 {
-	char c_id;
+	unsigned char cid;
 	char ip46flag; //see IP_ADDR_TYPE
 	ip4_netif_into ip4_info;
 #if LWIP_IPV6
@@ -91,7 +93,7 @@ extern osMutexId_t g_udp_send_m;
 /*******************************************************************************
  *                       Global function declarations                          *
  ******************************************************************************/
-void send_packet_to_user(char cid, int len, char *data);
+void send_packet_to_user(unsigned char cid, int len, char *data);
 int send_nonip_packet_to_ps(char *data, int data_len, int rai);
 
 /**
@@ -110,11 +112,11 @@ void ps_netif_activate(struct pdp_active_info *pdp_info);
 
 /**
  * @brief PDP去激活处理
- * @param c_id pdp链路ID
+ * @param cid pdp链路ID
  * @param ip46flag IP类型，可以参考IP_ADDR_TYPE定义
  * @note
  */
-int ps_netif_deactivate(int c_id, u16_t ip46flag);
+int ps_netif_deactivate(unsigned char cid, unsigned short ip46flag);
 
 /**
  * @brief 查询netif是否启动完成，返回1表示网口已启动，返回0表示未启动
@@ -135,3 +137,4 @@ void acquire_udp_send_mutex(void);
 
 void release_udp_send_mutex(void);
 
+bool is_netif_active(unsigned char cid);

@@ -168,7 +168,7 @@ void connection_task(void *args)
 	xy_printf("Connection Task start work\n");
 
 	//等待10*60 秒，大于软看门狗时间，超时会进入软看门狗callback
-	if(xy_wait_tcpip_ok(CONN_TASK_WAIT_TIME) == 0)
+	if(xy_wait_tcpip_ok(CONN_TASK_WAIT_TIME) != XY_OK)
 	{
 		xy_printf("pdp is fail \n");
 		xy_work_unlock(0);	
@@ -223,6 +223,9 @@ void connection_task(void *args)
 	
 	xy_rtc_timer_create(RTC_TIMER_USER2, CONN_TASK_RTC_TIME, NULL, NULL);
 	xy_work_unlock(0);
+
+	g_connection_TskHandle = NULL;
+	osThreadExit();	
 
 }
 

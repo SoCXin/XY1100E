@@ -31,6 +31,7 @@ int user_allow_deepsleep_hook();
  * @brief 芯片进入deepsleep前会调用该函数，用户可以在此执行私有动作，也可以进行RTC事件异常的容错等
  * @warning 在成功进入深睡前可能会多次从idle线程中退出，例如外部中断，进而会造成该接口可能被执行多次，需要用户在接口实现时考虑到多次调用带来的影响。
  * @warning 该接口在idle线程中调用，因此内部不能使用信号量、互斥量、消息收发等阻塞或释放调度权的操作，例如不能进行flash的擦写操作、xy_printf打印等。
+ * @warning 该接口在idle线程中调用，因此用户添加的代码可能会延长睡眠时长，造成功耗略微增加，尤其是写flash动作。
  */
 void user_deepsleep_before_hook();
 

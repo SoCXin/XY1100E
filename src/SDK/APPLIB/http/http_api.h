@@ -25,6 +25,7 @@
 
 #define XY_OK 0
 
+#define HTTP_CONTEXT_REF_NUM 1
 #define HTTP_RECV_NODE_NUMBER	8
 /** 
 * @brief       创建HTTP/HTTPS实例

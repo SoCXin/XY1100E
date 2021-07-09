@@ -6,7 +6,7 @@
 #include "netif_mgmt.h"
 #include "lwip/netif.h"
 #include "oss_nv.h"
-
+#include "xy_system.h"
 #define MAX_FINDSTR_SIZE 30
 
 
@@ -105,6 +105,11 @@ void dm_netif_event_callback(struct netif* netif, netif_mgmt_event event)
 		{
 #if XY_DM		
 		case UICC_TELECOM: //telecom
+			if(get_sys_up_stat() != POWER_ON)
+			{
+				softap_printf(USER_LOG, WARN_LOG, "g_sys_up_stat is not power_on and dm exit");
+				return;
+			}
 			telecom_dm_init();
 			break;
 #if MOBILE_VER
@@ -113,6 +118,11 @@ void dm_netif_event_callback(struct netif* netif, netif_mgmt_event event)
 #endif
 			break;
 		case UICC_UNICOM: //unicom
+			if(get_sys_up_stat() != POWER_ON)
+			{
+				softap_printf(USER_LOG, WARN_LOG, "g_sys_up_stat is not power_on and dm exit");
+				return;
+			}
 			unicom_dm_init();
 			break;
 #endif		
@@ -176,6 +186,7 @@ int at_XYDMP_req(char *at_buf, char **prsp_cmd)
 			memcpy(g_softap_fac_nv->dm_app_pwd, pwd, 64);
 			g_softap_fac_nv->dm_serv_flag = test;
 		}
+		SAVE_SOFTAP_FAC();
 free_out:
 		xy_free(key);
 		xy_free(pwd);
@@ -231,10 +242,28 @@ int at_QSREGENABLE_req(char *at_buf, char **prsp_cmd)
 
 
 #if XY_DM
+#if MOBILE_VER
+extern osThreadId_t g_cmcc_redm_TskHandle;
+extern osSemaphoreId_t cmccdm_sem;
+#endif
 void dm_ctl_init(void)
 {
+	register_app_at_req("AT+XYDMP", at_XYDMP_req);
+
 	if(g_softap_fac_nv->need_start_dm == 1) //dm switch
 	{
+#if MOBILE_VER	
+		unsigned int lifetimer = 0;
+		lifetimer = g_softap_fac_nv->dm_inteval_time*60;
+		if(lifetimer > 0 && g_cmcc_redm_TskHandle == NULL)
+		{
+			xy_printf("Start resume cmcc dm task!!!");
+			extern void cmcc_dm_resume(void);
+			if(cmccdm_sem == NULL)
+				cmccdm_sem = osSemaphoreNew(0xFFFF, 0);
+			g_cmcc_redm_TskHandle = osThreadNew (cmcc_dm_resume,"0","cmcc_dm_resume",0x1000,osPriorityNormal1);
+		}
+#endif
 	    netif_mgmt_init_event_callback(&dm_up_event_callback, dm_netif_event_callback, NETIF_MGMT_EVENT_UP);
 	    netif_mgmt_add_event_callback(&dm_up_event_callback);
 	    netif_mgmt_init_event_callback(&dm_down_event_callback, dm_netif_event_callback, NETIF_MGMT_EVENT_DOWN);

@@ -27,18 +27,21 @@
 
 #include "xy_api.h"
 
+//任务参数配置
 #define TIMER_TASK_PRIORITY     10
 #define TIMER_STACK_SIZE        0x400
 
-
+//demo宏定义
 #define TimHandle          		TimGatedHandle
+HAL_TIM_HandleTypeDef TimHandle;
 
-osThreadId_t  g_hal_gated_time_TskHandle = NULL;
-osSemaphoreId_t  g_hal_gated_time_sem = NULL;
+//任务全局变量
+osThreadId_t  g_hal_gated_timer_TskHandle = NULL;
+osSemaphoreId_t  g_hal_gated_timer_sem = NULL;
 
 static uint8_t hal_gated_timer_counter = 0;
 
-HAL_TIM_HandleTypeDef TimHandle;
+
 
 /**
  * @brief TIMER中断处理函数
@@ -51,48 +54,21 @@ void HAL_TIM1_IRQHandler(void) __RAM_FUNC;
 __weak void HAL_TIM1_IRQHandler(void)
 {
 	hal_gated_timer_counter++;
-	osSemaphoreRelease(g_hal_gated_time_sem);
+	osSemaphoreRelease(g_hal_gated_timer_sem);
 }
 
 
 /**
- * @brief TIMER初始化函数
- * @code
- *	//创建信号量
-	g_hal_gated_time_sem = osSemaphoreNew(0xFFFF, 0);
-
-	//映射GPIO为Timer的输入引脚
-	HAL_GPIO_InitTypeDef gpio_init;
-
-	gpio_init.Pin		= HAL_GPIO_PIN_NUM_8;
-	gpio_init.Mode		= GPIO_MODE_AF_INPUT;
-	gpio_init.Pull		= GPIO_PULLUP;
-	gpio_init.Alternate	= HAL_REMAP_TMR1_AF_INPUT;
-	HAL_GPIO_Init(&gpio_init);
-
-	//初始化Timer
-	TimHandle.Instance				=	HAL_TIM1;
-	TimHandle.Init.Mode				=	HAL_TIM_MODE_GATED;
-	TimHandle.Init.Reload			=	306 * 2000;
-	TimHandle.Init.ClockDivision	=	HAL_TIM_CLK_DIV_128;
-	TimHandle.Init.TIMPolarity		=	HAL_TIM_Polarity_Set;
-	HAL_TIM_Init(&TimHandle);
-
-	//设置Timer只在reload和compare事件下才触发中断
-	HAL_TIM_IntControl(&TimHandle, HAL_TIM_RELOAD_COMP_EVENTS);
-
-	//注册Timer中断服务函数
-	HAL_TIM_IT_REGISTER(&TimHandle);
-
-	//开启Timer
-	HAL_TIM_Start(&TimHandle);
- * @endcode
- *
+ * @brief TIMER gated模式初始化函数
+ *    	这个函数描述了timer初始化为gated模式时需要的相关步骤。\n
+ * 		在初始化函数内部需要设置gated模式的输入引脚与GPIO引脚的对应关系、复用方式、上下拉状态， \n
+ * 		以及定时器的编号、工作模式、重载值、时钟分频、时钟极性等\n
+ * 		且需要注册定时中断，然后打开定时器。\n
  */
 void hal_gated_timer_init(void)
 {
 	//创建信号量
-	g_hal_gated_time_sem = osSemaphoreNew(0xFFFF, 0);
+	g_hal_gated_timer_sem = osSemaphoreNew(0xFFFF, 0);
 
 	//映射GPIO为Timer的输入引脚
 	HAL_GPIO_InitTypeDef gpio_init;
@@ -131,7 +107,7 @@ void hal_gated_timer_work_task(void)
 	while(1)
 	{
 		//等待获取信号量，释放线程控制权
-		if(osOK == osSemaphoreAcquire(g_hal_gated_time_sem, osWaitForever))
+		if(osOK == osSemaphoreAcquire(g_hal_gated_timer_sem, osWaitForever))
 		{
 			//打印调试信息，用户可在此做实际业务
 			xy_printf("hal_gated_timer_counter: %d\n", hal_gated_timer_counter);
@@ -147,7 +123,7 @@ void hal_gated_timer_work_task(void)
  */
 void hal_gated_timer_work_task_init(void)
 {
-	g_hal_gated_time_TskHandle = osThreadNew((osThreadFunc_t)hal_gated_timer_work_task,NULL,"hal_gated_timer_work_task",TIMER_STACK_SIZE,osPriorityNormal);
+	g_hal_gated_timer_TskHandle = osThreadNew((osThreadFunc_t)hal_gated_timer_work_task,NULL,"hal_gated_timer_work_task",TIMER_STACK_SIZE,osPriorityNormal);
 }
 
 

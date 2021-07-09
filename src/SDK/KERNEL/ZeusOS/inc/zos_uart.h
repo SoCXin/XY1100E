@@ -15,12 +15,7 @@
 #ifndef __ZOS_UART_H__
 #define __ZOS_UART_H__
 
-/** @defgroup DRV_UART uart
- * Uart驱动接口
- * @ingroup CMIOT_DRIVER
- * @{
- * */
-
+#include "zos_def.h"
 
 typedef enum
 {

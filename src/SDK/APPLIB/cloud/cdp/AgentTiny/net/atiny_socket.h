@@ -141,7 +141,7 @@ int atiny_net_recv(void* ctx, unsigned char* buf, size_t len);
  *@par Dependency: none.
  *@see atiny_net_connect | atiny_net_recv | atiny_net_recv_timeout | atiny_net_close
  */
-int atiny_net_send(void* ctx, const unsigned char* buf, size_t len);
+int atiny_net_send(void* ctx, const unsigned char* buf, size_t len,uint8_t raiflag); /*XY ADD*/
 
 /**
  *@ingroup atiny_socket

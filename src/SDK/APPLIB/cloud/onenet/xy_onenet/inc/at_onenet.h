@@ -70,6 +70,7 @@ struct onenet_read {
 	char *value;
 	int index;
 	int flag;
+	uint8_t raiflag;
 };
 
 struct onenet_notify {
@@ -85,6 +86,7 @@ struct onenet_notify {
 	int index;
 	int flag;
 	int ackid;
+	uint8_t raiflag;
 };
 
 
@@ -92,6 +94,7 @@ struct onenet_write_exe {
 	int ref;
 	int msg_id;
 	int result;
+	uint8_t raiflag;
 };
 struct onenet_discover_rsp {
 	int ref;
@@ -99,16 +102,19 @@ struct onenet_discover_rsp {
 	int result;
     int length;
     char *value;
+    uint8_t raiflag;
 };
 struct onenet_parameter_rsp {
 	int ref;
 	int msg_id;
 	int result;
+    uint8_t raiflag;
 };
 struct onenet_update {
 	int ref;
 	int lifetime;
 	int withObjFlag;
+	uint8_t raiflag;
 };
 struct result_code_map{ 
     unsigned char at_result_code;

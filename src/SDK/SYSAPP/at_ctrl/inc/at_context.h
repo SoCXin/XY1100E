@@ -81,7 +81,6 @@ extern at_context_t ble_ctx;
 #endif
 extern at_context_dict_t *g_at_context_dict;
 extern osMutexId_t at_ctx_dict_m;
-extern osMutexId_t at_user_fd_m;
 
 /*******************************************************************************
  *                       Global function declarations                          *
@@ -122,19 +121,19 @@ int deregister_at_context(int fd);
 at_context_t *search_at_context(int fd);
 
 /**
- * @brief   get available context fd for user
- * @param from_proxy   mark caller is proxy task
- * @return  -1:no avail fd now,may had been distributed all, 1000-1004: avail fd for user
- * @note    used for at_ReqAndRsp_to_ps interface 
- * @warning
+ * @brief   获取可用的at_context
+ * @param from_proxy   1:调用者是xy_proxy线程, 0: 其他线程
+ * @return  返回NULL表示无可用at_context
+ * @note    用于at_ReqAndRsp_to_ps接口,目前最多支持4路user task并发执行at_ReqAndRsp_to_ps
+ * @warning 接口内部会malloc at_context,调用者须手动释放
  */
-int get_avail_atfd_4_user(int from_proxy);
+at_context_t* get_avail_atctx_4_user(int from_proxy);
 
 /**
  * @brief  通过软定时器id获取对应的队列ID
  * @param timerId  [IN]软定时器id
  * @return  成功返回对应的队列ID,失败返回NULL
- * @note 主要用于at_ReqAndRsp_to_ps 和 at_ReqAndRsp_to_ps_2接口
+ * @note 用于at_ReqAndRsp_to_ps接口
  */
 osMessageQueueId_t at_related_queue_4_user(osTimerId_t timerId);
 

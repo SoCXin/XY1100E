@@ -17,8 +17,18 @@ LIB_SYSAPP_SRC  = $(SYSAPP_LIB_DIR)/lib$(LIB_SYSAPP_NAME).a
 ####################################################################################################
 # include other makefile to include source
 ####################################################################################################
+-include $(SYSAPP_SRC_DIR)/at_cmd/at_cmd.mk
 -include $(SYSAPP_SRC_DIR)/at_ctrl/at_ctrl.mk
-
+-include $(SYSAPP_SRC_DIR)/at_uart/at_uart.mk
+-include $(SYSAPP_SRC_DIR)/diag_ctrl/diag_ctrl.mk
+-include $(SYSAPP_SRC_DIR)/flash/flash.mk
+-include $(SYSAPP_SRC_DIR)/lpm/lpm.mk
+-include $(SYSAPP_SRC_DIR)/redirect/redirect.mk
+-include $(SYSAPP_SRC_DIR)/rtc_tmr/rtc_tmr.mk
+-include $(SYSAPP_SRC_DIR)/shm_msg/shm_msg.mk
+-include $(SYSAPP_SRC_DIR)/sock_proxy/sock_proxy.mk
+-include $(SYSAPP_SRC_DIR)/system/system.mk
+-include $(SYSAPP_SRC_DIR)/test/test.mk
 
 
 ####################################################################################################

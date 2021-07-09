@@ -103,6 +103,7 @@ extern "C" {
 
 #include "er-coap-13/er-coap-13.h"
 #include "atiny_osdep.h"
+#include "agenttiny.h"
 
 #ifdef LWM2M_SERVER_MODE
 #ifndef LWM2M_SUPPORT_JSON
@@ -181,7 +182,8 @@ void lwm2m_close_connection(void* sessionH, void* userData);
 uint8_t lwm2m_buffer_send(void* sessionH,
                           uint8_t* buffer,
                           size_t length,
-                          void* userdata);
+                          void* userdata,
+                          uint8_t raiflag);
 
 // Compare two session handles
 // Returns true if the two sessions identify the same peer. false otherwise.
@@ -398,6 +400,7 @@ typedef struct _lwm2m_data_cfg_t
     int type;                     /*Êý¾ÝÉÏ±¨ÀàÐÍ*/
     int cookie;                   /*Êý¾Ýcookie,ÓÃÒÔÔÚack»Øµ÷ÖÐ£¬Çø·Ö²»Í¬µÄÊý¾Ý*/
     lwm2m_data_process callback;  /*ack»Øµ÷*/
+    cdp_msg_type_e msg_type;      /*rai标识位*/
 } lwm2m_data_cfg_t;
 
 typedef enum

@@ -251,7 +251,7 @@ int at_COAPOPTION_req(char *at_buf, char **prsp_cmd)
         return AT_END;
     }
 
-    if (at_parse_param_2("%d", at_buf, p) != AT_OK )
+    if (at_parse_param_2("%d", at_buf, p) != AT_OK || opt_count <=0 || opt_count > 10)
     {
         *prsp_cmd = AT_ERR_BUILD(ATERR_PARAM_INVALID);
         return AT_END;
@@ -261,7 +261,7 @@ int at_COAPOPTION_req(char *at_buf, char **prsp_cmd)
     /*dynamic parse param*/
     void *param[2*opt_count];
     CoapOptionData option[opt_count];
-    memset (&option,0,sizeof(CoapOptionData));
+    memset (&option,0,sizeof(CoapOptionData)*opt_count);
     form =format;
     for(i=0;i <2*opt_count;i+=2)
     {

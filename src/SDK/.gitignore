@@ -1,0 +1,9 @@
+*.pyc
+.pio/
+.vscode/
+elf
+bin
+.ignore
+*.flash
+*.d
+*.txt

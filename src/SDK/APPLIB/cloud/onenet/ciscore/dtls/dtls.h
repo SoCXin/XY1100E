@@ -61,7 +61,8 @@ typedef struct _dtls_handler_t
     int(*cis_dtls_write)( dtls_context_t  *ctx,
                  const session_t *session,
                  uint8_t         *buf,
-                 size_t           len );
+                 size_t           len,
+                 uint8_t raiflag);//XY add
 
     /**
      * Called from dtls_handle_message() deliver application data that was
@@ -296,7 +297,8 @@ int dtls_renegotiate( dtls_context_t  *ctx,
 int cis_dtls_write( dtls_context_t *ctx,
                 session_t      *session,
                 uint8          *buf,
-                size_t          len );
+                size_t          len ,
+                uint8_t raiflag);//XY add
 
 /**
  * Checks sendqueue of given DTLS context object for any outstanding

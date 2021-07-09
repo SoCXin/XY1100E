@@ -23,24 +23,24 @@
 typedef enum
 {
 	ICM_ETH = 0,
-	ICM_LPM,  //DSP核进入深睡，通过该消息告知M3核深睡的时长等信息
-	ICM_AT,   //两个核间进行AT命令交互，零拷贝机制
-	ICM_FREE,  //两个核间进行内存的跨核释放
-	ICM_SHMMEM_ALLOC,  //目前仅用于DSP向M3核申请堆内存，通常用于特殊调试时申请大内存
-	ICM_SHMMEM_GIVE,    //目前仅用于DSP向M3核申请堆内存，通常用于特殊调试时申请大内存
-	ICM_IPDATA,         //核间传递数据包，内部使用零拷贝
-	ICM_SOCKPROXY,     //DSP核通过该消息实现socket功能
-	ICM_SMARTCARDPROXY,  //DSP核的PS通过该消息使用M3核的SIM卡驱动
-	ICM_WIRESHARKDATA,   //M3核抓包数据零拷贝传给DSP核从log口输出
-	ICM_SMSDATA,         //M3核收到的短信内容通过该消息零拷贝传给DSP核
-	ICM_FLASHWRITE,      //M3核通过DSP核执行写flash动作，并挂起M3核
-	ICM_FLASHWRT_NOTICE,  //DSP核执行flash本地写操作之前，通过该消息通知M3核挂起，以防止退出XIP模式时M3核发生异常
-	ICM_APP_SHM_MSG_REQ,  //两个核间通过该消息传递跨核请求消息，对方处理完毕后，可以通过ICM_APP_SHM_MSG_RSP消息应答对方
-	ICM_APP_SHM_MSG_RSP,  //两个核间通过ICM_APP_SHM_MSG_REQ消息传递跨核请求消息，对方处理完毕后，可以通过该消息应答对方，以实现同步跨核API接口syn_send_shmmsg_req
-	ICM_AP_LOG_PRINT,     //M3向DSP输出log数据，零拷贝机制
+	ICM_LPM,			 //DSP核进入深睡，通过该消息告知M3核深睡的时长等信息
+	ICM_AT,				 //两个核间进行AT命令交互，零拷贝机制
+	ICM_FREE,			 //两个核间进行内存的跨核释放
+	ICM_FREE_AP_LOG,	 //跨核释放零拷贝LOG内存
+	ICM_SHMMEM_ALLOC,	 //目前仅用于DSP向M3核申请堆内存，通常用于特殊调试时申请大内存
+	ICM_SHMMEM_GIVE,	 //目前仅用于DSP向M3核申请堆内存，通常用于特殊调试时申请大内存
+	ICM_IPDATA,			 //核间传递数据包，内部使用零拷贝
+	ICM_SOCKPROXY,		 //DSP核通过该消息实现socket功能
+	ICM_SMARTCARDPROXY,	 //DSP核的PS通过该消息使用M3核的SIM卡驱动
+	ICM_WIRESHARKDATA,	 //M3核抓包数据零拷贝传给DSP核从log口输出
+	ICM_SMSDATA,		 //M3核收到的短信内容通过该消息零拷贝传给DSP核
+	ICM_FLASHWRITE,		 //M3核通过DSP核执行写flash动作，并挂起M3核
+	ICM_FLASHWRT_NOTICE, //DSP核执行flash本地写操作之前，通过该消息通知M3核挂起，以防止退出XIP模式时M3核发生异常
+	ICM_XINYI_SHM_MSG,	 //两个核间请求或者dsp发送URC消息
+	ICM_AP_LOG_PRINT,	 //M3向DSP输出log数据，零拷贝机制
 	ICM_MAX,
 
-}ICM_flag;
+} ICM_flag;
 
 typedef enum
 {

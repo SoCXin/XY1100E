@@ -18,16 +18,17 @@
 
 #include "xy_api.h"
 
-
+//任务参数配置
 #define TIMER_TASK_PRIORITY  10
 #define TIMER_STACK_SIZE     0x400
 
+//demo宏定义
 #define TimHandle          		TimOneShotHandle
-
 HAL_TIM_HandleTypeDef TimHandle;
 
-osThreadId_t  g_hal_one_shot_time_TskHandle = NULL;
-osSemaphoreId_t g_hal_one_shot_time_sem = NULL;
+//任务全局变量
+osThreadId_t  g_hal_one_shot_timer_TskHandle = NULL;
+osSemaphoreId_t g_hal_one_shot_timer_sem = NULL;
 
 static uint32_t counter_value;
 /**
@@ -41,36 +42,20 @@ void HAL_TIM1_IRQHandler(void) __RAM_FUNC;
 __weak void HAL_TIM1_IRQHandler(void)
 {
 	counter_value = HAL_TIM_GetCount(&TimHandle);
-	osSemaphoreRelease(g_hal_one_shot_time_sem);
+	osSemaphoreRelease(g_hal_one_shot_timer_sem);
 }
 
 
 /**
- * @brief TIMER初始化函数
- * @code
- *	//创建信号量
-	g_hal_one_shot_time_sem = osSemaphoreNew(0xFFFF, 0);
-
-	//初始化Timer
-	TimHandle.Instance				=	HAL_TIM1;
-	TimHandle.Init.Mode				=	HAL_TIM_MODE_ONE_SHOT;
-	TimHandle.Init.Reload			=	306 * 5000;
-	TimHandle.Init.ClockDivision	=	HAL_TIM_CLK_DIV_128;
-	TimHandle.Init.TIMPolarity		=	HAL_TIM_Polarity_Set;
-	HAL_TIM_Init(&TimHandle);
-
-	//注册Timer中断服务函数
-	HAL_TIM_IT_REGISTER(&TimHandle);
-
-	//开启Timer
-	HAL_TIM_Start(&TimHandle);
- * @endcode
- *
+ * @brief TIMER one_shot模式初始化函数
+ *  	这个函数描述了timer初始化为one_shot模式时需要的相关步骤。\n
+ * 		在初始化函数内部需要设置定时器的编号、工作模式、重载值、时钟分频、时钟极性等\n
+ * 		且需要注册定时中断，然后打开定时器。\n
  */
 void hal_one_shot_timer_init(void)
 {
 	//创建信号量
-	g_hal_one_shot_time_sem = osSemaphoreNew(0xFFFF, 0);
+	g_hal_one_shot_timer_sem = osSemaphoreNew(0xFFFF, 0);
 
 	//初始化Timer
 	TimHandle.Instance				=	HAL_TIM1;
@@ -97,7 +82,7 @@ void hal_one_shot_timer_work_task(void)
 	while(1)
 	{
 		//等待获取信号量，释放线程控制权
-		if( osOK == osSemaphoreAcquire(g_hal_one_shot_time_sem, osWaitForever) )	
+		if( osOK == osSemaphoreAcquire(g_hal_one_shot_timer_sem, osWaitForever) )
 		{
 			//打印调试信息，用户可在此做实际业务
 			xy_printf("hal_one_shot_timer_work_task counter_value:%d\n", counter_value);
@@ -112,6 +97,6 @@ void hal_one_shot_timer_work_task(void)
  */
 void hal_one_shot_timer_work_task_init(void)
 {
-	g_hal_one_shot_time_TskHandle = osThreadNew((osThreadFunc_t)hal_one_shot_timer_work_task,NULL,"hal_one_shot_timer_work_task",TIMER_STACK_SIZE,osPriorityNormal);
+	g_hal_one_shot_timer_TskHandle = osThreadNew((osThreadFunc_t)hal_one_shot_timer_work_task,NULL,"hal_one_shot_timer_work_task",TIMER_STACK_SIZE,osPriorityNormal);
 }
 #endif

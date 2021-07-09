@@ -36,7 +36,7 @@
 //used for local sequence for 3GPP reliable transmission
 unsigned short g_udp_send_seq[NUM_SOCKETS] = {0};
 unsigned char g_udp_send_rai[NUM_SOCKETS] = {0};
-struct ps_netif ps_if[PS_PDP_CID_MAX] = {0};
+struct ps_netif ps_if[PS_PDP_CID_MAX] = {{INVALID_CID, NULL}, {INVALID_CID, NULL}};
 nonip_uplink_func g_nonip_func = NULL;
 int g_cp_or_up = 0;
 osMutexId_t g_udp_send_m = NULL;
@@ -412,44 +412,39 @@ err_t ps_netif_init(struct netif* netif)
 #endif
     return ERR_OK;
 }
-struct ps_netif *find_netif_by_cid(char c_id)
+struct ps_netif *find_netif_by_cid(unsigned char cid)
 {
 	int i = 0;
 	for (; i < PS_PDP_CID_MAX; i++)
 	{
-		if (ps_if[i].cid == c_id)
+		if (ps_if[i].cid == cid)
 			return ps_if + i;
 	}
 
 	return NULL;
 }
 
-void insert_one_netif(char c_id,struct netif *ps_eth)
+void add_netif(unsigned char cid, struct netif *ps_eth)
 {
-	int i=0;
-	for(;i<PS_PDP_CID_MAX;i++)
+	int i = 0;
+	for (; i < PS_PDP_CID_MAX; i++)
 	{
-		if(ps_if[i].cid==c_id && ps_if[i].ps_eth)
-			xy_assert(0);
-	}
-	for(i=0;i<PS_PDP_CID_MAX;i++)
-	{
-		if(ps_if[i].ps_eth == NULL)
+		if (ps_if[i].ps_eth == NULL && ps_if[i].cid == INVALID_CID)
 		{
 			ps_if[i].ps_eth = ps_eth;
-			ps_if[i].cid = c_id;
+			ps_if[i].cid = cid;
 			return;
 		}
 	}
 	xy_assert(0);
 }
 
-void del_one_netif(char c_id)
+void delete_netif(unsigned char cid)
 {
 	int i = 0;
 	for (; i < PS_PDP_CID_MAX; i++)
 	{
-		if (ps_if[i].cid == c_id)
+		if (ps_if[i].cid == cid)
 		{
 			//主控线程处理完pdp激活消息后，pdp_active_info会被释放，lwip内部如果使用会出现野指针，因此额外申请了一块内存，需单独释放
 			if (ps_if[i].ps_eth->state != NULL)
@@ -457,9 +452,12 @@ void del_one_netif(char c_id)
 				xy_free(ps_if[i].ps_eth->state);
 				ps_if[i].ps_eth->state = NULL;
 			}
-			xy_free(ps_if[i].ps_eth);
-			ps_if[i].ps_eth = NULL;
-			ps_if[i].cid = 0;
+			if (ps_if[i].ps_eth != NULL)
+			{
+				xy_free(ps_if[i].ps_eth);
+				ps_if[i].ps_eth = NULL;
+			}
+			ps_if[i].cid = INVALID_CID;
 			return;
 		}
 	}
@@ -468,24 +466,34 @@ void del_one_netif(char c_id)
 
 struct netif* find_active_netif()
 {
-	int i=0;
-	for(;i<PS_PDP_CID_MAX;i++)
+	int i = 0;
+	for (; i < PS_PDP_CID_MAX; i++)
 	{
-		if(ps_if[i].ps_eth)
+		if (ps_if[i].ps_eth != NULL)
 			return ps_if[i].ps_eth;
 	}
-	//xy_assert(0);
 	return NULL;
 }
 
+bool is_netif_active(unsigned char cid)
+{
+	int i = 0;
+	for (; i < PS_PDP_CID_MAX; i++)
+	{
+		if (ps_if[i].cid == cid && ps_if[i].ps_eth != NULL)
+			return true;
+	}
+	return false;
+}
+
 //deliver IP packet to lwip tcpip stack
-int send_ps_packet_to_tcpip(void *data, unsigned short len, unsigned char c_id)
+int send_ps_packet_to_tcpip(void *data, unsigned short len, unsigned char cid)
 {
 	int err;
 	struct pbuf *p;
 	struct ps_netif *ps_temp;
 
-	ps_temp = find_netif_by_cid(c_id);
+	ps_temp = find_netif_by_cid(cid);
 	if (ps_temp == NULL || !netif_is_link_up(ps_temp->ps_eth))
 	{
 		xy_free(data);
@@ -511,12 +519,12 @@ int send_ps_packet_to_tcpip(void *data, unsigned short len, unsigned char c_id)
 
 //process  downlink PS  data,if AT CRTDCP ,need send to at_ctl,other send to tcpip stack
 #if IS_DSP_CORE
-void send_packet_to_user(char cid, int len, char *data)
+void send_packet_to_user(unsigned char cid, int len, char *data)
 {
 	char *rcv_data = xy_zalloc(len);
 	memcpy(rcv_data, data, len);
 
-	if (g_user_have_free_lock == 1)
+	if (g_user_lock_released == 1)
 	{
 		softap_printf(USER_LOG, WARN_LOG, "worklock have free,but recv downlink packet!!!");
 		ip_packet_information_print(rcv_data,len,1);
@@ -559,7 +567,7 @@ void send_packet_to_user(char cid, int len, char *data)
 	}
 }
 #else //M3 CORE
-void send_packet_to_user(char cid, int msg_len, char *msg_buf)
+void send_packet_to_user(unsigned char cid, int msg_len, char *msg_buf)
 {
 	(void)msg_len;
 	(void)cid;
@@ -621,7 +629,7 @@ void send_packet_to_user(char cid, int msg_len, char *msg_buf)
 }
 #endif //IS_DSP_CORE
 
-//refer  to  netif_init
+//pdp激活
 void ps_netif_activate(struct pdp_active_info *pdp_info)
 {
 	struct netif *temp;
@@ -629,7 +637,7 @@ void ps_netif_activate(struct pdp_active_info *pdp_info)
 	ip_addr_t secdns_t = {0};
 	
 	temp = xy_zalloc(sizeof(struct netif));
-	insert_one_netif(pdp_info->c_id,temp);
+	add_netif(pdp_info->cid, temp);
 	if(pdp_info->ip46flag==IPV4_TYPE||pdp_info->ip46flag==IPV46_TYPE)
 	{
 		/* DNS servers */
@@ -670,16 +678,20 @@ void ps_netif_activate(struct pdp_active_info *pdp_info)
 	netifapi_netif_set_up(temp);
 }
 
-int ps_netif_deactivate(int c_id, u16_t ip46flag)
+//pdp去激活
+int ps_netif_deactivate(unsigned char cid, unsigned short ip46flag)
 {
-	if(ip46flag == IPV4_TYPE)
+	if (ip46flag == IPV4_TYPE)
 	{
-		struct ps_netif *temp = find_netif_by_cid(c_id);
-		if(temp == NULL)
-			xy_assert(0);
+		struct ps_netif *netif_tmp = find_netif_by_cid(cid);
+		if(netif_tmp == NULL)
+		{
+			softap_printf(USER_LOG, WARN_LOG, "deactive cid:%u pdp fail", cid);
+			return XY_ERR;
+		}
 
-		netifapi_netif_remove(temp->ps_eth);
-		del_one_netif(c_id);
+		netifapi_netif_remove(netif_tmp->ps_eth);
+		delete_netif(cid);
 	}
 	return XY_OK;
 }
@@ -702,9 +714,9 @@ void proc_cgatt_rsp(char *at_str)
 
 	while (*chr == ' ')
 		chr++;
-	if (atoi(chr) == 1)
+	if ((int)strtol(chr,NULL,10) == 1)
 	{
-		if (g_working_cid != -1 && !ps_netif_is_ok())
+		if (g_working_cid != INVALID_CID && !ps_netif_is_ok())
 		{
 			//收到XYIPDNS消息，已经置working cid但是网口尚未启动
 			softap_printf(USER_LOG, WARN_LOG, "working cid has set but netif not started");

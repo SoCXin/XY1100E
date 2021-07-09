@@ -78,14 +78,14 @@ void hal_gpio_out_work_task(void)
 		//隔3s切换GPIO引脚的输出状态，用于调试
 		
 		zos_pin_write(PIN_9, PIN_LOW);
-		send_debug_str_to_at_uart("pin 9 low\r\n");
-		//通过osDelay释放线程控制权
-		osDelay(3000);
+		zos_printf("pin 9 low\r\n");
+		//通过zos_task_delay()释放线程控制权
+		zos_task_delay(3000);
 
 		zos_pin_write(PIN_9, PIN_HIGH);
-		send_debug_str_to_at_uart("pin 9 high\r\n");
-		//通过osDelay释放线程控制权
-		osDelay(3000);
+		zos_printf("pin 9 high\r\n");
+		//通过zos_task_delay()释放线程控制权
+		zos_task_delay(3000);
 	}
 }
 

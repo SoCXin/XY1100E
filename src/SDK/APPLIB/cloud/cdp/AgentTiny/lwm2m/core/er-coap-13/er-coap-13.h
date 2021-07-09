@@ -267,6 +267,7 @@ typedef struct
 
     uint16_t payload_len;
     uint8_t* payload;
+    uint8_t raiflag;     /*XY ADD*/
 
 } coap_packet_t;
 

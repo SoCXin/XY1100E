@@ -41,8 +41,8 @@ class XinyiGlobal(Enum):
     ARM_CONFIG_STRING = '''
     [image0]
     image_core = arm
-    image_load_addr = 0x2711F000
-    image_exec_addr = 0x2711F000
+    image_load_addr = 0x2713F000
+    image_exec_addr = 0x2713F000
     image_name = flash.bin
     image_type = bin
     force_exist = True

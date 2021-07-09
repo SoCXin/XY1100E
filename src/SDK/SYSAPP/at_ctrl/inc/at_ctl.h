@@ -43,6 +43,7 @@ typedef struct at_proxy_data
 {
   at_context_t *proxy_ctx;
   int at_req_type;
+  int msg_id;
   char data[0];
 } at_proxy_data_t;
 

@@ -199,6 +199,14 @@ uint32_t HAL_TIM_GetCaptureCount(HAL_TIM_HandleTypeDef *htim);
 void HAL_TIM_SetCount(HAL_TIM_HandleTypeDef *htim, uint32_t count);
 
 /**
+  * @brief  设置定时器pwm寄存器中的值.
+  * @param  htim	指向一个包含定时器具体配置信息的HAL_TIM_HandleTypeDef结构体的指针.详情参考 @ref HAL_TIM_HandleTypeDef.
+  * @param	count	设置的定时器pwm寄存器中的值.
+  * @retval 无
+  */
+void HAL_TIM_SetPwm(HAL_TIM_HandleTypeDef *htim, uint32_t pulse);
+
+/**
   * @brief  定时器中断控制.
   * @param  htim 	指向一个包含定时器具体配置信息的HAL_TIM_HandleTypeDef结构体的指针.详情参考 @ref HAL_TIM_HandleTypeDef.
   * @param	option	中断控制类型.详情参考 @ref HAL_TIMInt_TypeDef.

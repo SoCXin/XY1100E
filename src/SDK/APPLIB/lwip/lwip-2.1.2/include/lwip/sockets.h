@@ -184,6 +184,11 @@ struct ifreq {
   char ifr_name[IFNAMSIZ]; /* Interface name */
 };
 
+/* SOCKET DATA RAI info: Release assistant info  */
+#define PS_SOCK_RAI_NO_INFO             0
+#define PS_SOCK_RAI_NO_UL_DL_FOLLOWED   1      /*发送之后快速释放RRC*/
+#define PS_SOCK_ONLY_DL_FOLLOWED        2      /*收到应答快速释放RRC*/
+
 /* Socket protocol types (TCP/UDP/RAW) */
 #define SOCK_STREAM     1
 #define SOCK_DGRAM      2

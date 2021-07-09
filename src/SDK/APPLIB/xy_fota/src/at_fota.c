@@ -206,7 +206,7 @@ int at_NFWUPD_req(char *at_buf, char **prsp_cmd)
         }
 
     }
-    else if(g_req_type == AT_CMD_QUERY)
+    else if(g_req_type == AT_CMD_TEST)
     {
         *prsp_cmd = xy_zalloc(40);
         snprintf(*prsp_cmd, 40, "\r\n+NFWUPD:(0,1,2,5)\r\n\r\nOK\r\n");

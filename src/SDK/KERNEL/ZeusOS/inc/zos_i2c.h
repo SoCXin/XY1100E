@@ -1,7 +1,4 @@
-﻿/**
- *  @file    zos_i2c.h
- *  @brief   ZeusOS I2C驱动
- *
+﻿/*
  * Copyright (c) 2019-2029, ZeusOS Team
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -15,11 +12,6 @@
 #define __ZOS_I2C_H__
 
 #include "zos_def.h"
-/** @defgroup DRV_I2C i2c
- * I2C驱动接口
- * @ingroup CMIOT_DRIVER
- * @{
- * */
  
 typedef enum
 {
@@ -93,6 +85,5 @@ zos_err_t zos_i2c_write(ZOS_I2C_BUS dev, zos_uint16_t  addr, zos_uint8_t *data, 
  */
 zos_err_t zos_i2c_read(ZOS_I2C_BUS dev, zos_uint16_t addr, zos_uint8_t *data, zos_uint16_t len);
 
-/** @} end of group DRV_I2C */
 
 #endif

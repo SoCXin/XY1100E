@@ -13,7 +13,7 @@
 
 #ifndef __ZOS_SPI_H__
 #define __ZOS_SPI_H__
-#include "zos.h"
+#include "zos_def.h"
 
 
 #define SPI_MOSI_PIN        HAL_GPIO_PIN_NUM_6
@@ -23,11 +23,6 @@
 #define SPI_NSS2_PIN        0
 
 
-/** @defgroup DRV_SPI spi
- * SPI驱动接口
- * @ingroup CMIOT_DRIVER
- * @{
- * */
 typedef enum
 {
     ZOS_SPI_BUS_0,
@@ -83,8 +78,6 @@ zos_err_t zos_spi_init(ZOS_SPI_BUS dev, ZOS_SPI_CONFIG *config);
  *
  *  \param [in] dev spi设备
  *  \return  none
- *
- *  \details  More details
  */
 void zos_spi_deinit(ZOS_SPI_BUS dev);
 
@@ -96,8 +89,6 @@ void zos_spi_deinit(ZOS_SPI_BUS dev);
  *  \param [in] data 待写数据
  *  \param [in] len  待写数据长度
  *  \return  0：写数据成功，其他：写数据失败
- *
- *  \details  More details
  */
 zos_err_t zos_spi_write(ZOS_SPI_BUS dev, zos_uint8_t *data, zos_uint16_t len);
 
@@ -111,13 +102,8 @@ zos_err_t zos_spi_write(ZOS_SPI_BUS dev, zos_uint8_t *data, zos_uint16_t len);
  *  \param [out] r_data 读取数据存放地址，需先申请内存 
  *  \param [in] r_len  读取数据长度
  *  \return  0：读数据成功，其他：读数据失败
- *
- *  \details  More details
  */
 zos_err_t zos_spi_read(ZOS_SPI_BUS dev, zos_uint8_t *w_data, zos_uint16_t w_len,  zos_uint8_t *r_data, zos_uint16_t r_len);
 
-
-
-/** @} end of group DRV_SPI */
 
 #endif

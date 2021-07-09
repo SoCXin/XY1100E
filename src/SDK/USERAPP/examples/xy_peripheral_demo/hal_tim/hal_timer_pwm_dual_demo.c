@@ -25,41 +25,17 @@
 #include "xy_api.h"
 
 
+//demo宏定义
 #define TimHandle          		TimPWMDualHandle
 
 HAL_TIM_HandleTypeDef TimHandle;
 
 
 /**
- * @brief PWM初始化函数
- * @code
-	//映射GPIO为Timer的输出引脚
-	HAL_GPIO_InitTypeDef gpio_init;
-
-	gpio_init.Pin		= HAL_GPIO_PIN_NUM_6;
-	gpio_init.Mode		= GPIO_MODE_AF_PER;
-	gpio_init.Alternate	= HAL_REMAP_TMR1_AF_OUTP;
-	HAL_GPIO_Init(&gpio_init);
-
-	gpio_init.Pin		= HAL_GPIO_PIN_NUM_7;
-	gpio_init.Mode		= GPIO_MODE_AF_PER;
-	gpio_init.Alternate	= HAL_REMAP_TMR1_AF_OUTN;
-	HAL_GPIO_Init(&gpio_init);
-
-	//初始化Timer
-	TimHandle.Instance				=	HAL_TIM1;
-	TimHandle.Init.Mode				=	HAL_TIM_MODE_PWM_DUAL;
-	TimHandle.Init.Reload			=	306;
-	TimHandle.Init.ClockDivision	=	HAL_TIM_CLK_DIV_128;
-	TimHandle.Init.PWMReg			=	306 / 3;
-	TimHandle.Init.TIMPolarity		=	HAL_TIM_Polarity_Set;
-	TimHandle.Init.PWMDualDelay		=	HAL_TIM_DELAY_64_CYCLES;
-	HAL_TIM_Init(&TimHandle);
-
-	//开启Timer
-	HAL_TIM_Start(&TimHandle);
- * @endcode
- * 
+ * @brief 	timer 双PWM模式初始化函数
+ * 			这个函数描述了timer初始化为双PWM模式需要的相关步骤。\n
+ * 			在初始化函数内部需要设置双路PWM的输出引脚与GPIO引脚的对应关系、引脚复用方式， \n
+ * 			以及定时器的编号、工作模式、重载值、时钟分频、PWM寄存器、时钟极性以及双PWM延时等\n
  */
 void hal_pwm_dual_mode_init(void)
 {

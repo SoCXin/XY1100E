@@ -492,6 +492,7 @@ osStatus_t osMemoryPoolDelete (osMemoryPoolId_t mp_id);
 	}
  * @endcode
  * @note  该消息队列建议传递消息体的地址，需要保证发送方申请消息体内存，接收方释放消息体内存
+ * @warning  该队列创建内会根据msg_count*msg_size的积来申请堆空间，进而需要用户保证内存的合理开销
  * @warning  不能在中断或临界区中调用
  */
 osMessageQueueId_t osMessageQueueNew (uint32_t msg_count, uint32_t msg_size);

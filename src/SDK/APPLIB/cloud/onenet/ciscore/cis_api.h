@@ -55,6 +55,7 @@
 
 #include "cis_config.h"
 #include "cis_def.h"
+#include "lwip/sockets.h"
 
 
 #ifdef __cplusplus
@@ -226,10 +227,10 @@ CIS_API cis_ret_t    cis_addobject        (void* context,cis_oid_t objectid,cons
 CIS_API cis_ret_t    cis_delobject        (void* context,cis_oid_t objectid);
 
 CIS_API uint32_t     cis_pump             (void* context);
-CIS_API cis_ret_t    cis_update_reg       (void* context,cis_time_t lifetime,bool withObjects);
+CIS_API cis_ret_t    cis_update_reg       (void* context,cis_time_t lifetime,bool withObjects, uint8_t raiflag);//XY add
 
-CIS_API cis_ret_t    cis_response   	  (void* context,const cis_uri_t* uri,const cis_data_t* value,cis_mid_t mid,cis_coapret_t result);
-CIS_API cis_ret_t    cis_notify	          (void* context,const cis_uri_t* uri,const cis_data_t* value,cis_mid_t mid,cis_coapret_t result,bool needAck, unsigned short ackID);
+CIS_API cis_ret_t    cis_response   	  (void* context,const cis_uri_t* uri,const cis_data_t* value,cis_mid_t mid,cis_coapret_t result, uint8_t raiflag);//XY add
+CIS_API cis_ret_t    cis_notify	          (void* context,const cis_uri_t* uri,const cis_data_t* value,cis_mid_t mid,cis_coapret_t result,bool needAck, unsigned short ackID, uint8_t raiflag);//XY add
 
 
 #if CIS_ENABLE_UPDATE_MCU
