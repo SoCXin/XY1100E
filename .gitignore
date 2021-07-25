@@ -6,3 +6,4 @@ bin
 .ignore
 *.flash
 *.d
+*.txt
