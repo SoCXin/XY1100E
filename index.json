@@ -1,0 +1,36 @@
+{
+    "type":"SoC",
+    "name":"XY1100E",
+    "title": "xinyisemi XY1100E SoC",
+    "description":"xinyisemi Cortex-M3 NB-IoT SoC",
+    "Core": {
+        "CoreNum": 1,
+        "Core":"Cortex-M3",
+        "Fmax":240,
+        "DMIPS": 250,
+        "CoreMark": 680
+    },
+    "manufacturer": {
+        "vendor":"xinyisemi",
+        "homepage":"http://www.xinyisemi.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SoCXin/XY1100E.git"
+    },
+    "version":"1.0.0",
+    "series":["XY1100E"],
+    "package":["QFN52"],
+    "peripheral": ["ADC","XIP","USB","USART","SPI","IIC"],
+    "temp": [-40,85],
+    "volt": [1.8,3.3],
+    "ESD": {
+        "HBM": 2000,
+        "CDM": 500
+    },
+    "keywords": [
+        "Cortex-M3",
+        "xinyisemi","40nm",
+        "DAC","ADC","I2C","LVD","SPI","LPUSART"
+    ]
+}
